@@ -1,0 +1,26 @@
+.inputText {
+	height: 30px;
+	padding: 5px;
+	font-size: 18px;
+}
+.inputButton {
+	height: 46px;
+	width: 100px;
+	font-size: 18px;
+}
+.inputSelect {
+	height: 44px;
+	width: 180px;
+	padding-left: 10px;
+	font-size: 22px;
+}
+.font-18 {
+	font-size: 18px;
+}
+.pad-20 {
+	padding: 20px;
+}
+ul.yiiPager a:link, ul.yiiPager a:visited {
+	padding: 10px 20px;
+}
+a.big{font-size:16px;font-weight:bold;}

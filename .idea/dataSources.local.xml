@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - pdTwoLevelMaterial@localhost" uuid="6c308df5-c900-4545-8d3a-33e18c0d80b7">
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>pdTwoLevelMaterial.*</schema-pattern>
+      <default-schemas>pdTwoLevelMaterial.*</default-schemas>
+    </data-source>
+  </component>
+</project>

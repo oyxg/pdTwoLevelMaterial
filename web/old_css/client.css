@@ -1,0 +1,11 @@
+.grid_text{
+	height:30px;padding:5px;font-size:18px;
+}
+.github_tb{
+	font-size:18px;
+}
+.github_tb td,.github_tb thead th{
+	padding:10px;
+}
+.page{padding:10px;}
+.page span,.page a,.controller a{padding:10px 20px;border:1px solid #CCC;text-decoration:none;background-color:#dedede;}

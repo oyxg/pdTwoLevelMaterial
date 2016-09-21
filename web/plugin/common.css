@@ -1,0 +1,34 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	color: #333;
+	background-color: #FFF;
+	font-family: "微软雅黑",arial;
+}
+body, ul, li, div, form {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.form_pad {
+	padding: 10px;
+}
+.form_btns {
+	background-color: #F5F5F5;
+	padding: 5px 5px 7px 5px;
+	text-align: right;
+	border-top: 1px solid #EEE;
+	user-select: none;
+}
+
+.form_btns input{
+	padding:3px 10px;
+	font-size:12px;
+	color: #333;
+	font-family: 微软雅黑;
+}
+
+
+a.a_blue_u{text-decoration:underline;color:#3496EF;}
+a.a_blue_u:hover{text-decoration:none;}

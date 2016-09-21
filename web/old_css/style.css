@@ -1,0 +1,60 @@
+*{font-family:'微软雅黑',arial;}
+body{ background:#f7f7f7;}
+
+#top_header{line-height:28px;height:28px;background-color:#fafafa;border-bottom:1px solid #ddd;box-shadow:0px 1px 4px rgba(0,0,0,0.17);position:fixed;_position:absolute;left:0;top:0;width:100%;z-index:40; background-color:#096177;color:white;}
+.logo{width:591px;height:77px;}
+.so_panel{width:310px;line-height:25px;height:25px; background:url(/old_images/common/nav.jpg);padding:4px;_zoom:1;overflow:hidden;border:1px solid #096177;}
+.so_panel_div{width:240px;float:left; text-align:left}
+.so_input_text{line-height:25px;height:25px;_height:23px;padding:0;margin:0;border:0px none;width:100%;box-shadow:inset 3px 3px 0px rgba(0,0,0,.1);padding-left:5px;*position:relative;*top:-6px;_position:static;_top:auto;}
+.so_input_btn{background-color:transparent;border:0px none;cursor:pointer;height:29px;line-height:10px;width:70px;float:left; text-align:center;color:#fff;font-weight:bold;font-size:14px;padding-left:5px;position:relative;left:5px;top:-2px;*top:-6px;_width:65px;_top:-2px;}
+
+#header{
+	line-height: 80px;
+	margin:0 auto;
+	background-color:#f7f7f7 ;
+	padding:0 10px;
+	background:url(/old_images/common/top_bg.jpg) right top no-repeat;
+}
+#navigator{
+	width:96%;
+	margin:0 auto;
+	box-shadow:0px 1px 5px rgba(0,0,0,0.1);
+}
+.nav_ul{background: #096177 url(/old_images/common/nav.jpg) repeat-x;overflow:hidden;_zoom:1;border:1px solid #096177;}
+.nav_ul li{ /*background: none url(/old_images/common/nav_split.jpg) right center no-repeat; */height:32px;overflow:hidden;}
+.nav_ul li a,.nav_ul li a:visited{color: #FFF;padding-right: 20px;padding-left: 20px;text-decoration: none;line-height: 32px;height:32px;display:block;font-size: 12px;font-weight: bold;text-shadow:1px 1px rgba(0,0,0,0.6)}
+.nav_ul li a:hover{background-color: #045265;box-shadow:inset 0px 2px 7px rgba(0,0,0,.3);}
+.nav_sub{background-color: #eee;border:1px solid #e1e1e1;/*height: 32px;overflow:hidden;*/margin-bottom:5px;}
+.nav_sub ul{/*overflow:hidden;_zoom:1;*/}
+.nav_sub ul li{/*float: left;*/border-bottom:1px dotted #ccc;border-top:1px solid #fff;}
+.nav_sub ul li a,.nav_sub ul li a:visited{color: #000;padding-right: 20px;padding-left: 20px;text-decoration: none;line-height: 26px;display: block;font-size: 12px;}
+.nav_sub ul li a:hover{background-color: #fefefe;}
+.nav_sub ul li a:active{background-color: #ddd;color:#069;box-shadow:inset 0px 1px 3px rgba(0,0,0,.2);}
+#footer{position:fixed;_position:absolute;bottom:0;left:0;width:100%;}
+
+.mright{padding-left:10px;}
+
+button{overflow:visible;padding:2px 7px;_padding:3px 5px 0 5px;font-size:12px;}
+/*按钮的样式*/
+.button {cursor:pointer;text-decoration:none;display: inline-block;_height: 16px;line-height: 20px;
+		padding: 3px 11px;_padding: 2px 8px 0px 8px;overflow: visible;font-size: 12px;cursor: pointer;color: #444;
+		border: 1px solid #ccc;border-radius: 2px;margin: 0 1px;color: #444;box-shadow: 0px 1px 3px rgba(0, 0, 0, .07);
+		background-color: #f5f5f5;
+		background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff),to(#e6e6e6) );
+		background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+		background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+		background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);background-repeat: repeat-x;}
+.button:hover {color: #444;border: 1px solid #4d90fe;box-shadow: 0px 1px 3px rgba(0, 0, 0, .1);-webkit-transition: .2s linear;-moz-transition: .2s linear;}
+.button:active {border: 1px solid #b6b6b6;box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .2);
+		background-color: #eee;background-image: -webkit-linear-gradient(top, #eee, #e0e0e0);-webkit-transition: .3s linear;-moz-transition: .3s linear;}
+.button b {font-weight: normal;}
+.content{padding:10px;}
+.tag{background: url(/old_images/common/tb_head_bg.png) repeat-x left bottom;border: 1px solid #CCC;border-radius: 2px 2px 0 0;border-bottom: 0px none;height:27px;line-height:25px;padding-left: 8px;font-weight: bold;}
+.tagc{border: 1px solid #CCC;border-radius: 0 0 2px 2px ;border-top: 0px none;padding: 7px;margin-bottom: 3px;}
+.page-contain{border:1px solid #cdcdcd;border-top:0px none; text-align:center; padding:5px;
+background-color:#F5F5F5;-webkit-transition-property:background-color;-webkit-transition-duration:0.3s; -webkit-transition-timing-function:linear;}
+.page-contain:hover{}
+.page-btn-disabled{color:darkgray}
+.page-select{border:1px solid #999;padding:1px;font-size:11px;font-family:arial;}
+.page-button{height:24px;padding:0 8px;overflow:visible;}
