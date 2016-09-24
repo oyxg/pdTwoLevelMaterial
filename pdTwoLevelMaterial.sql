@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2016-09-21 17:28:30
+Date: 2016-09-24 11:08:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -53,6 +53,7 @@ INSERT INTO `auth_assignment` VALUES ('MaterialList', '39', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('PreFloodMaterial', '4', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialInfo', '4', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialList', '4', '', 's:0:\"\";');
+INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialNeed', '4', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('ReceiveMaterialList', '39', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('ReturnMaterialList', '39', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('Storer', '24', null, 'N;');
@@ -101,8 +102,9 @@ INSERT INTO `auth_item` VALUES ('MyReturnMF', '0', '我提交的退料单', '', 
 INSERT INTO `auth_item` VALUES ('MyScrapForm', '0', '我提交的报废表', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('MyTaskBook', '0', '我提交的任务书', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('PreFloodMaterial', '1', '防汛物资管理', '', 's:0:\"\";');
-INSERT INTO `auth_item` VALUES ('PreFloodMaterialInfo', '0', '防汛物资台账', '', 's:0:\"\";');
+INSERT INTO `auth_item` VALUES ('PreFloodMaterialInfo', '0', '防汛物资信息', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('PreFloodMaterialList', '0', '防汛物资列表', '', 's:0:\"\";');
+INSERT INTO `auth_item` VALUES ('PreFloodMaterialNeed', '0', '防汛各班需求', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('ReceiveMaterialList', '0', '领料物资记录', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('ReceiveMF', '0', '填写领料单', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('ReturnMaterialList', '0', '退料物资记录', '', 's:0:\"\";');
@@ -580,45 +582,6 @@ INSERT INTO `mod_move_form` VALUES ('35', '10', '20160628003', '', '2016-06-28',
 INSERT INTO `mod_move_form` VALUES ('36', '11', '20160628004', '', '2016-06-28', '', '0', null, null, ',upload/move_from_pic/36_1.jpg,upload/move_from_pic/36_3.jpg,upload/move_from_pic/36_8.jpg,upload/move_from_pic/36_9.jpg');
 
 -- ----------------------------
--- Table structure for `mod_preflood`
--- ----------------------------
-DROP TABLE IF EXISTS `mod_preflood`;
-CREATE TABLE `mod_preflood` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL COMMENT '物资名称',
-  `configure` varchar(255) DEFAULT NULL COMMENT '标准配置',
-  `price` double(10,2) DEFAULT NULL COMMENT '单价',
-  `unit` varchar(20) DEFAULT NULL COMMENT '单位',
-  `jsgf` varchar(255) DEFAULT NULL COMMENT '技术规范',
-  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
-  `pzlevel` varchar(255) DEFAULT NULL COMMENT '配置级别',
-  `className` varchar(50) DEFAULT NULL COMMENT '分类名称',
-  `a_xc` int(10) DEFAULT NULL COMMENT '一班现存',
-  `a_xq` int(10) DEFAULT NULL COMMENT '一班需求',
-  `b_xc` int(10) DEFAULT NULL COMMENT '二班现存',
-  `b_xq` int(10) DEFAULT NULL COMMENT '二班需求',
-  `c_xc` int(10) DEFAULT NULL COMMENT '三班现存',
-  `c_xq` int(10) DEFAULT NULL COMMENT '三班需求',
-  `d_xc` int(10) DEFAULT NULL COMMENT '四班现存',
-  `d_xq` int(10) DEFAULT NULL COMMENT '四班需求',
-  `e_xc` int(10) DEFAULT NULL COMMENT '五班现存',
-  `e_xq` int(10) DEFAULT NULL COMMENT '五班需求',
-  `f_xc` int(10) DEFAULT NULL COMMENT '六班现存',
-  `f_xq` int(10) DEFAULT NULL COMMENT '六班需求',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of mod_preflood
--- ----------------------------
-INSERT INTO `mod_preflood` VALUES ('1', '雨靴', '1件/人', '60.23', '双', '阿斯顿fnm', '输电配通用', '工区', '个人防护用品', '10', '3', '11', '4', '9', '4', '20', '12', '5', '4', '3', '3');
-INSERT INTO `mod_preflood` VALUES ('2', '雨衣', '1件/人', '23.21', '件', 'asdfadf', '输电配通用', '工区', '个人防护用品', '4', '2', '12', '4', '2', '1', '10', '3', '6', '3', '13', '6');
-INSERT INTO `mod_preflood` VALUES ('3', '面具', '1/人', null, 'toyo', '高斯', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `mod_preflood` VALUES ('4', '面具', '1/人', null, 'toyo', '高斯', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `mod_preflood` VALUES ('5', '面具', '1/人', null, 'toyo', '高斯', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `mod_preflood` VALUES ('6', '背包', '1', '1.00', '1', '1', '1', '1', '排水物资', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-
--- ----------------------------
 -- Table structure for `mod_preflood_in`
 -- ----------------------------
 DROP TABLE IF EXISTS `mod_preflood_in`;
@@ -650,7 +613,7 @@ INSERT INTO `mod_preflood_in` VALUES ('4', '1', '3', '2', '20160921003', '抢修
 DROP TABLE IF EXISTS `mod_preflood_info`;
 CREATE TABLE `mod_preflood_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `className` varchar(255) DEFAULT NULL COMMENT '分类名称',
+  `className` varchar(255) NOT NULL COMMENT '分类名称',
   `name` varchar(255) NOT NULL COMMENT '物资名称',
   `price` double(10,2) DEFAULT NULL COMMENT '单价',
   `unit` varchar(20) DEFAULT NULL COMMENT '单位',
@@ -1068,10 +1031,10 @@ CREATE TABLE `mod_user` (
 -- ----------------------------
 -- Records of mod_user
 -- ----------------------------
-INSERT INTO `mod_user` VALUES ('1', 'admin', '123', '超级管理员', '', '1', '165', '2016-09-20 17:04:01', '', '');
-INSERT INTO `mod_user` VALUES ('4', 'gqcl', '123', '工区材料管理员', '', '', '234', '2016-09-21 08:55:34', '', '');
-INSERT INTO `mod_user` VALUES ('5', 'cs1', '123', '测试网点1仓管', '', '', '15', '2016-07-25 14:07:01', '', '');
-INSERT INTO `mod_user` VALUES ('6', 'cs2', '123', '测试网点2仓管', '', '', '0', null, '', '');
+INSERT INTO `mod_user` VALUES ('1', 'admin', '123', '超级管理员', '', '1', '170', '2016-09-24 09:50:33', '', '');
+INSERT INTO `mod_user` VALUES ('4', 'gqcl', '123', '工区材料管理员', '', '', '237', '2016-09-24 09:50:38', '', '');
+INSERT INTO `mod_user` VALUES ('5', 'cs1', '123', '测试网点1仓管', '', '', '16', '2016-09-22 19:10:41', '', '');
+INSERT INTO `mod_user` VALUES ('6', 'cs2', '123', '测试网点2仓管', '', '', '1', '2016-09-22 19:11:09', '', '');
 INSERT INTO `mod_user` VALUES ('9', 'cty', '123', 'cty', '', '', '0', null, '', '');
 INSERT INTO `mod_user` VALUES ('10', 'zz1', '123', 'zz1', '', '', '14', '2016-06-14 12:57:28', '', '');
 INSERT INTO `mod_user` VALUES ('11', 'zz2', '123', 'zz2', '', '', '0', null, '', '');
@@ -1079,7 +1042,7 @@ INSERT INTO `mod_user` VALUES ('12', 'bz1', '123', 'bz1', '', '', '140', '2016-0
 INSERT INTO `mod_user` VALUES ('13', 'bz2', '123', 'bz2', '', '', '9', '2016-06-14 14:02:20', '', '');
 INSERT INTO `mod_user` VALUES ('14', 'bz11', '123', 'bz11', '', '', '8', '2016-07-04 09:17:48', '', '');
 INSERT INTO `mod_user` VALUES ('29', 's1', '123', 's1', '', '', '0', null, '', '');
-INSERT INTO `mod_user` VALUES ('30', 'v1', '123', 'v1', '', '', '0', null, '', '');
+INSERT INTO `mod_user` VALUES ('30', 'v1', '123', 'v1', '', '', '1', '2016-09-22 19:11:39', '', '');
 INSERT INTO `mod_user` VALUES ('31', 'v2', '123', 'v2', '', '', '0', null, '', '');
 INSERT INTO `mod_user` VALUES ('32', 'v3', '123', 'v3', '', '', '0', null, '', '');
 INSERT INTO `mod_user` VALUES ('33', 'v4', '123', 'v4', '', '', '0', null, '', '');
