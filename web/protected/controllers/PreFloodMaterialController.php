@@ -74,7 +74,7 @@ class PreFloodMaterialController extends Controller {
     }
 
     /**
-     * 防汛物资台账
+     * 防汛物资信息
      */
     public function actionMaterialInfo(){
         $condition[] = "1=1";
@@ -100,6 +100,13 @@ class PreFloodMaterialController extends Controller {
         $this->render("material_info",array(
             'rsList'=>$rsList
         ));
+    }
+
+    /**
+     * 防汛各班需求
+     */
+    public function actionMaterialNeed(){
+
     }
 
 }

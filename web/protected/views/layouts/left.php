@@ -109,7 +109,10 @@
                     <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/list"); ?>">防汛物资列表</a></li>
                 <?php endif; ?>
                 <?php if (Auth::has(AI::C_PreFloodMaterialInfo)): ?>
-                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/MaterialInfo"); ?>">防汛物资台账</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/MaterialInfo"); ?>">防汛物资信息</a></li>
+                <?php endif; ?>
+                <?php if (Auth::has(AI::C_PreFloodMaterialNeed)): ?>
+                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/MaterialNeed"); ?>">防汛各班需求</a></li>
                 <?php endif; ?>
             </ul>
         </div>

@@ -236,7 +236,7 @@ class ScrapController extends Controller {
         ));
     }
     /**
-     * 移库单详情
+     * 报废单详情
      */
     public function actionShowScrapForm(){
         $scrapForm = ScrapForm::model()->findByPk($_GET['id']);
