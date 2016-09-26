@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2016-09-24 11:08:16
+Date: 2016-09-26 17:29:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -617,22 +617,25 @@ CREATE TABLE `mod_preflood_info` (
   `name` varchar(255) NOT NULL COMMENT '物资名称',
   `price` double(10,2) DEFAULT NULL COMMENT '单价',
   `unit` varchar(20) DEFAULT NULL COMMENT '单位',
-  `standard` varchar(100) DEFAULT NULL COMMENT '规格型号',
+  `standard` varchar(255) DEFAULT NULL COMMENT '规格型号',
   `jsgf` varchar(255) DEFAULT NULL COMMENT '技术规范',
   `pzlevel` varchar(100) DEFAULT NULL COMMENT '配置级别',
   `configure` varchar(255) DEFAULT NULL COMMENT '配置标准',
   `factory` varchar(255) DEFAULT NULL COMMENT '厂家',
   `bh` varchar(50) DEFAULT NULL COMMENT '出厂编号',
-  `contact` varchar(100) DEFAULT NULL COMMENT '联系人',
-  `tel` varchar(100) DEFAULT NULL COMMENT '联系方式',
+  `contact` varchar(255) DEFAULT NULL COMMENT '联系人',
+  `tel` varchar(255) DEFAULT NULL COMMENT '联系方式',
   `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mod_preflood_info
 -- ----------------------------
-INSERT INTO `mod_preflood_info` VALUES ('1', '个人防护用品', '雨靴', '20.00', '双', 'xxxxx', 'xxxxx', '工区', '1件/人', 'asdfasdf', '110201', '王', '11111', '输变配通用');
+INSERT INTO `mod_preflood_info` VALUES ('1', '挡水物资', '雨靴1', '20.01', '双', '1111', '1111', '工区1', '2件/人', 'asdfasdf1111', '1102011111', '王1', '111111111', '输变配通用1');
+INSERT INTO `mod_preflood_info` VALUES ('2', '个人防护用品', '绝缘手套', '20.00', '黄色', null, '厚度0.2', '工区', '一双/人', null, null, null, null, '输变配通用');
+INSERT INTO `mod_preflood_info` VALUES ('3', '个人防护用品', '绝缘靴', '20.09', '红色', null, 'bbbbb', '班组', '1双/人', null, null, null, null, 'hsdfasdf');
+INSERT INTO `mod_preflood_info` VALUES ('4', '个人防护用品', '电工钳', '34.89', '把', '1k', 'asdfasdf', '班组', '1把/人', '北京电力设备', '9002-9090', '蔡瑁', '12340192384', 'asdfasdfH');
 
 -- ----------------------------
 -- Table structure for `mod_preflood_need`
@@ -649,7 +652,7 @@ CREATE TABLE `mod_preflood_need` (
 -- ----------------------------
 -- Records of mod_preflood_need
 -- ----------------------------
-INSERT INTO `mod_preflood_need` VALUES ('1', '1', '1', '12');
+INSERT INTO `mod_preflood_need` VALUES ('1', '1', '1', '10');
 INSERT INTO `mod_preflood_need` VALUES ('2', '1', '2', '4');
 INSERT INTO `mod_preflood_need` VALUES ('3', '1', '3', '6');
 INSERT INTO `mod_preflood_need` VALUES ('4', '1', '4', '2');
@@ -1032,7 +1035,7 @@ CREATE TABLE `mod_user` (
 -- Records of mod_user
 -- ----------------------------
 INSERT INTO `mod_user` VALUES ('1', 'admin', '123', '超级管理员', '', '1', '170', '2016-09-24 09:50:33', '', '');
-INSERT INTO `mod_user` VALUES ('4', 'gqcl', '123', '工区材料管理员', '', '', '237', '2016-09-24 09:50:38', '', '');
+INSERT INTO `mod_user` VALUES ('4', 'gqcl', '123', '工区材料管理员', '', '', '238', '2016-09-26 08:36:19', '', '');
 INSERT INTO `mod_user` VALUES ('5', 'cs1', '123', '测试网点1仓管', '', '', '16', '2016-09-22 19:10:41', '', '');
 INSERT INTO `mod_user` VALUES ('6', 'cs2', '123', '测试网点2仓管', '', '', '1', '2016-09-22 19:11:09', '', '');
 INSERT INTO `mod_user` VALUES ('9', 'cty', '123', 'cty', '', '', '0', null, '', '');

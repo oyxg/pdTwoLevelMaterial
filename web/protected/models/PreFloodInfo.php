@@ -10,13 +10,25 @@ class PreFloodInfo extends ActiveRecord{
 	public $standard;//规格型号
 	public $jsgf;//技术规范
 	public $pzlevel;//配置级别
-	public $configure;//标准配置
+	public $configure;//配置标准
 	public $factory;//厂家
 	public $bh;//出厂编号
 	public $contact;//联系人
 	public $tel;//联系方式
 	public $remark;//备注
 
+//	private $_pk = 'id';
+
+	public static function getType(){
+		$types = array(
+				'个人防护用品',
+				'排水物资',
+				'挡水物资',
+				'照明工具',
+				'辅助配套物资'
+		);
+		return $types;
+	}
 	/**
 	 * 获取模型实例
 	 * @return Material
@@ -38,7 +50,7 @@ class PreFloodInfo extends ActiveRecord{
 	public function rules(){
 		return array(
 			array(
-				'name,className',
+				'className,name',
 				'required'
 			),
 			array(
@@ -61,7 +73,7 @@ class PreFloodInfo extends ActiveRecord{
 				'standard'=>'规格型号',
 				'jsgf'=>'技术规范',
 				'pzlevel'=>'配置级别',
-				'configure'=>'标准配置',
+				'configure'=>'配置标准',
 				'factory'=>'厂家',
 				'bh'=>'出厂编号',
 				'contact'=>'联系方式',

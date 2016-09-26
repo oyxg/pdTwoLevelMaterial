@@ -221,16 +221,34 @@ Material.examScrapForm=function(id){
 }
 //----------------------------防汛物资-----------------------------//
 
-//添加
-Material.addPreFloodForm=function(){
+//新增防汛物资
+Material.addPreFloodInfo=function(){
 	window.__box=new Maya.Box({
-		url : "/PreFloodMaterial/addForm",
-		width : 600,
+		url : "/PreFloodMaterial/addPreFloodInfo",
+		width : 300,
 		heigh : 600,
-		text : "新增物资"
+		text : "新增防汛物资"
 	});
 }
-
+//修改防汛物资
+Material.editPreFloodInfo=function(id){
+	window.__box=new Maya.Box({
+		url : "/PreFloodMaterial/editPreFloodInfo?id="+id,
+		width : 300,
+		heigh : 600,
+		text : "修改防汛物资"
+	});
+}
+//设置各班需求
+Material.setPreFloodNeed=function(id){
+	console.info(id);
+	window.__box=new Maya.Box({
+		url : "/PreFloodMaterial/setPreFloodNeed?id="+id,
+		width : 300,
+		heigh : 600,
+		text : "设置各班需求"
+	});
+}
 //----------------------------任务书-----------------------------//
 
 
