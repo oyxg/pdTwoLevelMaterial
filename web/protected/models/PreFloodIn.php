@@ -3,26 +3,15 @@
 class PreFloodIn extends ActiveRecord{
 
 	public $id;
-	public $name;
-	public $configure;//标准配置
-	public $price;
-	public $unit;
-	public $jsgf;//技术规范
-	public $remark;
-	public $pzlevel;//配置级别
-	public $className;//分类名称
-	public $a_xc;//一班现存
-	public $b_xc;//二班现存
-	public $c_xc;
-	public $d_xc;
-	public $e_xc;
-	public $f_xc;
-	public $a_xq;//一班需求
-	public $b_xq;
-	public $c_xq;
-	public $d_xq;
-	public $e_xq;
-	public $f_xq;
+	public $mID;//防汛物资ID
+	public $bzID;//班组
+	public $num;//入库数量
+	public $projectCode;//项目编号
+	public $projectName;//项目名称
+	public $workCode;//工单号
+	public $erpLL;//ERP领料单
+	public $file;//附件
+	public $state;//状态
 	/**
 	 * 获取模型实例
 	 * @return Material
@@ -35,7 +24,7 @@ class PreFloodIn extends ActiveRecord{
 	 * @see CActiveRecord::tableName()
 	 */
 	public function tableName(){
-		return 'mod_preflood';
+		return 'mod_preflood_in';
 	}
 	/**
 	 * 验证规则
@@ -44,13 +33,11 @@ class PreFloodIn extends ActiveRecord{
 	public function rules(){
 		return array(
 			array(
-				'name,className',
+				'mID,bzID,num',
 				'required'
 			),
 			array(
-				'unit,jsgf,configure,price,remark,pzlevel,
-				a_xc,b_xc,c_xc,d_xc,e_xc,f_xc,
-				a_xq,b_xq,c_xq,d_xq,e_xq,f_xq',
+				'projectCode,projectName,workCode,erpLL,file,state',
 				'safe'
 			)
 		);
@@ -62,26 +49,15 @@ class PreFloodIn extends ActiveRecord{
 	public function attributeLabels(){
 		return array(
 				'id'=>'主键',
-				'name'=>'物资名称',
-				'configure'=>'标准配置',
-				'price'=>'单价',
-				'unit'=>'单位',
-				'jsgf'=>'技术规范',
-				'remark'=>'备注',
-				'pzlevel'=>'配置级别',
-				'className'=>'分类名称',
-				'a_xc'=>'一班现存',
-				'b_xc'=>'二班现存',
-				'c_xc'=>'三班现存',
-				'd_xc'=>'四班现存',
-				'e_xc'=>'五班现存',
-				'f_xc'=>'六班现存',
-				'a_xq'=>'一班需求',
-				'b_xq'=>'二班需求',
-				'c_xq'=>'三班需求',
-				'd_xq'=>'四班需求',
-				'e_xq'=>'五班需求',
-				'f_xq'=>'六班需求'
+				'mID'=>'防汛物资ID',
+				'bzID'=>'班组',
+				'num'=>'入库数量',
+				'projectCode'=>'项目编号',
+				'projectName'=>'项目名称',
+				'workCode'=>'工单号',
+				'erpLL'=>'ERP领料单',
+				'file'=>'附件',
+				'state'=>'状态',
 		);
 	}
 		/**
@@ -107,4 +83,54 @@ class PreFloodIn extends ActiveRecord{
 		return parent::getName($id,__CLASS__);
 	}
 
+	/**
+	 * 状态：正常
+	 */
+	const STATE_NORMAL="normal";
+	/**
+	 * 状态：送修
+	 */
+	const STATE_SEND="send";
+	/**
+	 * 状态：报废
+	 */
+	const STATE_SCRAP="scrap";
+	/**
+	 * @return array
+	 */
+	public static function getTypeList(){
+		return array(
+				self::STATE_NORMAL=> '<span style="color: #00aa00">正常</span>',
+				self::STATE_SEND=> '<span style="color: #000099">送修</span>',
+				self::STATE_SCRAP=> '<span style="color: #999999">报废</span>'
+		);
+	}
+	/**
+	 * 获取状态
+	 * @param string $key
+	 * @return string
+	 */
+	public static function getState($key){
+		$list=self::getTypeList();
+		return $list[$key];
+	}
+
+
+	/**
+	 * @return array
+	 */
+	public static function getBzList(){
+		return array(
+				'工区','一班','二班','三班','四班','五班','六班'
+		);
+	}
+	/**
+	 * 获取班组
+	 * @param string $key
+	 * @return string
+	 */
+	public static function getBz($key){
+		$list=self::getBzList();
+		return $list[$key];
+	}
 }

@@ -38,74 +38,19 @@
       <file leaf-file-name="PreFloodMaterialController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/protected/controllers/PreFloodMaterialController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36374134">
-              <caret line="158" column="25" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.4734411">
+              <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="need_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/need_form.php">
+      <file leaf-file-name="in_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/in_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.178571">
-              <caret line="53" column="118" selection-start-line="53" selection-start-column="118" selection-end-line="53" selection-end-column="118" />
-              <folding>
-                <marker date="1474881111059" expanded="true" signature="2084:2218" placeholder="..." />
-                <marker date="1474881111059" expanded="true" signature="2284:2418" placeholder="..." />
-                <marker date="1474881111059" expanded="true" signature="2484:2618" placeholder="..." />
-                <marker date="1474881111059" expanded="true" signature="2684:2816" placeholder="..." />
-                <marker date="1474881111059" expanded="true" signature="2884:3018" placeholder="..." />
-                <marker date="1474881111059" expanded="false" signature="3106:3132" placeholder="..." />
-                <marker date="1474881111059" expanded="true" signature="3133:3222" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="material_info.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.178572">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-              <folding>
-                <element signature="e#4763#4781#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreFloodInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3139534">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="19" />
+            <state vertical-scroll-proportion="-9.892858">
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_info.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_info.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.678572">
-              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-              <folding>
-                <marker date="1474873337722" expanded="true" signature="2737:2900" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="2955:3102" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="3158:3303" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="3358:3513" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="3572:3719" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="3774:3927" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="3985:4141" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="4201:4352" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="4410:4553" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="4606:4758" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="4816:4961" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="5015:5164" placeholder="..." />
-                <marker date="1474873337722" expanded="false" signature="5243:5269" placeholder="..." />
-                <marker date="1474873337722" expanded="true" signature="5270:5359" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -113,18 +58,32 @@
       <file leaf-file-name="material.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/plugin/module/material.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.642858">
-              <caret line="245" column="48" selection-start-line="245" selection-start-column="33" selection-end-line="245" selection-end-column="48" />
+            <state vertical-scroll-proportion="-24.142857">
+              <caret line="264" column="47" selection-start-line="264" selection-start-column="47" selection-end-line="264" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_form.php">
+      <file leaf-file-name="PreFloodIn.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodIn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.785714">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="124" />
+            <state vertical-scroll-proportion="-2.0357144">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <marker date="1474973772493" expanded="true" signature="1707:1721" placeholder="..." />
+                <marker date="1474973772493" expanded="true" signature="1772:1786" placeholder="..." />
+                <marker date="1474973772493" expanded="true" signature="1838:1852" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="material_in.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_in.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.821428">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -138,12 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/protected/models/Store.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/selected_list2.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/selected_list.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/task/add_form.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/select_list2.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/task/select_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/task/selected_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/task/task_book.php" />
         <option value="$PROJECT_DIR$/web/protected/models/TaskBookMaterial.php" />
@@ -157,7 +110,6 @@
         <option value="$PROJECT_DIR$/web/protected/views/material/add_form.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_form.php" />
         <option value="$PROJECT_DIR$/web/protected/models/PreFlood.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/material/material_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/select_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/material/show_pic.php" />
@@ -179,16 +131,23 @@
         <option value="$PROJECT_DIR$/web/protected/controllers/UseMaterialController.php" />
         <option value="$PROJECT_DIR$/web/protected/config/main.php" />
         <option value="$PROJECT_DIR$/web/protected/controllers/ScrapController.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/PreFloodIn.php" />
-        <option value="$PROJECT_DIR$/web/protected/vendor/youngsun/AI.php" />
         <option value="$PROJECT_DIR$/web/protected/models/PreFloodNeed.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/PreFloodInfo.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/layouts/left.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_info.php" />
-        <option value="$PROJECT_DIR$/web/plugin/module/material.js" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php" />
+        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFlood.php" />
+        <option value="$PROJECT_DIR$/web/protected/models/PreFloodInfo.php" />
+        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFloodList.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/layouts/left.php" />
+        <option value="$PROJECT_DIR$/web/protected/vendor/youngsun/AI.php" />
+        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFloodBills.php" />
+        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFloodIn.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/need_form.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_in.php" />
+        <option value="$PROJECT_DIR$/web/plugin/module/material.js" />
+        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/in_form.php" />
         <option value="$PROJECT_DIR$/web/protected/controllers/PreFloodMaterialController.php" />
+        <option value="$PROJECT_DIR$/web/protected/models/PreFloodIn.php" />
       </list>
     </option>
   </component>
@@ -204,7 +163,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -481,23 +440,23 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../changzhou" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.22918707" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/web/pdTwoLevelMaterial/web/protected/views/material/move_form_list.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\prefloodmaterial" />
-      <recent name="D:\web\pdTwoLevelMaterial\web\protected\models" />
-      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\UseMaterial" />
-      <recent name="D:\web\pdTwoLevelMaterial\web\images\login" />
-      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\material" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\web\pdTwoLevelMaterial\web\plugin\module" />
       <recent name="D:\web\xt\web\protected\views\instrument" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web\pdTwoLevelMaterial\web\protected\models" />
+      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\prefloodmaterial" />
+      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\UseMaterial" />
+      <recent name="D:\web\pdTwoLevelMaterial\web\images\login" />
+      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\material" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.InOutController.php">
@@ -559,10 +518,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13675214" sideWeight="0.49462366" order="1" side_tool="false" content_ui="combo" x="841" y="83" width="340" height="761" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.49462366" order="1" side_tool="false" content_ui="combo" x="841" y="83" width="340" height="761" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15511727" sideWeight="0.41558442" order="5" side_tool="true" content_ui="tabs" />
@@ -620,41 +579,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/protected/vendor/http/WUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/show_pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3290993">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/move_form_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="115" selection-start-line="78" selection-start-column="115" selection-end-line="78" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/Bz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/components/UserIdentity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -798,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="70" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -833,25 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/PreFlood.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021939954">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/vendor/youngsun/AI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.607142">
-          <caret line="58" column="64" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/models/InForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2159353">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9838337">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6986144">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.3533487">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,9 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1720555">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1447044318324" expanded="true" signature="2309:2404" placeholder="SELECT * FRO..mod_store..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,14 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39491916">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/layouts/left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.214286">
-          <caret line="108" column="92" selection-start-line="108" selection-start-column="92" selection-end-line="108" selection-end-column="92" />
           <folding />
         </state>
       </provider>
@@ -913,22 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodIn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5265589">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.785714">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/controllers/ScrapController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.607142">
@@ -937,35 +809,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugin/module/material.js">
+    <entry file="file://$PROJECT_DIR$/web/protected/models/ActiveRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.642858">
-          <caret line="245" column="48" selection-start-line="245" selection-start-column="33" selection-end-line="245" selection-end-column="48" />
+        <state vertical-scroll-proportion="136.0">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <marker date="1447044318378" expanded="true" signature="2327:2381" placeholder="SELECT COUNT..${$tables}..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/db/ar/CActiveRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.535715">
+          <caret line="2093" column="43" selection-start-line="2093" selection-start-column="43" selection-end-line="2093" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php">
+    <entry file="file://$PROJECT_DIR$/web/protected/views/layouts/left.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.178572">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state vertical-scroll-proportion="-16.678572">
+          <caret line="113" column="61" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/vendor/youngsun/AI.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6143187">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/models/ViewPreFloodBills.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6785714">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/models/ViewPreFloodList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.021939954">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/models/ScrapForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22055428">
+          <caret line="120" column="4" selection-start-line="120" selection-start-column="4" selection-end-line="131" selection-end-column="22" />
           <folding>
-            <element signature="e#4763#4781#0#HTML" expanded="true" />
+            <marker date="1465806101732" expanded="true" signature="2033:2047" placeholder="..." />
+            <marker date="1465806101732" expanded="true" signature="2095:2109" placeholder="..." />
+            <marker date="1465806101732" expanded="true" signature="2157:2171" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/need_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.642858">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+          <folding>
+            <marker date="1474970169120" expanded="true" signature="2284:2418" placeholder="..." />
+            <marker date="1474970169120" expanded="true" signature="2484:2618" placeholder="..." />
+            <marker date="1474970169120" expanded="true" signature="2684:2818" placeholder="..." />
+            <marker date="1474970169120" expanded="true" signature="2884:3016" placeholder="..." />
+            <marker date="1474970169120" expanded="true" signature="3084:3218" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/models/ViewPreFloodIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.5">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3139534">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="19" />
+        <state vertical-scroll-proportion="7.75">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.678572">
+        <state vertical-scroll-proportion="-0.053117782">
           <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
             <marker date="1474873337722" expanded="true" signature="2737:2900" placeholder="..." />
@@ -980,42 +918,68 @@
             <marker date="1474873337722" expanded="true" signature="4606:4758" placeholder="..." />
             <marker date="1474873337722" expanded="true" signature="4816:4961" placeholder="..." />
             <marker date="1474873337722" expanded="true" signature="5015:5164" placeholder="..." />
-            <marker date="1474873337722" expanded="false" signature="5243:5269" placeholder="..." />
-            <marker date="1474873337722" expanded="true" signature="5270:5359" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/ActiveRecord.php">
+    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7909931">
-          <caret line="250" column="20" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="20" />
+        <state vertical-scroll-proportion="1.6454965">
+          <caret line="144" column="58" selection-start-line="144" selection-start-column="58" selection-end-line="144" selection-end-column="58" />
           <folding>
-            <marker date="1447044318378" expanded="true" signature="2327:2381" placeholder="SELECT COUNT..${$tables}..." />
+            <marker date="1474972230016" expanded="true" signature="4632:6843" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/need_form.php">
+    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.178571">
-          <caret line="53" column="118" selection-start-line="53" selection-start-column="118" selection-end-line="53" selection-end-column="118" />
+        <state vertical-scroll-proportion="0.26327944">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plugin/module/material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.142857">
+          <caret line="264" column="47" selection-start-line="264" selection-start-column="47" selection-end-line="264" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.821428">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/in_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.892858">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0357144">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
-            <marker date="1474881111059" expanded="true" signature="2084:2218" placeholder="..." />
-            <marker date="1474881111059" expanded="true" signature="2284:2418" placeholder="..." />
-            <marker date="1474881111059" expanded="true" signature="2484:2618" placeholder="..." />
-            <marker date="1474881111059" expanded="true" signature="2684:2816" placeholder="..." />
-            <marker date="1474881111059" expanded="true" signature="2884:3018" placeholder="..." />
-            <marker date="1474881111059" expanded="false" signature="3106:3132" placeholder="..." />
-            <marker date="1474881111059" expanded="true" signature="3133:3222" placeholder="..." />
+            <marker date="1474973772493" expanded="true" signature="1707:1721" placeholder="..." />
+            <marker date="1474973772493" expanded="true" signature="1772:1786" placeholder="..." />
+            <marker date="1474973772493" expanded="true" signature="1838:1852" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/controllers/PreFloodMaterialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36374134">
-          <caret line="158" column="25" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.4734411">
+          <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
           <folding />
         </state>
       </provider>

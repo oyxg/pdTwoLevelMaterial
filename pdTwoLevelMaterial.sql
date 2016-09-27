@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2016-09-26 17:29:00
+Date: 2016-09-27 18:58:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -51,9 +51,9 @@ INSERT INTO `auth_assignment` VALUES ('Materialer', '4', null, 'N;');
 INSERT INTO `auth_assignment` VALUES ('Materialer', '9', null, 'N;');
 INSERT INTO `auth_assignment` VALUES ('MaterialList', '39', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('PreFloodMaterial', '4', '', 's:0:\"\";');
+INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialIn', '4', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialInfo', '4', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialList', '4', '', 's:0:\"\";');
-INSERT INTO `auth_assignment` VALUES ('PreFloodMaterialNeed', '4', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('ReceiveMaterialList', '39', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('ReturnMaterialList', '39', '', 's:0:\"\";');
 INSERT INTO `auth_assignment` VALUES ('Storer', '24', null, 'N;');
@@ -102,9 +102,9 @@ INSERT INTO `auth_item` VALUES ('MyReturnMF', '0', '我提交的退料单', '', 
 INSERT INTO `auth_item` VALUES ('MyScrapForm', '0', '我提交的报废表', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('MyTaskBook', '0', '我提交的任务书', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('PreFloodMaterial', '1', '防汛物资管理', '', 's:0:\"\";');
+INSERT INTO `auth_item` VALUES ('PreFloodMaterialIn', '0', '防汛物资入库', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('PreFloodMaterialInfo', '0', '防汛物资信息', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('PreFloodMaterialList', '0', '防汛物资列表', '', 's:0:\"\";');
-INSERT INTO `auth_item` VALUES ('PreFloodMaterialNeed', '0', '防汛各班需求', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('ReceiveMaterialList', '0', '领料物资记录', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('ReceiveMF', '0', '填写领料单', '', 's:0:\"\";');
 INSERT INTO `auth_item` VALUES ('ReturnMaterialList', '0', '退料物资记录', '', 's:0:\"\";');
@@ -645,17 +645,34 @@ CREATE TABLE `mod_preflood_need` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `mID` int(11) NOT NULL COMMENT '防汛物资id',
   `bzID` int(11) NOT NULL COMMENT '班组ID',
-  `needNum` int(11) NOT NULL COMMENT '需求数量',
+  `needNum` int(11) NOT NULL DEFAULT '0' COMMENT '需求数量',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mod_preflood_need
 -- ----------------------------
 INSERT INTO `mod_preflood_need` VALUES ('1', '1', '1', '10');
-INSERT INTO `mod_preflood_need` VALUES ('2', '1', '2', '4');
-INSERT INTO `mod_preflood_need` VALUES ('3', '1', '3', '6');
-INSERT INTO `mod_preflood_need` VALUES ('4', '1', '4', '2');
+INSERT INTO `mod_preflood_need` VALUES ('2', '1', '2', '7');
+INSERT INTO `mod_preflood_need` VALUES ('3', '1', '3', '5');
+INSERT INTO `mod_preflood_need` VALUES ('4', '1', '4', '6');
+INSERT INTO `mod_preflood_need` VALUES ('5', '1', '5', '10');
+INSERT INTO `mod_preflood_need` VALUES ('6', '1', '6', '12');
+INSERT INTO `mod_preflood_need` VALUES ('35', '1', '0', '12');
+INSERT INTO `mod_preflood_need` VALUES ('36', '2', '0', '15');
+INSERT INTO `mod_preflood_need` VALUES ('37', '2', '1', '10');
+INSERT INTO `mod_preflood_need` VALUES ('38', '2', '2', '0');
+INSERT INTO `mod_preflood_need` VALUES ('39', '2', '3', '12');
+INSERT INTO `mod_preflood_need` VALUES ('40', '2', '4', '11');
+INSERT INTO `mod_preflood_need` VALUES ('41', '2', '5', '12');
+INSERT INTO `mod_preflood_need` VALUES ('42', '2', '6', '0');
+INSERT INTO `mod_preflood_need` VALUES ('43', '3', '0', '8');
+INSERT INTO `mod_preflood_need` VALUES ('44', '3', '1', '15');
+INSERT INTO `mod_preflood_need` VALUES ('45', '3', '2', '4');
+INSERT INTO `mod_preflood_need` VALUES ('46', '3', '3', '0');
+INSERT INTO `mod_preflood_need` VALUES ('47', '3', '4', '9');
+INSERT INTO `mod_preflood_need` VALUES ('48', '3', '5', '0');
+INSERT INTO `mod_preflood_need` VALUES ('49', '3', '6', '0');
 
 -- ----------------------------
 -- Table structure for `mod_receive_form`
@@ -1034,8 +1051,8 @@ CREATE TABLE `mod_user` (
 -- ----------------------------
 -- Records of mod_user
 -- ----------------------------
-INSERT INTO `mod_user` VALUES ('1', 'admin', '123', '超级管理员', '', '1', '170', '2016-09-24 09:50:33', '', '');
-INSERT INTO `mod_user` VALUES ('4', 'gqcl', '123', '工区材料管理员', '', '', '238', '2016-09-26 08:36:19', '', '');
+INSERT INTO `mod_user` VALUES ('1', 'admin', '123', '超级管理员', '', '1', '172', '2016-09-27 16:55:34', '', '');
+INSERT INTO `mod_user` VALUES ('4', 'gqcl', '123', '工区材料管理员', '', '', '240', '2016-09-27 16:55:39', '', '');
 INSERT INTO `mod_user` VALUES ('5', 'cs1', '123', '测试网点1仓管', '', '', '16', '2016-09-22 19:10:41', '', '');
 INSERT INTO `mod_user` VALUES ('6', 'cs2', '123', '测试网点2仓管', '', '', '1', '2016-09-22 19:11:09', '', '');
 INSERT INTO `mod_user` VALUES ('9', 'cty', '123', 'cty', '', '', '0', null, '', '');
@@ -1084,6 +1101,18 @@ INSERT INTO `mod_user_store` VALUES ('16', '31', '10');
 INSERT INTO `mod_user_store` VALUES ('17', '32', '11');
 INSERT INTO `mod_user_store` VALUES ('18', '33', '10,11');
 INSERT INTO `mod_user_store` VALUES ('19', '39', '9,10,11');
+
+-- ----------------------------
+-- View structure for `view_preflood_bills`
+-- ----------------------------
+DROP VIEW IF EXISTS `view_preflood_bills`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_preflood_bills` AS select distinct `info`.`className` AS `className`,`info`.`name` AS `name`,`info`.`price` AS `price`,`info`.`unit` AS `unit`,`info`.`standard` AS `standard`,`info`.`factory` AS `factory`,sum(`in`.`num`) AS `num`,`in`.`projectCode` AS `projectCode`,`in`.`projectName` AS `projectName`,`in`.`workCode` AS `workCode`,`in`.`erpLL` AS `erpLL`,`in`.`file` AS `file`,`in`.`state` AS `state`,`info`.`bh` AS `bh`,`info`.`contact` AS `contact`,`info`.`tel` AS `tel` from (`mod_preflood_info` `info` join `mod_preflood_in` `in` on((`info`.`id` = `in`.`mID`))) ;
+
+-- ----------------------------
+-- View structure for `view_preflood_in`
+-- ----------------------------
+DROP VIEW IF EXISTS `view_preflood_in`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_preflood_in` AS select `info`.`name` AS `name`,`info`.`price` AS `price`,`info`.`unit` AS `unit`,`info`.`factory` AS `factory`,`info`.`bh` AS `bh`,`info`.`contact` AS `contact`,`info`.`tel` AS `tel`,`in`.`num` AS `num`,`in`.`projectCode` AS `projectCode`,`in`.`projectName` AS `projectName`,`in`.`workCode` AS `workCode`,`in`.`erpLL` AS `erpLL`,`in`.`file` AS `file`,`in`.`state` AS `state`,`in`.`bzID` AS `bzID`,`in`.`id` AS `InID` from (`mod_preflood_info` `info` join `mod_preflood_in` `in` on((`info`.`id` = `in`.`mID`))) ;
 
 -- ----------------------------
 -- View structure for `view_preflood_list`

@@ -56,7 +56,7 @@ class AI{
 
 	const C_PreFloodMaterialList="PreFloodMaterialList";//防汛物资列表
 	const C_PreFloodMaterialInfo="PreFloodMaterialInfo";//防汛物资台账
-	const C_PreFloodMaterialNeed="PreFloodMaterialNeed";//防汛物资需求
+	const C_PreFloodMaterialIn="PreFloodMaterialIn";//防汛物资入库
 
 	/************************************任务分割线*****************************************/
 

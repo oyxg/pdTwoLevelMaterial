@@ -51,36 +51,60 @@
 
 
 </script>
-<form id="form" name="form" class="" method="post" action="<?= Yii::app()->createUrl("PreFloodMaterial/SetPreFloodNeed") ?>">
+<div style="letter-spacing:20px; text-align:center;padding:15px 0px 15px 0px ;font-size:18px;font-weight:bold;"> 物资信息 </div>
+<form id="form" name="form" class="" method="post"
+      <?php if($Edit):?>
+          action="<?= Yii::app()->createUrl("PreFloodMaterial/edit") ?>"
+      <?php else:?>
+          action="<?= Yii::app()->createUrl("PreFloodMaterial/AddForm") ?>"
+      <?php endif;?>>
     <table align="center" class="github_tb" style="margin-top: 0px;">
-        <input name="mID" id="mID" type="hidden"  value="<?php echo $_GET['id'];?>" />
         <tr class="row">
-            <td width="100" align="right">工区需求：</td>
-            <td><input name="0" id="0" type="text" class="grid_text"  value="<?php echo $data[0]?>" /></td>
+            <td width="100" align="right"><label>＊</label>分类：</td>
+            <td><select  name="className" id="className" type="text" class="grid_text" style="width:140px;height: 24px;">
+                    <option value="">-请选择-</option>
+                    <option value="个人防护用品">个人防护用品</option>
+                    <option value="排水物资">排水物资</option>
+                    <option value="挡水物资">挡水物资</option>
+                    <option value="照明工具">照明工具</option>
+                    <option value="辅助配套物资">辅助配套物资</option>
+                </select></td>
+        </tr>
+        <tr class="row">
+            <td width="100" align="right">配置级别：</td>
+            <td><input name="pzlevel" id="pzlevel" type="text" class="grid_text"  value="<?= $data['pzlevel']?>"></td>
+        </tr>
+        <tr class="row">
+            <td width="100" align="right">单位：</td>
+            <td><input name="unit" id="unit" type="text" class="grid_text"  value="<?= $data['unit']?>"></td>
+        </tr>
+        <tr class="row">
+            <td width="100" align="right">技术规范：</td>
+            <td><input name="jsgf" id="jsgf" type="text" class="grid_text"  value="<?= $data['jsgf']?>"></td>
         </tr>
         <tr class="row">
             <td width="100" align="right">一班需求：</td>
-            <td><input name="1" id="1" type="text" class="grid_text"  value="<?php echo $data[1]?>" /></td>
+            <td><input name="a_xq" id="a_xq" type="text" class="grid_text"  value="<?= $data['a_xq']?>" /></td>
         </tr>
         <tr class="row">
             <td width="100" align="right">二班需求：</td>
-            <td><input name="2" id="2" type="text" class="grid_text"  value="<?php echo $data[2]?>" /></td>
+            <td><input name="b_xq" id="b_xq" type="text" class="grid_text"  value="<?= $data['b_xq']?>" /></td>
         </tr>
         <tr class="row">
             <td width="100" align="right">三班需求：</td>
-            <td><input name="3" id="3" type="text" class="grid_text"  value="<?php echo $data[3]?>" /></td>
+            <td><input name="c_xq" id="c_xq" type="text" class="grid_text"  value="<?= $data['c_xq']?>" /></td>
         </tr>
         <tr class="row">
             <td width="100" align="right">四班需求：</td>
-            <td><input name="4" id="4" type="text" class="grid_text"  value="<?php echo $data[4]?>" /></td>
+            <td><input name="d_xq" id="d_xq" type="text" class="grid_text"  value="<?= $data['d_xq']?>" /></td>
         </tr>
         <tr class="row">
             <td width="100" align="right">五班需求：</td>
-            <td><input name="5" id="5" type="text" class="grid_text"  value="<?php echo $data[5]?>" /></td>
+            <td><input name="e_xq" id="e_xq" type="text" class="grid_text"  value="<?= $data['e_xq']?>" /></td>
         </tr>
         <tr class="row">
             <td width="100" align="right">六班需求：</td>
-            <td><input name="6" id="6" type="text" class="grid_text"  value="<?php echo $data[6]?>" /></td>
+            <td><input name="f_xq" id="f_xq" type="text" class="grid_text"  value="<?= $data['f_xq']?>" /></td>
         </tr>
     </table>
 
