@@ -251,12 +251,12 @@ Material.setPreFloodNeed=function(id){
 }
 
 //新增防汛物资入库记录
-Material.addPreFloodIn=function(){
+Material.addPreFloodIn=function(id){
 	window.__box=new Maya.Box({
-		url : "/PreFloodMaterial/AddPreFloodIn",
+		url : "/PreFloodMaterial/AddPreFloodIn?id="+id,
 		width : 300,
 		heigh : 600,
-		text : "新增防汛物资入库"
+		text : "防汛物资入库"
 	});
 }
 //修改防汛物资入库记录
@@ -265,7 +265,17 @@ Material.editPreFloodIn=function(id){
 		url : "/PreFloodMaterial/EditPreFloodIn?id="+id,
 		width : 300,
 		heigh : 600,
-		text : "修改防汛物资入库"
+		text : "修改防汛物资"
+	});
+}
+
+//防汛物资附件
+Material.PreFloodFile=function(id){
+	window.__box=new Maya.Box({
+		url : "/PreFloodMaterial/uploadFile?id="+id,
+		width : 580,
+		heigh : 500,
+		text : "上传附件"
 	});
 }
 //----------------------------任务书-----------------------------//

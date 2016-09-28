@@ -234,8 +234,11 @@ class UseMaterialController extends Controller {
         }
 
         $condition[] = $_GET['formCode'] == "" ? "" : "AND INSTR(formCode,'{$_GET['formCode']}')>0";
+        $condition[] = $_GET['glProCode'] == "" ? "" : "AND INSTR(glProCode,'{$_GET['glProCode']}')>0";
         $condition[] = $_GET['glPro'] == "" ? "" : "AND INSTR(glPro,'{$_GET['glPro']}')>0";
         $condition[] = $_GET['nature'] == "" ? "" : "AND nature='{$_GET['nature']}'";
+        $condition[] = $_GET['bz'] == "" ? "" : "AND INSTR(bz,'{$_GET['bz']}')>0";
+        $condition[] = $_GET['batchCode'] == "" ? "" : "AND INSTR(batchCode,'{$_GET['batchCode']}')>0";
 
         //模型实例化
         $receiveForm = New ReceiveForm();
@@ -687,7 +690,9 @@ WHERE rf.id = rfm.formID AND rf.formCode='{$_rtm->formCode}' AND rfm.materialID=
         }
 
         $condition[] = $_GET['formCode'] == "" ? "" : "AND INSTR(formCode,'{$_GET['formCode']}')>0";
+        $condition[] = $_GET['glProCode'] == "" ? "" : "AND INSTR(glProCode,'{$_GET['glProCode']}')>0";
         $condition[] = $_GET['glPro'] == "" ? "" : "AND INSTR(glPro,'{$_GET['glPro']}')>0";
+        $condition[] = $_GET['batchCode'] == "" ? "" : "AND INSTR(batchCode,'{$_GET['batchCode']}')>0";
         $condition[] = $_GET['nature'] == "" ? "" : "AND nature='{$_GET['nature']}'";
 
         //模型实例化

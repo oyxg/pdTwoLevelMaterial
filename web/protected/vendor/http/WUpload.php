@@ -100,7 +100,7 @@ class WUpload {
 	 * @var array
 	 */
 	private $allowType=array(
-		"jpg","gif","png","doc","xls","txt","pdf","zip","rar"
+		"jpg","gif","png","doc","xls","txt","pdf","zip","rar","docx"
 	);
 	/**
 	 * 允许上传文件的大小（字节），默认10M

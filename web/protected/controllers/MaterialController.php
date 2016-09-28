@@ -54,8 +54,10 @@ class MaterialController extends Controller {
             }
         }
         $condition[] = "AND del='0'";
+        $condition[] = $_GET['batchCode'] == "" ? "" : "AND INSTR(batchCode,'{$_GET['batchCode']}')>0";
         $condition[] = $_GET['goodsCode'] == "" ? "" : "AND INSTR(goodsCode,'{$_GET['goodsCode']}')>0";
         $condition[] = $_GET['goodsName'] == "" ? "" : "AND INSTR(goodsName,'{$_GET['goodsName']}')>0";
+        $condition[] = $_GET['factory'] == "" ? "" : "AND INSTR(factory,'{$_GET['factory']}')>0";
         //模型实例化
         $material = new Material();
         //条件
@@ -414,6 +416,8 @@ class MaterialController extends Controller {
         $condition[] = $_GET['informCode'] == "" ? "" : "AND INSTR(informCode,'{$_GET['informCode']}')>0";
         $condition[] = $_GET['glProCode'] == "" ? "" : "AND INSTR(glProCode,'{$_GET['glProCode']}')>0";
         $condition[] = $_GET['glPro'] == "" ? "" : "AND INSTR(glPro,'{$_GET['glPro']}')>0";
+        $condition[] = $_GET['starDate'] == "" ? "" : "AND date>='{$_GET['starDate']}'";
+        $condition[] = $_GET['endDate'] == "" ? "" : "AND date<='{$_GET['endDate']}'";
 
         //模型实例化
         $material = New InForm();
@@ -712,6 +716,8 @@ class MaterialController extends Controller {
         $condition[] = $_GET['moveFormCode'] == "" ? "" : "AND INSTR(moveFormCode,'{$_GET['moveFormCode']}')>0";
         $condition[] = $_GET['batchCode'] == "" ? "" : "AND INSTR(batchCode,'{$_GET['batchCode']}')>0";
         $condition[] = $_GET['storeID'] == "" ? "" : "AND storeID='{$_GET['storeID']}'";
+        $condition[] = $_GET['starDate'] == "" ? "" : "AND date>='{$_GET['starDate']}'";
+        $condition[] = $_GET['endDate'] == "" ? "" : "AND date<='{$_GET['endDate']}'";
         //模型实例化
         $material = New MoveForm();
         //条件

@@ -9,9 +9,9 @@
             Material.editPreFloodIn($(this).attr('code'));
         });
 
-        //添加物资
-        $("button[rel=add]").click(function(){
-            Material.addPreFloodIn();
+        //修改缓存中的物资信息
+        $("a[rel=file]").click(function(){
+            Material.PreFloodFile($(this).attr('code'));
         });
 
     });
@@ -26,23 +26,36 @@
                     $this->endContent();
                     ?>
                 </td>
-                <td align="right"><form method="get" action="<?= Yii::app()->createUrl("PreFloodMaterial/PreFloodList") ?>">
-                        分类：
-                        <select class="grid_text" name="className" id="className" style="height: 24px">
-                            <option></option>
-                            <?php
-                            $PreFlood = new PreFloodInfo();
-                            $types = $PreFlood->model()->getType();
-                            foreach($types as $type): ?>
-                                <option value="<?=$type?>"<?php if($type==$_GET['className'])echo "selected";?>><?=$type?></option>
-                            <?php endforeach;?>
-                        </select>
-                        物资名称：
-                        <input class="grid_text" name="name" value="<?php echo $_GET['name']; ?>">
-                        配置级别：
-                        <input class="grid_text" name="pzlevel" value="<?php echo $_GET['pzlevel']; ?>">
-                        <input type="submit" value="查询" class="grid_button grid_button_s">
-                        <button type="button" rel="add" class="grid_button">入库</button>
+                <td align="right"><form method="get" action="<?= Yii::app()->createUrl("PreFloodMaterial/PreFloodIn") ?>">
+                    <table>
+                        <tr>
+                            <tb>
+                                项目编号：
+                                <input class="grid_text" name="projectCode" value="<?php echo $_GET['projectCode']; ?>">
+                                项目名称：
+                                <input class="grid_text" name="projectName" value="<?php echo $_GET['projectName']; ?>">
+                                班组：
+                                <select  name="bzID" id="bzID" type="text" class="grid_text" style="height: 24px;">
+                                    <option value=""></option>
+                                    <?php
+                                    $PreFlood = new PreFloodIn();
+                                    $bzs = $PreFlood->getBzList();
+                                    for($i=0;$i<count($bzs);$i++): ?>
+                                        <option value="<?=$i?>"<?php if(!empty($_GET['bzID'])&&$i==$_GET['bzID'])echo "selected";?>><?=$bzs[$i]?></option>
+                                    <?php endfor;?>
+                                </select>
+                            </tb>
+                        </tr>
+                        <tr>
+                            <td>
+                                厂家：
+                                <input class="grid_text" name="factory" value="<?php echo $_GET['factory']; ?>">
+                                物资名称：
+                                <input class="grid_text" name="name" value="<?php echo $_GET['name']; ?>">
+                                <input type="submit" value="查询" class="grid_button grid_button">
+                            </td>
+                        </tr>
+                        </table>
                     </form></td>
             </tr>
         </tbody>
@@ -64,7 +77,6 @@
             <th align="left">项目名称</th>
             <th align="left">工单号</th>
             <th align="left">ERP领料单</th>
-            <th align="left">附件</th>
             <th align="center">状态</th>
             <th width="70" align="center">操作</th>
         </tr>
@@ -85,13 +97,13 @@
             <td align="left"><?php echo $v->projectName; ?></td>
             <td align="left"><?php echo $v->workCode; ?></td>
             <td align="left"><?php echo $v->erpLL; ?></td>
-            <td align="left"><?php echo $v->file; ?></td>
             <td align="center"><?php echo PreFloodIn::getState($v->state); ?></td>
             <td align="left"><div class="grid_menu_panel" style="width:70px">
                     <div class="grid_menu_btn">操作</div>
                     <div class="grid_menu">
                         <ul>
-                            <li class="icon_015"><a href="#" code="<?php echo $v-InID; ?>" rel="edit">修改</a></li>
+                            <li class="icon_015"><a href="#" code="<?php echo $v->InID; ?>" rel="edit">修改</a></li>
+                            <li class="icon_015"><a href="#" code="<?php echo $v->InID; ?>" rel="file">附件</a></li>
                         </ul>
                     </div>
                 </div></td>

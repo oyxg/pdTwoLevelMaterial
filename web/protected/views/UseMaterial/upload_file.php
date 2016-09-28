@@ -30,7 +30,7 @@
             <td>&nbsp;&nbsp;
                 <?php
                 $ext = strrchr($file,'.');
-                if($ext=='.xls'):
+                if($ext=='.xls'||$ext=='.docx'||$ext=='.doc'||$ext=='.pdf'):
                 ?>
                     <a href="../<?=$file;?>">下载</a>
                 <?php else: ?>

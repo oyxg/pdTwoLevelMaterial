@@ -3,9 +3,9 @@
 </style>
 <script>
     $(function(){
-        $('a[rel=showpic]').click(function(){
+        $('a[rel=showPic]').click(function(){
             window.__box=new Maya.Box({
-                url : "/material/showPic?src="+$(this).attr('src'),
+                url : "/PreFloodMaterial/ShowPic?src="+$(this).attr('src'),
                 width : 500,
                 height : 400,
                 text : "查看"
@@ -22,7 +22,7 @@
     </thead>
     <tbody>
     <?php foreach($fileArr as $file):
-        $fileName = substr(strchr($file,'move_from_pic/'),14);
+        $fileName = substr(strchr($file,'preflood_file/'),14);
         if(!empty($file)):?>
         <tr>
             <td><?=$file?></td>
@@ -32,18 +32,18 @@
                 if($ext=='.xls'||$ext=='.docx'||$ext=='.doc'||$ext=='.pdf'):
                     ?>
                     <a href="../<?=$file;?>">下载</a>
-                <?php else: ?>
-                    <a rel="showpic" src="<?=$file;?>">查看</a>
+                <?php  else:  ?>
+                    <a rel="showPic" src="<?=$file;?>">查看</a>
                 <?php endif;?>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/material/delFile?formID=<?=$formID?>&name=<?=$fileName?>">删除</a></td>
+                <a href="/PreFloodMaterial/DelFile?inID=<?=$inID?>&name=<?=$fileName?>">删除</a></td>
         </tr>
     <?php endif;
     endforeach;?>
         <tr>
-            <form id="form" name="form" class="" action="/material/uploadFile" method="post" enctype="multipart/form-data">
+            <form id="form" name="form" class="" action="/PreFloodMaterial/UploadFile" method="post" enctype="multipart/form-data">
             <td><label>新增附件：</label><input type="file" name="file" />
-                <input type="hidden" name="formID" value="<?=$formID?>" /></td>
+                <input type="hidden" name="inID" value="<?=$inID?>" /></td>
             <td><button type="submit" class="grid_button">提交</button></td>
             </form>
         </tr>

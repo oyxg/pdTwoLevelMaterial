@@ -41,20 +41,30 @@
                 <td align="right">
                     <form method="get" action="<?= Yii::app()->createUrl("UseMaterial/ReturnMFList") ?>">
                     <table>
-                        <tr><td>
-                            <input type="hidden" name="type" value="<?php echo $_GET['type'];?>">
-                            退料性质：
-                            <select class="grid_text" name="nature" style="width:100px;height: 24px;">
-                                <option></option>
-                                <option value="dx" <?php if($_GET['nature']=="dx"){echo "selected";}?>>大修</option>
-                                <option value="qx" <?php if($_GET['nature']=="qx"){echo "selected";}?>>抢修</option>
-                            </select>
-                            退料单号：
-                            <input class="grid_text" name="formCode" value="<?php echo $_GET['formCode']; ?>" />
-                            项目名称：
-                            <input class="grid_text" name="glPro" value="<?php echo $_GET['glPro']; ?>" />
-                            <input type="submit" value="查询" class="grid_button grid_button_s" />
-                            </td></tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="type" value="<?php echo $_GET['type'];?>">
+                                退料性质：
+                                <select class="grid_text" name="nature" style="width:100px;height: 24px;">
+                                    <option></option>
+                                    <option value="dx" <?php if($_GET['nature']=="dx"){echo "selected";}?>>大修</option>
+                                    <option value="qx" <?php if($_GET['nature']=="qx"){echo "selected";}?>>抢修</option>
+                                </select>
+                                项目编号：
+                                <input class="grid_text" name="glProCode" value="<?php echo $_GET['glProCode']; ?>" />
+                                项目名称：
+                                <input class="grid_text" name="glPro" value="<?php echo $_GET['glPro']; ?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                退料单号：
+                                <input class="grid_text" name="formCode" value="<?php echo $_GET['formCode']; ?>" />
+                                批次号：
+                                <input class="grid_text" name="batchCode" value="<?php echo $_GET['batchCode']; ?>" />
+                                <input type="submit" value="查询" class="grid_button grid_button_s" />
+                            </td>
+                        </tr>
                         </table>
                     </form>
                 </td>

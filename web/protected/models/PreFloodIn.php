@@ -12,6 +12,8 @@ class PreFloodIn extends ActiveRecord{
 	public $erpLL;//ERP领料单
 	public $file;//附件
 	public $state;//状态
+	public $date;//状态
+
 	/**
 	 * 获取模型实例
 	 * @return Material
@@ -33,7 +35,7 @@ class PreFloodIn extends ActiveRecord{
 	public function rules(){
 		return array(
 			array(
-				'mID,bzID,num',
+				'mID,bzID,num,date',
 				'required'
 			),
 			array(
@@ -58,6 +60,7 @@ class PreFloodIn extends ActiveRecord{
 				'erpLL'=>'ERP领料单',
 				'file'=>'附件',
 				'state'=>'状态',
+				'date'=>'入库日期'
 		);
 	}
 		/**

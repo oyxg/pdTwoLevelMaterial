@@ -1,6 +1,13 @@
+<!-- 日历插件js & css -->
+<script type="text/javascript" src="/plugin/lhgcalendar/lhgcalendar.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/plugin/lhgcalendar/skins/lhgcalendar.css"/>
 <script type="text/javascript" src="/plugin/module/material.js"></script>
 <script>
     $(function () {
+        //日历插件
+        $(".date").calendar({
+            format : "yyyy-MM-dd"
+        });
         //修改缓存中的物资信息
         $("a[rel=show]").click(function(){
             Material.showMoveForm($(this).attr('formID'));
@@ -25,28 +32,37 @@
                 <td align="right">
                     <form method="get" action="<?= Yii::app()->createUrl("material/MoveFormList") ?>">
                     <table>
-                        <tr><td>
-                            移入仓库：
-                            <select name="storeID" id="storeID" class="grid_text" style="height: 24px">
-                                <option></option>
-                                <?php
-                                $store = Store::model()->findAll();
-                                foreach($store as $key=>$val){
-                                    if($_GET['storeID']==$val->storeID){
-                                        echo "<option value=\"{$val->storeID}\" selected>{$val->storeName}</option>";
-                                    }else{
-                                        echo "<option value=\"{$val->storeID}\">{$val->storeName}</option>";
+                        <tr>
+                            <td>
+                                批次号：
+                                <input class="grid_text" name="batchCode" value="<?php echo $_GET['batchCode']; ?>" />
+                                移库单号：
+                                <input class="grid_text" name="moveFormCode" value="<?php echo $_GET['moveFormCode']; ?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                移入仓库：
+                                <select name="storeID" id="storeID" class="grid_text" style="height: 24px">
+                                    <option></option>
+                                    <?php
+                                    $store = Store::model()->findAll();
+                                    foreach($store as $key=>$val){
+                                        if($_GET['storeID']==$val->storeID){
+                                            echo "<option value=\"{$val->storeID}\" selected>{$val->storeName}</option>";
+                                        }else{
+                                            echo "<option value=\"{$val->storeID}\">{$val->storeName}</option>";
+                                        }
                                     }
-                                }
-                                ?>
-                            </select>
-                            移库单号：
-                            <input class="grid_text" name="moveFormCode" value="<?php echo $_GET['moveFormCode']; ?>" />
-                            批次号：
-                            <input class="grid_text" name="batchCode" value="<?php echo $_GET['batchCode']; ?>" />
-                            <input type="submit" value="查询" class="grid_button grid_button_s" />
-                            </td></tr>
-                        </table>
+                                    ?>
+                                </select>
+                                移库日期：
+                                <input class="grid_text date" name="starDate" value="<?php echo $_GET['starDate']; ?>" style="width:80px" />-
+                                <input class="grid_text date" name="endDate" value="<?php echo $_GET['endDate']; ?>" style="width:80px" />
+                                <input type="submit" value="查询" class="grid_button grid_button_s" />
+                            </td>
+                        </tr>
+                    </table>
                     </form>
                 </td>
             </tr>

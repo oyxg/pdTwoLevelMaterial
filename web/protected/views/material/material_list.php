@@ -2,6 +2,7 @@
 <script type="text/javascript" src="/plugin/module/inventory.js"></script>
 <script>
     $(function () {
+
         //修改缓存中的物资信息
         $("a[rel=edit]").click(function(){
             Material.edit($(this).attr('gCode'));
@@ -13,35 +14,51 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>
             <tr>
-                <td width="400">
+                <td width="300">
                     <?php
                     $this->beginContent("//layouts/breadcrumbs");
                     $this->endContent();
                     ?>
                 </td>
                 <td align="right"><form method="get" action="<?= Yii::app()->createUrl("material/list") ?>">
-                        物资编码：
-                        <input class="grid_text" name="goodsCode" value="<?php echo $_GET['goodsCode']; ?>">
-                        物资描述：
-                        <input class="grid_text" name="goodsName" value="<?php echo $_GET['goodsName']; ?>">
-                        <?php if (Auth::has(AI::R_Materialer)): ?>
-                        仓库：
-                        <select class="grid_text" name="storeID" id="storeID" style="height: 24px">
-                            <option></option>
-                            <?php
-                            $store = Store::model()->findAll();
-                            foreach($store as $key=>$val){
-                                echo "<option value=\"{$val->storeID}\">{$val->storeName}</option>";
-                            }
-                            ?>
-                        </select>
-                        <?php endif; ?>
-                        <input type="submit" value="查询" class="grid_button grid_button_s">
-                        <?php if (Auth::has(AI::C_InForm)): ?>
-                            <a href="<?= Yii::app()->createUrl("material/InForm") ?>">
-                                <input type="button" id="addItemBtn" value="填写入库单" class="grid_button" />
-                            </a>
-                        <?php endif; ?>
+                    <table>
+                        <tr>
+                            <td>
+                                批次号：
+                                <input class="grid_text" name="batchCode" value="<?php echo $_GET['batchCode']; ?>">
+                                厂家：
+                                <input class="grid_text" name="factory" value="<?php echo $_GET['factory']; ?>">
+                                <?php if (Auth::has(AI::R_Materialer)): ?>
+                                    仓库：
+                                    <select class="grid_text" name="storeID" id="storeID" style="height: 24px">
+                                        <option></option>
+                                        <?php
+                                        $store = Store::model()->findAll();
+                                        foreach($store as $key=>$val){
+                                            echo "<option value=\"{$val->storeID}\">{$val->storeName}</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                <?php endif; ?>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                物资编码：
+                                <input class="grid_text" name="goodsCode" value="<?php echo $_GET['goodsCode']; ?>">
+                                物资描述：
+                                <input class="grid_text" name="goodsName" value="<?php echo $_GET['goodsName']; ?>">
+                                <input type="submit" value="查询" class="grid_button grid_button_s">
+                                <?php if (Auth::has(AI::C_InForm)): ?>
+                                    <a href="<?= Yii::app()->createUrl("material/InForm") ?>">
+                                        <input type="button" id="addItemBtn" value="填写入库单" class="grid_button" />
+                                    </a>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    </table>
                     </form></td>
             </tr>
         </tbody>

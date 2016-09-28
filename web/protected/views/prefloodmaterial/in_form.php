@@ -1,14 +1,6 @@
-<!-- 日历插件js & css -->
-<script type="text/javascript" src="/plugin/lhgcalendar/lhgcalendar.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/plugin/lhgcalendar/skins/lhgcalendar.css"/>
+
 <script>
     $(function () {
-        //日历插件
-        $("#validityDate").calendar({
-            format : "yyyy-MM-dd"
-        });
-        //物资编码获取焦点
-        $('#goodsCode').focus();
         //提交事件
         $("#form").submit(function () {
             var ajaxOpt = {
@@ -51,60 +43,57 @@
 
 
 </script>
-<div style="letter-spacing:20px; text-align:center;padding:15px 0px 15px 0px ;font-size:18px;font-weight:bold;"> 物资信息 </div>
+
 <form id="form" name="form" class="" method="post"
       <?php if($Edit):?>
-          action="<?= Yii::app()->createUrl("PreFloodMaterial/edit") ?>"
+          action="<?= Yii::app()->createUrl("PreFloodMaterial/EditPreFloodIn") ?>"
       <?php else:?>
-          action="<?= Yii::app()->createUrl("PreFloodMaterial/AddForm") ?>"
+          action="<?= Yii::app()->createUrl("PreFloodMaterial/AddPreFloodIn") ?>"
       <?php endif;?>>
     <table align="center" class="github_tb" style="margin-top: 0px;">
+        <?php if($Edit):?>
+            <input type="hidden" name="id" value="<?=$data['id'];?>" />
+        <?php endif;?>
+        <input type="hidden" name="mID" value="<?=$mID==""?$data['mID']:$mID;?>" />
         <tr class="row">
-            <td width="100" align="right"><label>＊</label>分类：</td>
-            <td><select  name="className" id="className" type="text" class="grid_text" style="width:140px;height: 24px;">
+            <td width="100" align="right"><label>＊</label>班组：</td>
+            <td><select  name="bzID" id="bzID" type="text" class="grid_text" style="width:140px;height: 24px;">
                     <option value="">-请选择-</option>
-                    <option value="个人防护用品">个人防护用品</option>
-                    <option value="排水物资">排水物资</option>
-                    <option value="挡水物资">挡水物资</option>
-                    <option value="照明工具">照明工具</option>
-                    <option value="辅助配套物资">辅助配套物资</option>
+                    <?php
+                    $PreFlood = new PreFloodIn();
+                    $bzs = $PreFlood->getBzList();
+                    for($i=0;$i<count($bzs);$i++): ?>
+                        <option value="<?=$i?>"<?php if(!empty($data['bzID'])&&$i==$data['bzID'])echo "selected";?>><?=$bzs[$i]?></option>
+                    <?php endfor;?>
                 </select></td>
         </tr>
         <tr class="row">
-            <td width="100" align="right">配置级别：</td>
-            <td><input name="pzlevel" id="pzlevel" type="text" class="grid_text"  value="<?= $data['pzlevel']?>"></td>
+            <td width="100" align="right"><label>＊</label>状态：</td>
+            <td><select name="state" id="state" class="grid_text">
+                    <option value="normal" <?php if($data['state']=="normal")echo "selected";?>>正常</option>
+                    <option value="send" <?php if($data['state']=="send")echo "selected";?>>送修</option>
+                    <option value="scrap" <?php if($data['state']=="scrap")echo "selected";?>>报废</option>
+                </select></td>
         </tr>
         <tr class="row">
-            <td width="100" align="right">单位：</td>
-            <td><input name="unit" id="unit" type="text" class="grid_text"  value="<?= $data['unit']?>"></td>
+            <td width="100" align="right"><label>＊</label>入库数量：</td>
+            <td><input name="num" id="num" type="text" class="grid_text"  value="<?= $data['num']?>"></td>
         </tr>
         <tr class="row">
-            <td width="100" align="right">技术规范：</td>
-            <td><input name="jsgf" id="jsgf" type="text" class="grid_text"  value="<?= $data['jsgf']?>"></td>
+            <td width="100" align="right">项目编号：</td>
+            <td><input name="projectCode" id="projectCode" type="text" class="grid_text"  value="<?= $data['projectCode']?>"></td>
         </tr>
         <tr class="row">
-            <td width="100" align="right">一班需求：</td>
-            <td><input name="a_xq" id="a_xq" type="text" class="grid_text"  value="<?= $data['a_xq']?>" /></td>
+            <td width="100" align="right">项目名称：</td>
+            <td><input name="projectName" id="projectName" type="text" class="grid_text"  value="<?= $data['projectName']?>"></td>
         </tr>
         <tr class="row">
-            <td width="100" align="right">二班需求：</td>
-            <td><input name="b_xq" id="b_xq" type="text" class="grid_text"  value="<?= $data['b_xq']?>" /></td>
+            <td width="100" align="right">工单号：</td>
+            <td><input name="workCode" id="workCode" type="text" class="grid_text"  value="<?= $data['workCode']?>" /></td>
         </tr>
         <tr class="row">
-            <td width="100" align="right">三班需求：</td>
-            <td><input name="c_xq" id="c_xq" type="text" class="grid_text"  value="<?= $data['c_xq']?>" /></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">四班需求：</td>
-            <td><input name="d_xq" id="d_xq" type="text" class="grid_text"  value="<?= $data['d_xq']?>" /></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">五班需求：</td>
-            <td><input name="e_xq" id="e_xq" type="text" class="grid_text"  value="<?= $data['e_xq']?>" /></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">六班需求：</td>
-            <td><input name="f_xq" id="f_xq" type="text" class="grid_text"  value="<?= $data['f_xq']?>" /></td>
+            <td width="100" align="right">ERP领料单：</td>
+            <td><input name="erpLL" id="erpLL" type="text" class="grid_text"  value="<?= $data['erpLL']?>" /></td>
         </tr>
     </table>
 

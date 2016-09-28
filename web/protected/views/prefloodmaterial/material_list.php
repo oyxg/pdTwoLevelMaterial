@@ -8,7 +8,7 @@
 <script>
     $(function () {
 
-        var bottonStr = "显示需求";
+        var bottonStr = "显示现存";
         $('#controlDisplay').click(function(){
             $('th').each(function(){
                 if($(this).attr('class')=='xc'){
@@ -61,7 +61,7 @@
                         配置级别：
                         <input class="grid_text" name="pzlevel" value="<?php echo $_GET['pzlevel']; ?>">
                         <input type="submit" value="查询" class="grid_button grid_button_s">
-                        <input type="button" class="grid_button grid_button_s" id="controlDisplay" value="显示现存" />
+                        <input type="button" class="grid_button grid_button_s" id="controlDisplay" value="显示需求" />
                     </form></td>
             </tr>
         </tbody>

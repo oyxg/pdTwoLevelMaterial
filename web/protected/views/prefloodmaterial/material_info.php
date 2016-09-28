@@ -1,5 +1,4 @@
 <script type="text/javascript" src="/plugin/module/material.js"></script>
-<script type="text/javascript" src="/plugin/module/inventory.js"></script>
 <style>
     .xc{display: none;}
 </style>
@@ -9,13 +8,17 @@
         $("a[rel=edit]").click(function(){
             Material.editPreFloodInfo($(this).attr('code'));
         });
-        //添加物资
+        //添加物资信息
         $("button[rel=add]").click(function(){
             Material.addPreFloodInfo();
         });
         //设置班组需求
         $("a[rel=need]").click(function(){
             Material.setPreFloodNeed($(this).attr('code'));
+        });
+        //物资入库
+        $("a[rel=in]").click(function(){
+            Material.addPreFloodIn($(this).attr('code'));
         });
     });
 </script>
@@ -48,7 +51,7 @@
                                 <input class="grid_text" name="name" value="<?php echo $_GET['name']; ?>">
                                 配置级别：
                                 <input class="grid_text" name="pzlevel" value="<?php echo $_GET['pzlevel']; ?>">
-
+                                <button type="button" rel="add" class="grid_button">新增</button>
                             </td>
                         </tr>
                         <tr>
@@ -60,7 +63,7 @@
                                 联系人：
                                 <input class="grid_text" name="contact" value="<?php echo $_GET['contact']; ?>">
                                 <input type="submit" value="查询" class="grid_button grid_button_s">
-                                <button type="button" rel="add" class="grid_button">新增</button>
+
                             </td>
                         </tr>
                         </table>
@@ -112,6 +115,7 @@
                     <div class="grid_menu">
                         <ul>
                             <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="edit">修改</a></li>
+                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="in">入库</a></li>
                             <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="need">各班需求</a></li>
                         </ul>
                     </div>
