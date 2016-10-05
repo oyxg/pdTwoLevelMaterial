@@ -30,17 +30,17 @@ $(function(){
 		<tr>
 			<td align="right"><strong>原密码：</strong></td>
 			<td><label for="srcPwd"></label>
-				<input type="password" name="srcPwd" id="srcPwd"></td>
+				<input type="password" name="srcPwd" id="srcPwd" autocomplete="off"></td>
 		</tr>
 		<tr>
 			<td align="right"><strong>新密码：</strong></td>
 			<td><label for="newPwd1"></label>
-				<input type="password" name="newPwd1" id="newPwd1"></td>
+				<input type="password" name="newPwd1" id="newPwd1" autocomplete="off"></td>
 		</tr>
 		<tr>
 			<td align="right"><strong>确认新密码：</strong></td>
 			<td><label for="newPwd2"></label>
-				<input type="password" name="newPwd2" id="newPwd2"></td>
+				<input type="password" name="newPwd2" id="newPwd2" autocomplete="off"></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>

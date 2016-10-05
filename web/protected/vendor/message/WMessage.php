@@ -21,7 +21,7 @@ class WMessage {
 	 */
 	public static function ajaxInfo($info="操作成功",$status=1,array $data=array()){
 		header("content-type:application/json");
-		echo json_encode(array(
+		echo CJSON::encode(array(
 			"info"=>$info,
 			"status"=>$status,
 			"data"=>$data

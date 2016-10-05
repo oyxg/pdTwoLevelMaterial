@@ -1,4 +1,10 @@
 <script type="text/javascript" src="/plugin/module/inventory.js"></script>
+<?php
+//bugfix start
+clean_xss($_GET['sdate']);
+clean_xss($_GET['edate']);
+//bugfix end
+?>
 <div class="control_tb">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>

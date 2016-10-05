@@ -1,3 +1,8 @@
+<?php
+//bugfix start
+clean_xss($_GET['userName']);
+//bugfix end
+?>
 <script type="text/javascript" src="/plugin/module/store.js"></script>
 <div class="control_tb">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">

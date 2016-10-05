@@ -800,6 +800,7 @@ class CHttpRequest extends CApplicationComponent
 	{
 		if(strpos($url,'/')===0 && strpos($url,'//')!==0)
 			$url=$this->getHostInfo().$url;
+			$url=stripslashes($url);	//过滤 CR（回车，由 %0d 或 \r 指定）和 LF（换行，由 %0a 或 \n 指定）的字符输入到头文件中
 		header('Location: '.$url, true, $statusCode);
 		if($terminate)
 			Yii::app()->end();

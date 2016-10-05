@@ -35,51 +35,120 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="168">
-      <file leaf-file-name="PreFloodMaterialController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/controllers/PreFloodMaterialController.php">
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.785715">
-              <caret line="198" column="42" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
+            <state vertical-scroll-proportion="-3.392857">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaterialController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/controllers/MaterialController.php">
+      <file leaf-file-name="configs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/configs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.321428">
-              <caret line="811" column="29" selection-start-line="811" selection-start-column="29" selection-end-line="811" selection-end-column="29" />
+            <state vertical-scroll-proportion="-5.428571">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CComponent.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/base/CComponent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0">
+              <caret line="610" column="32" selection-start-line="610" selection-start-column="32" selection-end-line="610" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="standard_defines.php" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_defines.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.642858">
+              <caret line="722" column="9" selection-start-line="722" selection-start-column="9" selection-end-line="722" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yiilite.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/yiilite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.678572">
+              <caret line="4542" column="81" selection-start-line="4542" selection-start-column="81" selection-end-line="4542" selection-end-column="81" />
               <folding>
-                <marker date="1475052335428" expanded="true" signature="25675:25757" placeholder="SELECT a.*,i..mod_material..." />
-                <marker date="1475052335428" expanded="true" signature="25889:25975" placeholder="SELECT a.*,i..mod_material..." />
+                <marker date="1475685358512" expanded="true" signature="257471:257548" placeholder="CREATE TABLE..${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="257809:257820" placeholder="DROP TABLE $..." />
+                <marker date="1475685358512" expanded="true" signature="258023:258120" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="258217:258279" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="258385:258492" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="258597:258740" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="259202:259438" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="259625:259691" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="260567:260722" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="260787:260853" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="261616:261656" placeholder="SELECT MAX(`..${{$table-&gt;rawName}..." />
+                <marker date="1475685358512" expanded="true" signature="261814:261881" placeholder="UPDATE sqlit..." />
+                <marker date="1475685358512" expanded="true" signature="262148:262225" placeholder="SELECT DISTI..sqlite_master..." />
+                <marker date="1475685358512" expanded="true" signature="264287:264347" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="264439:264451" placeholder="DELETE FROM ..." />
+                <marker date="1475685358512" expanded="true" signature="282868:283013" placeholder="INSERT INTO ${$this-&gt;_connection-&gt;quoteTableName($table)}..." />
+                <marker date="1475685358512" expanded="true" signature="283837:283849" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UseMaterialController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/controllers/UseMaterialController.php">
+      <file leaf-file-name="MessageCommand.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/cli/commands/MessageCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.672414">
-              <caret line="694" column="39" selection-start-line="694" selection-start-column="39" selection-end-line="694" selection-end-column="39" />
-              <folding>
-                <marker date="1475055990133" expanded="true" signature="4878:4904" placeholder="SELECT * FRO..mod_material..." />
-                <marker date="1475055990133" expanded="true" signature="19406:19575" placeholder="SELECT rfm.*..mod_receive_form_material..." />
-                <marker date="1475055990133" expanded="true" signature="22040:22132" placeholder="SELECT disti..mod_receive_form_material..." />
-              </folding>
+            <state vertical-scroll-proportion="-13.571428">
+              <caret line="69" column="75" selection-start-line="69" selection-start-column="75" selection-end-line="69" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="return_form_list.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/return_form_list.php">
+      <file leaf-file-name="CFileHelper.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/framework/utils/CFileHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50461894">
-              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-              <folding>
-                <element signature="e#1679#1712#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6801909">
+              <caret line="109" column="18" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CHttpSession.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/web/CHttpSession.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.107143">
+              <caret line="272" column="9" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_password.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/views/user/user_password.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.392857">
+              <caret line="42" column="79" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordHasher.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/vendor/phpexcel/PHPExcel/Shared/PasswordHasher.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.964285">
+              <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,57 +161,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/protected/models/TaskBook.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/task/task_book_show.php" />
-        <option value="$PROJECT_DIR$/web/protected/controllers/TaskController.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/task/task_book_list.php" />
-        <option value="$PROJECT_DIR$/web/protected/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/web/protected/controllers/LoginController.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/Auth.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/material/add_form.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_form.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/PreFlood.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/select_list.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/material/show_pic.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/Bz.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/ReceiveMF.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/return_form_show.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/ReturnForm.php" />
-        <option value="$PROJECT_DIR$/web/plugin/module/use_material.js" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/receive_form_show.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/login/login.php" />
-        <option value="$PROJECT_DIR$/web/images/login/login.css" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/show_file.php" />
-        <option value="$PROJECT_DIR$/web/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/web/protected/controllers/ScrapController.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/PreFloodNeed.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/add_info.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFlood.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/PreFloodInfo.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFloodList.php" />
-        <option value="$PROJECT_DIR$/web/protected/vendor/youngsun/AI.php" />
-        <option value="$PROJECT_DIR$/web/protected/models/ViewPreFloodBills.php" />
         <option value="$PROJECT_DIR$/web/protected/models/ViewPreFloodIn.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/need_form.php" />
         <option value="$PROJECT_DIR$/web/protected/models/PreFloodIn.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/in_form.php" />
         <option value="$PROJECT_DIR$/web/plugin/module/material.js" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_in.php" />
         <option value="$PROJECT_DIR$/web/protected/views/layouts/left.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/material/material_list.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/material/in_form_list.php" />
         <option value="$PROJECT_DIR$/web/protected/controllers/MaterialController.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/material/move_form_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_list.php" />
         <option value="$PROJECT_DIR$/web/protected/vendor/http/WUpload.php" />
         <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/upload_file.php" />
         <option value="$PROJECT_DIR$/web/protected/views/material/upload_file.php" />
         <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/upload_file.php" />
         <option value="$PROJECT_DIR$/web/protected/controllers/PreFloodMaterialController.php" />
-        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/receive_form_list.php" />
         <option value="$PROJECT_DIR$/web/protected/controllers/UseMaterialController.php" />
+        <option value="$PROJECT_DIR$/framework/web/CHttpSession.php" />
+        <option value="$PROJECT_DIR$/web/protected/vendor/phpqrcode/index.php" />
+        <option value="$PROJECT_DIR$/web/protected/vendor/message/WMessage.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/select_list2.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/receive_form_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/edit_photo.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/scrap_form_list.php" />
         <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/return_form_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/use_material_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/UseMaterial/select_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/auth/auth_item_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/inout/io_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/inventory/inventory_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/layouts/layout_header.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/material/detail_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/material/warningl_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/material/material_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/material/move_form_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/material/in_form_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/material/select_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/scrap/scrap_form_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/store/user_store_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/task/task_book_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/task/select_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/task2/task_book_list.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/user/user_list.php" />
+        <option value="$PROJECT_DIR$/framework/yiilite.php" />
+        <option value="$PROJECT_DIR$/framework/web/CHttpRequest.php" />
+        <option value="$PROJECT_DIR$/web/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/web/configs.php" />
+        <option value="$PROJECT_DIR$/web/protected/vendor/phpexcel/PHPExcel/Shared/PasswordHasher.php" />
+        <option value="$PROJECT_DIR$/framework/base/CComponent.php" />
+        <option value="$PROJECT_DIR$/framework/utils/CFileHelper.php" />
+        <option value="$PROJECT_DIR$/web/protected/views/user/user_password.php" />
       </list>
     </option>
   </component>
@@ -202,6 +271,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
+              <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,6 +337,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,11 +388,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseMaterial" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,37 +410,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pdTwoLevelMaterial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pdTwoLevelMaterial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prefloodmaterial" />
+              <option name="myItemId" value="phpexcel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,37 +436,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="material" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pdTwoLevelMaterial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemId" value="phpexcel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="PHPExcel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -440,7 +466,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpexcel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHPExcel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,7 +500,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,11 +514,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
+              <option name="myItemId" value="framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,42 +528,113 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cli" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cli" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pdTwoLevelMaterial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../changzhou" />
+    <property name="last_opened_file_path" value="D:/UIUXdemo/task1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.22918707" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/web/pdTwoLevelMaterial/web/protected/views/material/move_form_list.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\pdTwoLevelMaterial\web\plugin\module" />
+      <recent name="D:\web\xt\web\protected\views\instrument" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\web\pdTwoLevelMaterial\web" />
       <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\prefloodmaterial" />
       <recent name="D:\web\pdTwoLevelMaterial\web\protected\models" />
       <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\UseMaterial" />
       <recent name="D:\web\pdTwoLevelMaterial\web\images\login" />
-      <recent name="D:\web\pdTwoLevelMaterial\web\protected\views\material" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\web\pdTwoLevelMaterial\web\plugin\module" />
-      <recent name="D:\web\xt\web\protected\views\instrument" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.InOutController.php">
@@ -594,19 +699,19 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14179105" sideWeight="0.49462366" order="1" side_tool="false" content_ui="combo" x="841" y="83" width="340" height="761" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14392324" sideWeight="0.49462366" order="1" side_tool="false" content_ui="combo" x="841" y="83" width="340" height="761" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1256" height="676" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15511727" sideWeight="0.41558442" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3217768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2398957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15298508" sideWeight="0.58441556" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15191898" sideWeight="0.58441556" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19985673" sideWeight="0.50537634" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1256" height="676" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -652,307 +757,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../source/backend/views/electric-pile-operation/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/show_pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/vendor/phpexcel/PHPExcel/IOFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.607142">
-          <caret line="267" column="49" selection-start-line="267" selection-start-column="49" selection-end-line="267" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/vendor/phpexcel/PHPExcel/Reader/IReader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41685912">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/show_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/controllers/TaskController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021939954">
-          <caret line="330" column="26" selection-start-line="330" selection-start-column="26" selection-end-line="330" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/InForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2159353">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/AuthItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9838337">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/Material.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6986144">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3533487">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/UserStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1720555">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/Store.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39491916">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodNeed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3290993">
-          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/controllers/ScrapController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.607142">
-          <caret line="299" column="48" selection-start-line="299" selection-start-column="39" selection-end-line="299" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/db/ar/CActiveRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.535715">
-          <caret line="2093" column="43" selection-start-line="2093" selection-start-column="43" selection-end-line="2093" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/vendor/youngsun/AI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6143187">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/ViewPreFloodBills.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/ViewPreFloodList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021939954">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/ScrapForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22055428">
-          <caret line="120" column="4" selection-start-line="120" selection-start-column="4" selection-end-line="131" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/need_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.642858">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/ViewPreFloodIn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.5">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4133949">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/ActiveRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5715935">
-          <caret line="240" column="20" selection-start-line="240" selection-start-column="20" selection-end-line="240" selection-end-column="20" />
-          <folding>
-            <marker date="1447044318378" expanded="true" signature="2327:2381" placeholder="SELECT COUNT..${$tables}..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/models/PreFloodIn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.892858">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding>
-            <marker date="1475026068732" expanded="true" signature="1751:1765" placeholder="..." />
-            <marker date="1475026068732" expanded="true" signature="1816:1830" placeholder="..." />
-            <marker date="1475026068732" expanded="true" signature="1882:1896" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.714286">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="37" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/show_qrcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/show_pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/in_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.75">
-          <caret line="65" column="79" selection-start-line="65" selection-start-column="79" selection-end-line="65" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_in.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.821428">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#1465#1486#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/layouts/left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63625866">
-          <caret line="114" column="108" selection-start-line="114" selection-start-column="108" selection-end-line="114" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/move_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/selected_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/select_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/material_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.087759815">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/plugin/module/material.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.285714">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/show_pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30715936">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/upload_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.964286">
-          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/upload_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.964286">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/controllers/PreFloodMaterialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.785715">
+        <state vertical-scroll-proportion="0.0">
           <caret line="198" column="42" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
           <folding />
         </state>
@@ -962,18 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58545035">
           <caret line="102" column="48" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/move_form_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18822171">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-          <folding>
-            <element signature="e#2743#2761#0#HTML" expanded="true" />
-            <element signature="e#2883#2901#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45150116">
           <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,18 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72401845">
           <caret line="63" column="110" selection-start-line="63" selection-start-column="110" selection-end-line="63" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/material/in_form_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11363637">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#1423#1441#0#HTML" expanded="true" />
-            <element signature="e#1563#1581#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,56 +790,403 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10969977">
           <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/use_material_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.25">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/controllers/MaterialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.321428">
+        <state vertical-scroll-proportion="0.0">
           <caret line="811" column="29" selection-start-line="811" selection-start-column="29" selection-end-line="811" selection-end-column="29" />
-          <folding>
-            <marker date="1475052335428" expanded="true" signature="25675:25757" placeholder="SELECT a.*,i..mod_material..." />
-            <marker date="1475052335428" expanded="true" signature="25889:25975" placeholder="SELECT a.*,i..mod_material..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/receive_form_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.142858">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="70" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/controllers/UseMaterialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.672414">
+        <state vertical-scroll-proportion="0.0">
           <caret line="694" column="39" selection-start-line="694" selection-start-column="39" selection-end-line="694" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/cli/commands/ShellCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6344464">
+          <caret line="86" column="66" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/vendor/phpqrcode/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-35.964287">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
           <folding>
-            <marker date="1475055990133" expanded="true" signature="4878:4904" placeholder="SELECT * FRO..mod_material..." />
-            <marker date="1475055990133" expanded="true" signature="19406:19575" placeholder="SELECT rfm.*..mod_receive_form_material..." />
-            <marker date="1475055990133" expanded="true" signature="22040:22132" placeholder="SELECT disti..mod_receive_form_material..." />
+            <marker date="1475640340094" expanded="true" signature="2662:3299" placeholder="..." />
+            <marker date="1475640340094" expanded="true" signature="2845:3251" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/vendor/message/WMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56766254">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/json.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3497364">
+          <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/web/helpers/CJSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3497364">
+          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36731106">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/receive_form_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0357144">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/scrap_form_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0357144">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/return_form_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50461894">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+        <state vertical-scroll-proportion="-2.7142856">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/use_material_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.821428">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/select_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.214286">
+          <caret line="36" column="125" selection-start-line="36" selection-start-column="125" selection-end-line="36" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/select_list2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.071429">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/UseMaterial/edit_photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3392857">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="5" selection-end-column="10" />
           <folding>
-            <element signature="e#1679#1712#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/inout/io_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+          <folding>
+            <marker date="1475677178359" expanded="true" signature="9477:9547" placeholder="SELECT a.ass..mod_asset_out..." />
+            <marker date="1475677178359" expanded="true" signature="11026:11088" placeholder="SELECT a.bz ..mod_request_detail..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/auth/auth_item_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0535715">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/layouts/layout_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74595845">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/inventory/inventory_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3392857">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/in_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/detail_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.571428">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/warningl_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.75">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/material_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.142858">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/move_form_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41454965">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/in_form_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.034483">
+          <caret line="35" column="100" selection-start-line="35" selection-start-column="100" selection-end-line="35" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/material/select_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5465117">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/scrap/scrap_form_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.178572">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/store/user_store_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/prefloodmaterial/material_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.278291">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/task/select_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.375">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/task/task_book_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.785714">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="29" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/task2/task_book_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7142856">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="29" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34411085">
+          <caret line="277" column="9" selection-start-line="277" selection-start-column="9" selection-end-line="277" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/user/user_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/xssfix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3571428">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding>
+            <marker date="1464312137232" expanded="true" signature="1081:1158" placeholder="..." />
+            <marker date="1464312137232" expanded="true" signature="1299:1376" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/web/CHttpRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47494033">
+          <caret line="786" column="12" selection-start-line="786" selection-start-column="12" selection-end-line="786" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/vendor/phpexcel/PHPExcel/Shared/PasswordHasher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.964285">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/configs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.428571">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/base/CComponent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0">
+          <caret line="610" column="32" selection-start-line="610" selection-start-column="32" selection-end-line="610" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_defines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.642858">
+          <caret line="722" column="9" selection-start-line="722" selection-start-column="9" selection-end-line="722" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/yiilite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.678572">
+          <caret line="4542" column="81" selection-start-line="4542" selection-start-column="81" selection-end-line="4542" selection-end-column="81" />
+          <folding>
+            <marker date="1475685358512" expanded="true" signature="257471:257548" placeholder="CREATE TABLE..${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="257809:257820" placeholder="DROP TABLE $..." />
+            <marker date="1475685358512" expanded="true" signature="258023:258120" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="258217:258279" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="258385:258492" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="258597:258740" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="259202:259438" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="259625:259691" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="260567:260722" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="260787:260853" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="261616:261656" placeholder="SELECT MAX(`..${{$table-&gt;rawName}..." />
+            <marker date="1475685358512" expanded="true" signature="261814:261881" placeholder="UPDATE sqlit..." />
+            <marker date="1475685358512" expanded="true" signature="262148:262225" placeholder="SELECT DISTI..sqlite_master..." />
+            <marker date="1475685358512" expanded="true" signature="264287:264347" placeholder="ALTER TABLE ${$this-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="264439:264451" placeholder="DELETE FROM ..." />
+            <marker date="1475685358512" expanded="true" signature="282868:283013" placeholder="INSERT INTO ${$this-&gt;_connection-&gt;quoteTableName($table)}..." />
+            <marker date="1475685358512" expanded="true" signature="283837:283849" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/cli/commands/MessageCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.571428">
+          <caret line="69" column="75" selection-start-line="69" selection-start-column="75" selection-end-line="69" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/views/user/user_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.392857">
+          <caret line="42" column="79" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/web/CHttpSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.107143">
+          <caret line="272" column="9" selection-start-line="272" selection-start-column="9" selection-end-line="272" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/utils/CFileHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6801909">
+          <caret line="109" column="18" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

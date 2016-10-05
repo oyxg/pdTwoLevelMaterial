@@ -15,6 +15,13 @@
     });
 
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['informCode']);
+clean_xss($_GET['glPro']);
+clean_xss($_GET['glProCode']);
+//bugfix end
+?>
 <div class="control_tb">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>

@@ -1,4 +1,8 @@
-
+<?php
+//bugfix start
+clean_xss($_GET['name']);
+//bugfix end
+?>
 <div style="height:30px;"></div>
 <div id="top_header">
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">

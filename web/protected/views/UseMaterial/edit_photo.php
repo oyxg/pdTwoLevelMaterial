@@ -1,4 +1,9 @@
 <form action="<?=Yii::app()->request->url?>" id="form" name="form" enctype="multipart/form-data" style="padding: 10px;" method="post">
+        <?php
+        //bugfix start
+        clean_xss($_GET['id']);
+        //bugfix end
+        ?>
         <input name="id" type="hidden" value="<?=$_GET['id']?>">
 	<table border="0" cellspacing="0" cellpadding="0" class="github_tb" width="100%">
 		<tr>

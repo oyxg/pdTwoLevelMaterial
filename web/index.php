@@ -6,6 +6,10 @@ $config=dirname(__FILE__).'/protected/config/main.php';
 defined('YII_DEBUG') or define('YII_DEBUG',true);
 //指示日志调用栈等级
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
+//bugfix start
+require_once('xssfix.php');
+require_once('configs.php');
+//bugfix end
 //运行框架
 require_once($yii);
 ini_set("display_errors","Off");

@@ -1,4 +1,8 @@
-
+<?php
+//bugfix start
+clean_xss($_GET['goodsName']);
+//bugfix end
+?>
 
 <div class="control_tb">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">

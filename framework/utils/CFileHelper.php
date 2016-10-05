@@ -108,7 +108,7 @@ class CFileHelper
 		$fileTypes=array();
 		$exclude=array();
 		$level=-1;
-		extract($options);
+		extract($options,EXTR_SKIP);//bugfix
 		$list=self::findFilesRecursive($dir,'',$fileTypes,$exclude,$level);
 		sort($list);
 		return $list;

@@ -5,6 +5,12 @@ $(function(){
 	
 });
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['userName']);
+clean_xss($_GET['loginName']);
+//bugfix end
+?>
 <div class="control_tb">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>

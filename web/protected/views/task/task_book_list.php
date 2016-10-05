@@ -20,6 +20,14 @@
     });
 
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['type']);
+clean_xss($_GET['zrbz']);
+clean_xss($_GET['edate']);
+clean_xss($_GET['sdate']);
+//bugfix end
+?>
 <div class="control_tb">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>

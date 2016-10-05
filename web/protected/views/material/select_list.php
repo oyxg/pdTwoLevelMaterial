@@ -5,6 +5,14 @@ var reloadSelectIframe=function(){
 }
 
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['glProCode']);
+clean_xss($_GET['goodsName']);
+clean_xss($_GET['glPro']);
+clean_xss($_GET['goodsCode']);
+//bugfix end
+?>
 <div class="control_tb">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>

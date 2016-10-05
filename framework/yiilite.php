@@ -2619,6 +2619,7 @@ class CHttpRequest extends CApplicationComponent
 	{
 		if(strpos($url,'/')===0 && strpos($url,'//')!==0)
 			$url=$this->getHostInfo().$url;
+			$url=stripslashes($url);	//过滤 CR（回车，由 %0d 或 \r 指定）和 LF（换行，由 %0a 或 \n 指定）的字符输入到头文件中
 		header('Location: '.$url, true, $statusCode);
 		if($terminate)
 			Yii::app()->end();
@@ -2958,14 +2959,19 @@ class CCookieCollection extends CMap
 		if(version_compare(PHP_VERSION,'5.2.0','>='))
 			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
 		else
-			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure);
+			//setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure);
+			//bugfix start
+			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
+			//bugfix end
 	}
 	protected function removeCookie($cookie)
 	{
 		if(version_compare(PHP_VERSION,'5.2.0','>='))
 			setcookie($cookie->name,'',0,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
 		else
-			setcookie($cookie->name,'',0,$cookie->path,$cookie->domain,$cookie->secure);
+			//bugfix start
+			setcookie($cookie->name,'',0,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
+			//bugfix end
 	}
 }
 class CUrlManager extends CApplicationComponent
@@ -4536,7 +4542,9 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 		if(isset($httponly))
 			session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
 		else
-			session_set_cookie_params($lifetime,$path,$domain,$secure);
+			//bugfix start
+			session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
+			//bugfix end
 	}
 	public function getCookieMode()
 	{

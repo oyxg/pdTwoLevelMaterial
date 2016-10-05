@@ -28,6 +28,14 @@
     });
 
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['formCode']);
+clean_xss($_GET['glPro']);
+clean_xss($_GET['nature']);
+clean_xss($_GET['type']);
+//bugfix end
+?>
 <div class="control_tb">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>

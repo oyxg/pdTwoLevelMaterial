@@ -36,7 +36,7 @@ return array(
         // 取消下面的注释可以启用 Gii 工具l
         'gii'=>array(
         'class'=>'system.gii.GiiModule',
-        'password'=>'123',
+        'password'=>'. GIIPASSWORD .',
         // 如果移除下面的选项，Gii默认只能本机访问
         'ipFilters'=>array('127.0.0.1','::1'),
         ),
@@ -68,14 +68,16 @@ return array(
                 //数据库配置
                 'db'=>array(
                         //连接字符串
-                        'connectionString' => 'mysql:host=127.0.0.1;dbname=pdTwoLevelMaterial',
+                        //bugfix start
+                        'connectionString' => 'mysql:host='.DBHOST.':'.DBPORT.';dbname='.DBNAME,
                         //是否打开准备模拟。默认为 false， 意味着PDO将准备使用本地预备支持，如果可用。对于某些数据
                         //库 (如 MySQL), 这将需要设置为true 以至于 PDO 能模拟该预备支持 绕过buggy本地预备支持
                         'emulatePrepare' => true,
                         //用户名
-                        'username' => 'root',
+                        'username' => DBUSER,
                         //密码
-                        'password' => 'abc112233',
+                        'password' => DBPASSWD,
+                        //bugfix end
                         //编码
                         'charset' => 'utf8',
                         //是否记录的值绑定到一个准备的SQL语句。 默认为 false。在开发阶段，你应该考虑设置这个属性为true

@@ -33,6 +33,19 @@
         });
     }
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['property']);
+clean_xss($_GET['borrowerName']);
+clean_xss($_GET['dend']);
+clean_xss($_GET['page']);
+clean_xss($_GET['whereGo']);
+clean_xss($_GET['bh']);
+clean_xss($_GET['dstart']);
+clean_xss($_GET['inOut']);
+clean_xss($_GET['goodsName']);
+//bugfix end
+?>
 <div class="control_tb">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>

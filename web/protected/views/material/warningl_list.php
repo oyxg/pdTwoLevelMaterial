@@ -35,7 +35,12 @@ function createAppendOrder(){
 //	);
 }
 </script>
-
+<?php
+//bugfix start
+clean_xss($_GET['style']);
+clean_xss($_GET['goodsName']);
+//bugfix end
+?>
 <div id="w" class="easyui-window" title="请选择接收此补库单的专职人员" data-options="closed:true" style="width:300px;padding:10px;"> 专职：
 	<select name="handlerUserID" id="handlerUserID"  style="width:120px;">
 		<?php foreach (User::getListByItem(AI::R_Pro) as $key=>$user):?>

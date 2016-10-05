@@ -13,6 +13,16 @@
     });
 
 </script>
+<?php
+//bugfix start
+clean_xss($_GET['goodsCode']);
+clean_xss($_GET['goodsName']);
+clean_xss($_GET['type']);
+clean_xss($_GET['formCode']);
+clean_xss($_GET['batchCode']);
+clean_xss($_GET['glPro']);
+//bugfix end
+?>
 <div class="control_tb">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>
