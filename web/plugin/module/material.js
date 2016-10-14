@@ -278,6 +278,57 @@ Material.PreFloodFile=function(id){
 		text : "上传附件"
 	});
 }
+//----------------------------仪器仪表-----------------------------//
+
+//添加仪器仪表
+Material.addInstrument=function(){
+	window.__box=new Maya.Box({
+		url : "/Instrument/addInstrument",
+		width : 600,
+		heigh : 600,
+		text : "添加仪器仪表"
+	});
+}
+
+//修改仪器仪表
+Material.editInstrument=function(id){
+	window.__box=new Maya.Box({
+		url : "/Instrument/EditInstrument?id="+id,
+		width : 600,
+		heigh : 600,
+		text : "修改仪器仪表"
+	});
+}
+
+//删除仪器仪表
+Material.delInstrument=function(id,fun){
+	if(!confirm("确定要删除吗？"))return;
+	$.get(
+			"/Instrument/delInstrument",
+			{
+				id : id
+			},
+			function(data){
+				if(data.status==1){
+					maya.notice.success(data.info,fun);
+					location.reload();
+				}else{
+					maya.notice.fail(data.info);
+				}
+			},
+			"json"
+	);
+}
+//仪器仪表附件
+Material.InstrumentFile=function(id){
+	window.__box=new Maya.Box({
+		url : "/Instrument/uploadFile?id="+id,
+		width : 580,
+		heigh : 500,
+		text : "上传附件"
+	});
+}
+
 //----------------------------任务书-----------------------------//
 
 

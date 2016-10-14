@@ -58,6 +58,8 @@ class AI{
 	const C_PreFloodMaterialInfo="PreFloodMaterialInfo";//防汛物资台账
 	const C_PreFloodMaterialIn="PreFloodMaterialIn";//防汛物资入库
 
+	const C_InstrumentList="InstrumentList";//仪器仪表列表
+
 	/************************************任务分割线*****************************************/
 
 	const T_Material="Material";//物资管理
@@ -69,6 +71,7 @@ class AI{
 	const T_Store="Store";//仓库
 	const T_User="User";//用户
 	const T_PreFloodMaterial="PreFloodMaterial";//防汛物资管理
+	const T_Instrument="Instrument";//防汛物资管理
 
 	/************************************角色分割线*****************************************/
 

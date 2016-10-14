@@ -118,6 +118,19 @@
         </div>
     <?php endif; ?>
 
+    <?php if (Auth::has(AI::T_Instrument)): ?>
+        <ul class="nav_ul">
+            <li><a href="javascript:void(0)">仪器仪表管理</a></li>
+        </ul>
+        <div class="nav_sub">
+            <ul>
+                <?php if (Auth::has(AI::C_InstrumentList)): ?>
+                    <li><a href="<?php echo Yii::app()->createUrl("Instrument/Instrumentlist"); ?>">仪器仪表列表</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+
     <?php if (Auth::has(AI::T_Scrap)): ?>
         <ul class="nav_ul">
             <li><a href="javascript:void(0)">报废管理</a></li>

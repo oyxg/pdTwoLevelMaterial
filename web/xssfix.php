@@ -33,14 +33,14 @@ function _sqlfilter()
 	$pattern2 = '/<|>|script/i';
 	foreach($_REQUEST as $key => $para){
 			if(is_array($para) || is_object($para) || 0 < preg_match($pattern,$para)){
-					 echo '<script language="JavaScript">alert("系统警告：\n\n请不要尝试在参数中包含非法字符尝试注入！");
+					 echo '<script language="JavaScript">alert("系统警告1：\n\n请不要尝试在参数中包含非法字符尝试注入！");
 					 history.go(-1);
-					 </script>';
+					 </script>'.$para;
 					exit;
 			}
 
 			if(is_array($para) || is_object($para) || 0 < preg_match($pattern2,$para)){
-					 echo '<script language="JavaScript">alert("系统警告：\n\n请不要尝试在参数中包含非法字符尝试注入！");
+					 echo '<script language="JavaScript">alert("系统警告2：\n\n请不要尝试在参数中包含非法字符尝试注入！");
 					 history.go(-1);
 					 </script>';
 					exit;

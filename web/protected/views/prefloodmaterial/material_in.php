@@ -9,7 +9,7 @@
             Material.editPreFloodIn($(this).attr('code'));
         });
 
-        //修改缓存中的物资信息
+        //附件
         $("a[rel=file]").click(function(){
             Material.PreFloodFile($(this).attr('code'));
         });
