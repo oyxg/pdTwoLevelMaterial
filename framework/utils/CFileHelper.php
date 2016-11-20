@@ -56,7 +56,9 @@ class CFileHelper
 		$fileTypes=array();
 		$exclude=array();
 		$level=-1;
-		extract($options);
+		//bugfix start
+		extract($options,EXTR_SKIP);
+		//bugfix end
 		if(!is_dir($dst))
 			self::mkdir($dst,$options,true);
 
@@ -108,7 +110,9 @@ class CFileHelper
 		$fileTypes=array();
 		$exclude=array();
 		$level=-1;
-		extract($options,EXTR_SKIP);//bugfix
+		//bugfix start
+		extract($options,EXTR_SKIP);
+		//bugfix end
 		$list=self::findFilesRecursive($dir,'',$fileTypes,$exclude,$level);
 		sort($list);
 		return $list;

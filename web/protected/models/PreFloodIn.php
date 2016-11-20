@@ -5,7 +5,7 @@ class PreFloodIn extends ActiveRecord{
 	public $id;
 	public $mID;//防汛物资ID
 	public $bzID;//班组
-	public $num;//入库数量
+	public $num;//领用数量
 	public $projectCode;//项目编号
 	public $projectName;//项目名称
 	public $workCode;//工单号
@@ -53,7 +53,7 @@ class PreFloodIn extends ActiveRecord{
 				'id'=>'主键',
 				'mID'=>'防汛物资ID',
 				'bzID'=>'班组',
-				'num'=>'入库数量',
+				'num'=>'领用数量',
 				'projectCode'=>'项目编号',
 				'projectName'=>'项目名称',
 				'workCode'=>'工单号',
@@ -89,7 +89,7 @@ class PreFloodIn extends ActiveRecord{
 	/**
 	 * 状态：正常
 	 */
-	const STATE_NORMAL="normal";
+	const STATE_NORMAL="zc";
 	/**
 	 * 状态：送修
 	 */

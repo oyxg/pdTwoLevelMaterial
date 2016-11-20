@@ -108,6 +108,7 @@ button{overflow:visible;padding:2px 7px;_padding:3px 5px 0 5px;font-size:12px;}
 	color:#2a4a5e;
 	box-shadow:inset 2px 2px 0px rgba(0,0,0,.1);
 	height:22px;
+	width: 100px;
 }
 .grid_button{
 	color: #000;

@@ -1,29 +1,26 @@
 <?php
-//仪器仪表表入库
-class Instrument extends ActiveRecord{
+//仪器仪表台账
+class InstrumentIn extends ActiveRecord{
 
 	public $id;
-	public $class;//资产分类
-	public $projectCode;//项目编号
+	public $mID;
+	public $storeAddress;//存放地址
 	public $projectName;//项目名称
+	public $projectCode;//项目编号
+	public $materialCode;//物资编码
+	public $equCode;//设备编号
 	public $card;//资产卡片
 	public $SAP;//SAP编号
-	public $equCode;//设备编号
-	public $materialCode;//物资编码
-	public $materialName;//物资名称
-	public $storeAddress;//存放地址
-	public $standard;//型号
+	public $num;//领用数量
 	public $factory;//厂家
 	public $factoryCode;//出厂编号
 	public $factoryDate;//出厂日期
-	public $unit;//单位
-	public $num;//数量
-	public $price;//单价
 	public $distribution;//配送单位
 	public $contact;//联系人
 	public $tel;//联系电话
 	public $file;//附件
 	public $state;//状态
+	public $date;//入库日期
 
 	/**
 	 * 获取模型实例
@@ -37,7 +34,7 @@ class Instrument extends ActiveRecord{
 	 * @see CActiveRecord::tableName()
 	 */
 	public function tableName(){
-		return 'mod_instrument';
+		return 'mod_instrument_in';
 	}
 	/**
 	 * 验证规则
@@ -46,11 +43,11 @@ class Instrument extends ActiveRecord{
 	public function rules(){
 		return array(
 			array(
-				'materialCode,materialName,storeAddress,state',
+				'mID,storeAddress,state,num,date',
 				'required'
 			),
 			array(
-				'class,projectCode,projectName,card,SAP,equCode,standard,factory,factoryCode,factoryDate,unit,num,price,distribution,contact,tel,file',
+				'projectCode,projectName,card,SAP,materialCode,equCode,standard,factory,factoryCode,factoryDate,distribution,contact,tel,file',
 				'safe'
 			)
 		);
@@ -62,27 +59,24 @@ class Instrument extends ActiveRecord{
 	public function attributeLabels(){
 		return array(
 				'id'=>'主键',
-				'class'=>'资产分类',
+				'storeAddress'=>'存放地址',
+				'mID'=>'物资ID',
 				'projectCode'=>'项目编号',
 				'projectName'=>'项目名称',
-				'card'=>'资产卡片',
-				'SAP'=>'SAP编号',
-				'equCode'=>'设备编号',
 				'materialCode'=>'物资编码',
-				'materialName'=>'物资名称',
-				'storeAddress'=>'存放地址',
-				'standard'=>'型号',
-				'factory'=>'厂家',
+				'equCode'=>'设备编号',
+				'card'=>'资产卡片号',
+				'SAP'=>'SAP编号',
+				'num'=>'领用数量',
+				'factory'=>'生产厂家',
 				'factoryCode'=>'出厂编号',
 				'factoryDate'=>'出厂日期',
-				'unit'=>'单位',
-				'num'=>'数量',
-				'price'=>'单价',
 				'distribution'=>'配送单位',
 				'contact'=>'联系人',
 				'tel'=>'联系电话',
 				'file'=>'附件',
-				'state'=>'状态'
+				'state'=>'状态',
+				'date'=>'入库日期'
 		);
 	}
 		/**
@@ -140,4 +134,21 @@ class Instrument extends ActiveRecord{
 		return $list[$key];
 	}
 
+	/**
+	 * @return array
+	 */
+	public static function getBzList(){
+		return array(
+				'工区','一班','二班','三班','四班','五班','六班'
+		);
+	}
+	/**
+	 * 获取班组
+	 * @param string $key
+	 * @return string
+	 */
+	public static function getBz($key){
+		$list=self::getBzList();
+		return $list[$key];
+	}
 }

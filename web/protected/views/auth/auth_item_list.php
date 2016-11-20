@@ -18,7 +18,7 @@ $(function(){
 </script>
 <?php
 //bugfix start
-clean_xss($_GET['name']);
+//clean_xss($_GET['name']);
 //bugfix end
 ?>
 <div class="control_tb">

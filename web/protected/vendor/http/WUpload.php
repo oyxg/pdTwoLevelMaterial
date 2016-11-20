@@ -7,47 +7,48 @@
  * 版权：Copytright © 2013 wutong (http://www.wutong.biz)
  * 网站：http://www.wutong.biz
  */
+
 /**-----------------------------------------------------------------
- changelog:
- 	2013-10-21 增加了 transSourceToArray 静态方法
- 	2013-12-11 修正了 transSourceToArray 方法的返回类型错误
- 			    增加了一个 $rawName 属性
+changelog:
+2013-10-21 增加了 transSourceToArray 静态方法
+2013-12-11 修正了 transSourceToArray 方法的返回类型错误
+增加了一个 $rawName 属性
 -----------------------------------------------------------------*/
 
 /**-----------------------------------------------------------------
- example:
- 	//注意：设置保存文件名必须在调用init方法之后
- 	 
- 	//单个文件
- 	
-	$upload=new WUpload($_FILES['file']);
-	$upload->init();
-	$upload->setFileName(Upload::MD5_DATE);
-	try {
-		$upload->save();
-	}catch (\Exception $e){
-		echo $e->getMessage();
-	}
-	echo $upload->getFileName()."<br>";
-	echo $upload->getFileSaveFullName()."<br>";
-	
-	//多文件
-	
-	$newFiles=WUpload::transSourceToArray($_FILES);
-	$upload = new WUpload ();
-	$upload->setAllowType("*");
-	$upload->setMaxSize ( 1024 * 4 );
-	$upload->setSavePath ( $dir );
-	for ($i=0;$i<count($newFiles['files']);$i++){
-		try {
-			$upload->setSourceData($newFiles['files'][$i]);
-			$upload->init();
-			$upload->setFileName(WUpload::DATE_TIME);
-			$upload->save ();
-		} catch ( Exception $err ) {
-			Message::ajaxInfo($err->getMessage(),0);
-		}
-	}
+example:
+//注意：设置保存文件名必须在调用init方法之后
+
+//单个文件
+
+$upload=new WUpload($_FILES['file']);
+$upload->init();
+$upload->setFileName(Upload::MD5_DATE);
+try {
+$upload->save();
+}catch (\Exception $e){
+echo $e->getMessage();
+}
+echo $upload->getFileName()."<br>";
+echo $upload->getFileSaveFullName()."<br>";
+
+//多文件
+
+$newFiles=WUpload::transSourceToArray($_FILES);
+$upload = new WUpload ();
+$upload->setAllowType("*");
+$upload->setMaxSize ( 1024 * 4 );
+$upload->setSavePath ( $dir );
+for ($i=0;$i<count($newFiles['files']);$i++){
+try {
+$upload->setSourceData($newFiles['files'][$i]);
+$upload->init();
+$upload->setFileName(WUpload::DATE_TIME);
+$upload->save ();
+} catch ( Exception $err ) {
+Message::ajaxInfo($err->getMessage(),0);
+}
+}
 -----------------------------------------------------------------*/
 
 //namespace biz\wutong\http;
@@ -73,9 +74,9 @@ class WUpload {
 	 * @var string
 	 */
 	const MD5_DATE_TIME="md5_date_time";
-	
+
 	const SOURCE_NAME="source_name";
-	
+
 	private static $infoList=array(
 			"system_error"=>"系统发生错误",
 			"save_path_exists" => "保存目录不存在",
@@ -84,7 +85,7 @@ class WUpload {
 			"save_fail"=>"保存文件出错",
 			"not_file"=>"没有选择要上传的文件"
 	);
-	
+
 	/**
 	 * 文件域的name值
 	 * @var string
@@ -100,7 +101,7 @@ class WUpload {
 	 * @var array
 	 */
 	private $allowType=array(
-		"jpg","gif","png","doc","xls","txt","pdf","zip","rar","docx"
+		"jpg","gif","png","doc","xls","txt","pdf","zip","rar","docx","xlsx"
 	);
 	/**
 	 * 允许上传文件的大小（字节），默认10M
@@ -135,7 +136,7 @@ class WUpload {
 	 * @var string
 	 */
 	public $rawName="";
-	
+
 	/**
 	 * 构造方法
 	 * @param array 文件域，就是包含【name、type、tmp_name、error、size】的一个数组
@@ -231,6 +232,9 @@ class WUpload {
 		if ($this->sourceData['error']!=0) {
 			throw new Exception(self::$infoList['system_error']);
 		}
+		//bugfix start
+		$this->allowType=explode(",", "jpg,gif,png,doc,xls,txt,pdf,zip,rar,docx,xlsx");
+		//bugfix end
 		//检测文件是否合法
 		if ($this->allowType[0]!="*") {
 			if(!in_array($this->fileExtName, $this->allowType)){

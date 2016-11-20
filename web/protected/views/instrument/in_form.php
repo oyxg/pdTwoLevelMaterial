@@ -37,36 +37,28 @@
 
 <form id="form" name="form" class="" method="post"
       <?php if($Edit):?>
-          action="<?= Yii::app()->createUrl("Instrument/EditInstrument") ?>"
+          action="<?= Yii::app()->createUrl("Instrument/EditInstrumentIn") ?>"
       <?php else:?>
-          action="<?= Yii::app()->createUrl("Instrument/AddInstrument") ?>"
+          action="<?= Yii::app()->createUrl("Instrument/AddInstrumentIn") ?>"
       <?php endif;?>>
     <table align="center" class="github_tb" style="margin-top: 0px;">
         <?php if($Edit):?>
             <input type="hidden" name="id" value="<?=$data['id'];?>" />
         <?php endif;?>
-
+            <input type="hidden" name="mID" value="<?=$mID==""?$data['mID']:$mID;?>" />
             <tr>
                 <td>
                     <table>
                         <tr class="row">
-                            <td width="100" align="right"><label>＊</label>物料编码：</td>
-                            <td><input name="materialCode" id="focus" type="text" class="grid_text"  value="<?= $data['materialCode']?>"></td>
-                        </tr>
-                        <tr class="row">
-                            <td width="100" align="right"><label>＊</label>物料名称：</td>
-                            <td><input name="materialName" type="text" class="grid_text"  value="<?= $data['materialName']?>"></td>
-                        </tr>
-                        <tr class="row">
                             <td width="100" align="right"><label>＊</label>存放地点：</td>
                             <td><select class="grid_text" name="storeAddress" style="height: 24px">
                                     <option></option>
-                                    <?php foreach (Store::getCategoryList() as $value): ?>
-                                        <?php if ($value['storeID'] == $stores->storeID): ?>
-                                            <?php continue; ?>
-                                        <?php endif; ?>
-                                        <option value="<?php echo $value['storeID']; ?>" <?= $value['storeID'] == $stores->parentID ? "selected=\"selected\"" : "" ?>><?php echo $value['storeName']; ?></option>
-                                    <?php endforeach; ?>
+                                    <?php
+                                    $Instrument = new InstrumentIn();
+                                    $bzs = $Instrument->getBzList();
+                                    for($i=0;$i<count($bzs);$i++): ?>
+                                        <option value="<?=$i?>"<?php if($i==$data['storeAddress'])echo "selected";?>><?=$bzs[$i]?></option>
+                                    <?php endfor;?>
                                 </select></td>
                         </tr>
                         <tr class="row">
@@ -78,20 +70,8 @@
                                 </select></td>
                         </tr>
                         <tr class="row">
-                            <td width="100" align="right"><label>＊</label>数量：</td>
+                            <td width="100" align="right"><label>＊</label>领用数量：</td>
                             <td><input name="num" type="text" class="grid_text"  value="<?= $data['num']?>"></td>
-                        </tr>
-                        <tr class="row">
-                            <td width="100" align="right">单价：</td>
-                            <td><input name="price" type="text" class="grid_text"  value="<?= $data['price']?>" /></td>
-                        </tr>
-                        <tr class="row">
-                            <td width="100" align="right">单位：</td>
-                            <td><input name="unit" type="text" class="grid_text"  value="<?= $data['unit']?>" /></td>
-                        </tr>
-                        <tr class="row">
-                            <td width="100" align="right">规格型号：</td>
-                            <td><input name="standard" type="text" class="grid_text"  value="<?= $data['standard']?>" /></td>
                         </tr>
                         <tr class="row">
                             <td width="100" align="right">项目编号：</td>
@@ -101,22 +81,22 @@
                             <td width="100" align="right">项目名称：</td>
                             <td><input name="projectName" type="text" class="grid_text"  value="<?= $data['projectName']?>"></td>
                         </tr>
-                    </table>
-                </td>
-                <td>
-                    <table>
                         <tr class="row">
-                            <td width="100" align="right">资产卡片号：</td>
-                            <td><input name="card" type="text" class="grid_text"  value="<?= $data['card']?>" /></td>
+                            <td width="100" align="right">物资编码：</td>
+                            <td><input name="materialCode" type="text" class="grid_text"  value="<?= $data['materialCode']?>" /></td>
                         </tr>
                         <tr class="row">
-                            <td width="100" align="right">资产分类：</td>
-                            <td><input name="class" type="text" class="grid_text"  value="<?= $data['class']?>" /></td>
+                            <td width="100" align="right">资产卡号：</td>
+                            <td><input name="card" type="text" class="grid_text"  value="<?= $data['card']?>" /></td>
                         </tr>
                         <tr class="row">
                             <td width="100" align="right">SAP编号：</td>
                             <td><input name="SAP" type="text" class="grid_text"  value="<?= $data['SAP']?>" /></td>
                         </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
                         <tr class="row">
                             <td width="100" align="right">设备编号：</td>
                             <td><input name="equCode" type="text" class="grid_text"  value="<?= $data['equCode']?>" /></td>
@@ -130,7 +110,7 @@
                             <td><input name="factoryCode" type="text" class="grid_text"  value="<?= $data['factoryCode']?>" /></td>
                         </tr>
                         <tr class="row">
-                            <td width="100" align="right">生产时间：</td>
+                            <td width="100" align="right">生产日期：</td>
                             <td><input name="factoryDate" id="date" type="text" class="grid_text"  value="<?= $data['factoryDate']?>" /></td>
                         </tr>
                         <tr class="row">
@@ -144,6 +124,10 @@
                         <tr class="row">
                             <td width="100" align="right">联系电话：</td>
                             <td><input name="tel" type="text" class="grid_text"  value="<?= $data['tel']?>" /></td>
+                        </tr>
+                        <tr class="row">
+                            <td width="100" height="22" align="right">　</td>
+                            <td></td>
                         </tr>
                     </table>
                 </td>

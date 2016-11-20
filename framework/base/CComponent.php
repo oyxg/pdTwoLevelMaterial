@@ -608,7 +608,9 @@ class CComponent
 	{
 		if(is_string($_expression_))
 		{
-			extract($_data_,EXTR_SKIP);//bugfix
+		//bugfix start
+			extract($_data_,EXTR_SKIP);
+		//bugfix end
 			return eval('return '.$_expression_.';');
 		}
 		else

@@ -54,11 +54,13 @@ class AI{
 
 	const C_Bz="Bz";//班组
 
-	const C_PreFloodMaterialList="PreFloodMaterialList";//防汛物资列表
-	const C_PreFloodMaterialInfo="PreFloodMaterialInfo";//防汛物资台账
-	const C_PreFloodMaterialIn="PreFloodMaterialIn";//防汛物资入库
+	const C_PreFloodMaterialInfo="PreFloodMaterialInfo";//防汛物资配置
+	const C_PreFloodMaterialIn="PreFloodMaterialIn";//防汛物资台帐
+	const C_PreFloodMaterialList="PreFloodMaterialList";//防汛物资汇总
 
-	const C_InstrumentList="InstrumentList";//仪器仪表列表
+	const C_InstrumentInfo="InstrumentInfo";//仪器仪表配置
+	const C_InstrumentIn="InstrumentIn";//仪器仪表台账
+	const C_InstrumentList="InstrumentList";//仪器仪表汇总
 
 	/************************************任务分割线*****************************************/
 

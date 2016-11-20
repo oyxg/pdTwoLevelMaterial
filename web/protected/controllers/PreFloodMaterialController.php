@@ -16,7 +16,7 @@ class PreFloodMaterialController extends Controller {
     public $controllerName = "防汛物资管理";
 
     /**
-     * 防汛物资列表
+     * 防汛物资汇总
      */
     public function actionPreFloodList(){
         $condition[] = "1=1";
@@ -29,7 +29,7 @@ class PreFloodMaterialController extends Controller {
         $criteria = new CDbCriteria();
         //$criteria->order = "CONVERT(LEFT(goodsName,1) USING gbk)  asc";//中文排序
         $criteria->condition = implode(" ", $condition);
-        $criteria->order = "id asc";
+        $criteria->order = "id DESC";
         //分页
         $this->pagination = new CPagination();
         $this->pagination->pageSize = 15;
@@ -39,14 +39,14 @@ class PreFloodMaterialController extends Controller {
 //        var_dump($rsList);
 //        exit();
         //渲染视图
-        $this->setBread("防汛物资列表");
+        $this->setBread("防汛物资汇总");
         $this->render("material_list",array(
             'rsList'=>$rsList
         ));
     }
 
     /**
-     * 防汛物资信息
+     * 防汛物资配置
      */
     public function actionPreFloodInfo(){
         $condition[] = "1=1";
@@ -72,14 +72,14 @@ class PreFloodMaterialController extends Controller {
 //        var_dump($rsList);
 //        exit();
         //渲染视图
-        $this->setBread("防汛物资信息");
+        $this->setBread("防汛物资配置");
         $this->render("material_info",array(
             'rsList'=>$rsList
         ));
     }
 
     /**
-     * 添加防汛物资信息
+     * 添加防汛物资
      */
     public function actionAddPreFloodInfo(){
         if (Yii::app()->request->isAjaxRequest) {
@@ -97,7 +97,27 @@ class PreFloodMaterialController extends Controller {
         $this->render("add_info");
     }
     /**
-     * 添加防汛物资信息
+     * 添加分类
+     */
+    public function actionAddPreFloodClass(){
+        if (Yii::app()->request->isAjaxRequest) {
+            $Class = New PreFloodClass();
+            if($Class->count("name='{$_POST['name']}'")>0){
+                WMessage::ajaxInfo("已存在",0);
+            }else{
+                $Class->attributes = $_POST;
+                if (!$Class->add()) {
+                    WMessage::ajaxInfo($Class->error->getErrorMessage(),0);
+                }
+                WMessage::ajaxInfo();
+            }
+        }
+        //渲染视图
+        $this->setLayoutNone();
+        $this->render("add_class");
+    }
+    /**
+     * 修改防汛物资
      */
     public function actionEditPreFloodInfo(){
         if (Yii::app()->request->isAjaxRequest) {
@@ -119,58 +139,58 @@ class PreFloodMaterialController extends Controller {
     /**
      * 设置各班需求（查看、新增、修改）
      */
-    public function actionSetPreFloodNeed(){
-        //处理提交数据
-        if (Yii::app()->request->isAjaxRequest) {
-            $res = PreFloodNeed::model()->findAll("mID='{$_POST['mID']}'");
-//            var_dump($res);
-//            exit();
-            $edit = array();
-            foreach($res as $row){
-                for($i=0;$i<=6;$i++) {
-                    if ($row->bzID == $i) {
-                        $editRow = PreFloodNeed::model()->find("mID='{$_POST['mID']}' AND bzID='{$i}'");
-                        $editRow->needNum = "{$_POST[$i]}";
-                        //修改满足条件的班组需求数量（修改）
-                        if (!$editRow->edit()) {
-                            WMessage::ajaxInfo($editRow->error->getErrorMessage(), 0);
-                        }
-                        array_push($edit, $i);//将修改过的班组存入edit
-                    }
-                }
-            }
-//            var_dump($edit);
-//            exit();
-            $add = array_diff(array(0,1,2,3,4,5,6),$edit);//获取没有修改的班组
-            foreach ($add as $bz){
-                $need = new PreFloodNeed();
-                $need->mID = "{$_POST['mID']}";
-                $need->bzID = "{$bz}";
-                $need->needNum = $_POST[$bz]==''?0:$_POST[$bz];
-                //新增指定班组的需求记录（新增）
-                if (!$need->add()) {
-                    WMessage::ajaxInfo($need->error->getErrorMessage(),0);
-                }
-            }
-            WMessage::ajaxInfo();
-        }
-        //根据物资ID返回各班组需求数量（查看）
-        $res = PreFloodNeed::model()->findAll("mID='{$_GET['id']}'");
-        $data = array();
-        foreach($res as $row){
-            for($i=0;$i<=6;$i++){
-                if($row->bzID==$i){
-                    $data[$i] = "{$row->needNum}";
-                }
-            }
-        }
-        //渲染视图
-        $this->setLayoutNone();
-        $this->render("need_form",array(
-            'data'=>$data,
-            'mID'=>$_GET['id']
-        ));
-    }
+//    public function actionSetPreFloodNeed(){
+//        //处理提交数据
+//        if (Yii::app()->request->isAjaxRequest) {
+//            $res = PreFloodNeed::model()->findAll("mID='{$_POST['mID']}'");
+////            var_dump($res);
+////            exit();
+//            $edit = array();
+//            foreach($res as $row){
+//                for($i=0;$i<=6;$i++) {
+//                    if ($row->bzID == $i) {
+//                        $editRow = PreFloodNeed::model()->find("mID='{$_POST['mID']}' AND bzID='{$i}'");
+//                        $editRow->needNum = "{$_POST[$i]}";
+//                        //修改满足条件的班组需求数量（修改）
+//                        if (!$editRow->edit()) {
+//                            WMessage::ajaxInfo($editRow->error->getErrorMessage(), 0);
+//                        }
+//                        array_push($edit, $i);//将修改过的班组存入edit
+//                    }
+//                }
+//            }
+////            var_dump($edit);
+////            exit();
+//            $add = array_diff(array(0,1,2,3,4,5,6),$edit);//获取没有修改的班组
+//            foreach ($add as $bz){
+//                $need = new PreFloodNeed();
+//                $need->mID = "{$_POST['mID']}";
+//                $need->bzID = "{$bz}";
+//                $need->needNum = $_POST[$bz]==''?0:$_POST[$bz];
+//                //新增指定班组的需求记录（新增）
+//                if (!$need->add()) {
+//                    WMessage::ajaxInfo($need->error->getErrorMessage(),0);
+//                }
+//            }
+//            WMessage::ajaxInfo();
+//        }
+//        //根据物资ID返回各班组需求数量（查看）
+//        $res = PreFloodNeed::model()->findAll("mID='{$_GET['id']}'");
+//        $data = array();
+//        foreach($res as $row){
+//            for($i=0;$i<=6;$i++){
+//                if($row->bzID==$i){
+//                    $data[$i] = "{$row->needNum}";
+//                }
+//            }
+//        }
+//        //渲染视图
+//        $this->setLayoutNone();
+//        $this->render("need_form",array(
+//            'data'=>$data,
+//            'mID'=>$_GET['id']
+//        ));
+//    }
 
 
     /**
@@ -355,5 +375,41 @@ class PreFloodMaterialController extends Controller {
             'fileArr'=>$fileArr,
             'inID'=>$inID
         ));
+    }
+
+    /**
+     * 显示防汛台账
+     */
+    public function actionShowPrefloodIn(){
+        $condition[] = "1=1";
+        $condition[] = "AND mID={$_GET['m']}";
+        $condition[] = "AND bzID={$_GET['b']}";
+        //模型实例化
+        $PreFlood = new ViewPreFloodIn();
+        //条件
+        $criteria = new CDbCriteria();
+        $criteria->condition = implode(" ", $condition);
+        $criteria->order = "InID DESC";
+        //分页
+        $this->pagination = new CPagination();
+        $this->pagination->pageSize = 15;
+        //查找数据
+        $rsList = $PreFlood->getRecord($criteria, $this->pagination);
+        $this->setLayoutNone();
+        $this->render("in_list",array(
+            'rsList'=>$rsList
+        ));
+    }
+
+    /**
+     * 获得配置信息
+     */
+    public function actionGetPzInfo(){
+        $m = $_POST['mid'];
+//        $b = $_POST['bzID'];
+        $PreFloodInfo = new PreFloodInfo();
+        $res = $PreFloodInfo->find("id='{$m}'");
+        echo json_encode($res);
+        exit;
     }
 }

@@ -22,21 +22,21 @@
     </thead>
     <tbody>
     <?php foreach($fileArr as $file):
-        $fileName = substr(strchr($file,'instrument_file/'),14);
+        $fileName = substr(strchr($file,'instrument_file/'),16);
         if(!empty($file)):?>
         <tr>
             <td><?=$file?></td>
             <td>&nbsp;&nbsp;
                 <?php
                 $ext = strrchr($file,'.');
-                if($ext=='.xls'||$ext=='.docx'||$ext=='.doc'||$ext=='.pdf'):
+                if($ext=='.xls'||$ext=='.xlsx'||$ext=='.docx'||$ext=='.doc'||$ext=='.pdf'):
                     ?>
                     <a href="../<?=$file;?>">下载</a>
                 <?php  else:  ?>
                     <a rel="showPic" src="<?=$file;?>">查看</a>
                 <?php endif;?>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/PreFloodMaterial/DelFile?inID=<?=$inID?>&name=<?=$fileName?>">删除</a></td>
+                <a href="/Instrument/DelFile?inID=<?=$inID?>&name=<?=$fileName?>">删除</a></td>
         </tr>
     <?php endif;
     endforeach;?>

@@ -1,0 +1,117 @@
+<script type="text/javascript" src="/plugin/module/material.js"></script>
+<style>
+    .xc{display: none;}
+</style>
+<script>
+    $(function () {
+        //修改缓存中的物资信息
+        $("a[rel=edit]").click(function(){
+            Material.editInstrumentInfo($(this).attr('code'));
+        });
+        //添加物资信息
+        $("button[rel=add]").click(function(){
+            Material.addInstrumentInfo();
+        });
+        //物资入库
+        $("a[rel=in]").click(function(){
+            Material.addInstrumentIn($(this).attr('code'));
+        });
+    });
+</script>
+<?php
+//bugfix start
+clean_xss($_GET['name']);
+//bugfix end
+?>
+<div class="control_tb">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="400">
+                    <?php
+                    $this->beginContent("//layouts/breadcrumbs");
+                    $this->endContent();
+                    ?>
+                </td>
+                <td align="right">
+                    <form method="get" action="<?= Yii::app()->createUrl("Instrument/InstrumentInfo") ?>">
+                        <table>
+                        <tr>
+                            <td>
+                                物资分类：
+                                <select  name="className" type="text" class="grid_text" style="width:140px;height: 24px;">
+                                    <option value="">-请选择-</option>
+                                    <?php
+                                    $instrumentClass = new InstrumentClass();
+                                    $class = $instrumentClass->model()->getList();
+                                    foreach($class as $row): ?>
+                                        <option value="<?=$row->name?>"<?php if($row->name==$_GET['className'])echo "selected";?>><?=$row->name?></option>
+                                    <?php endforeach;?>
+                                </select>
+                                物资名称：
+                                <input class="grid_text" name="name" value="<?php echo $_GET['name']; ?>">
+                                规格型号：
+                                <input class="grid_text" name="standard" value="<?php echo $_GET['standard']; ?>">
+                                技术规范：
+                                <input class="grid_text" name="jsgf" value="<?php echo $_GET['jsgf']; ?>">
+                                <input type="submit" value="查询" class="grid_button grid_button_s">
+                                <button type="button" rel="add" class="grid_button">新增</button>
+                            </td>
+                        </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="github_tb">
+    <thead>
+        <tr class="row">
+            <th align="left">物资分类</th>
+            <th align="left">物资编号</th>
+            <th align="left">公司编号</th>
+            <th align="left">物资名称</th>
+            <th align="center">配置数量</th>
+            <th align="center">配置单位</th>
+            <th align="center">配置单价</th>
+            <th align="left">规格型号</th>
+            <th align="left">技术规范</th>
+            <th align="center">是/否标配</th>
+            <th align="center">是/否资产</th>
+            <th width="100" align="center">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach ($rsList as $key => $v):
+        ?>
+        <tr>
+            <td align="left"><?php echo $v->className; ?></td>
+            <td align="left"><?php echo $v->mbh; ?></td>
+            <td align="left"><?php echo $v->cbh; ?></td>
+            <td align="left"><?php echo $v->name; ?></td>
+            <td align="center"><?php echo $v->num; ?></td>
+            <td align="center"><?php echo $v->unit; ?></td>
+            <td align="center"><?php echo $v->price; ?></td>
+            <td align="left"><?php echo $v->standard; ?></td>
+            <td align="left"><?php echo $v->jsgf; ?></td>
+            <td align="center"><?php echo InstrumentInfo::getState($v->isBp); ?></td>
+            <td align="center"><?php echo InstrumentInfo::getState($v->isZc); ?></td>
+            <td align="left"><div class="grid_menu_panel" style="width:70px">
+                    <div class="grid_menu_btn">操作</div>
+                    <div class="grid_menu">
+                        <ul>
+                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="edit">修改</a></li>
+                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="in">入库</a></li>
+                        </ul>
+                    </div>
+                </div></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+<?php
+$this->beginContent("//layouts/pagination");
+$this->endContent();
+?>

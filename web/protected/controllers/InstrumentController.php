@@ -16,23 +16,16 @@ class InstrumentController extends Controller {
     public $controllerName = "仪器仪表管理";
 
     /**
-     * 仪器仪表列表
+     * 仪器仪表配置
      */
-    public function actionInstrumentList(){
+    public function actionInstrumentInfo(){
         $condition[] = "1=1";
-        $condition[] = $_GET['projectCode'] == "" ? "" : "AND INSTR(projectCode,'{$_GET['projectCode']}')>0";
-        $condition[] = $_GET['projectName'] == "" ? "" : "AND INSTR(projectName,'{$_GET['projectName']}')>0";
-        $condition[] = $_GET['card'] == "" ? "" : "AND INSTR(card,'{$_GET['card']}')>0";
-        $condition[] = $_GET['SAP'] == "" ? "" : "AND INSTR(SAP,'{$_GET['SAP']}')>0";
-        $condition[] = $_GET['equCode'] == "" ? "" : "AND INSTR(equCode,'{$_GET['equCode']}')>0";
-        $condition[] = $_GET['materialCode'] == "" ? "" : "AND INSTR(materialCode,'{$_GET['materialCode']}')>0";
-        $condition[] = $_GET['materialName'] == "" ? "" : "AND INSTR(materialName,'{$_GET['materialName']}')>0";
+        $condition[] = $_GET['className'] == "" ? "" : "AND INSTR(className,'{$_GET['className']}')>0";
+        $condition[] = $_GET['name'] == "" ? "" : "AND INSTR(name,'{$_GET['name']}')>0";
         $condition[] = $_GET['standard'] == "" ? "" : "AND INSTR(standard,'{$_GET['standard']}')>0";
-        $condition[] = $_GET['factory'] == "" ? "" : "AND INSTR(factory,'{$_GET['factory']}')>0";
-        $condition[] = $_GET['storeAddress'] == "" ? "" : "AND storeAddress='{$_GET['storeAddress']}'";
-        $condition[] = $_GET['state'] == "" ? "" : "AND state='{$_GET['state']}'";
+        $condition[] = $_GET['jsgf'] == "" ? "" : "AND INSTR(jsgf,'{$_GET['jsgf']}')>0";
         //模型实例化
-        $instrument = new Instrument();
+        $instrumentInfo = new InstrumentInfo();
         //条件
         $criteria = new CDbCriteria();
         //$criteria->order = "CONVERT(LEFT(goodsName,1) USING gbk)  asc";//中文排序
@@ -42,48 +35,142 @@ class InstrumentController extends Controller {
         $this->pagination = new CPagination();
         $this->pagination->pageSize = 15;
         //查找数据
-        //$rsList = $material->findAll("del='0' AND storeID='9'");//问题：category取不到值，明天用原生sql查询
-        $rsList = $instrument->getRecord($criteria, $this->pagination);
-//        var_dump($rsList);
-//        exit();
+        $rsList = $instrumentInfo->getRecord($criteria, $this->pagination);
         //渲染视图
-        $this->setBread("仪器仪表列表");
-        $this->render("material_list",array(
+        $this->setBread("仪器仪表配置");
+        $this->render("material_info",array(
             'rsList'=>$rsList
         ));
     }
-
     /**
-     * 仪器仪表入库
+     * 添加分类
      */
-    public function actionAddInstrument(){
+    public function actionAddInstrumentClass(){
         if (Yii::app()->request->isAjaxRequest) {
-            $instrument = New Instrument();
-            $instrument->attributes = $_POST;
-            if (!$instrument->add()) {
-                WMessage::ajaxInfo($instrument->error->getErrorMessage(),0);
+            $instrumentClass = New InstrumentClass();
+            if($instrumentClass->count("name='{$_POST['name']}'")>0){
+                WMessage::ajaxInfo("已存在",0);
+            }else{
+                $instrumentClass->attributes = $_POST;
+                if (!$instrumentClass->add()) {
+                    WMessage::ajaxInfo($instrumentClass->error->getErrorMessage(),0);
+                }
+                WMessage::ajaxInfo();
+            }
+        }
+        //渲染视图
+        $this->setLayoutNone();
+        $this->render("add_class");
+    }
+    /**
+     * 添加仪器仪表
+     */
+    public function actionAddInstrumentInfo(){
+        if (Yii::app()->request->isAjaxRequest) {
+            $instrumentInfo = New InstrumentInfo();
+            $res = $instrumentInfo->count("className='{$_POST['className']}' AND name='{$_POST['name']}'");
+            if($res > 0) {
+                WMessage::ajaxInfo('该配置已存在，不能重复添加',0);
+            }
+            $instrumentInfo->attributes = $_POST;
+            if (!$instrumentInfo->add()) {
+                WMessage::ajaxInfo($instrumentInfo->error->getErrorMessage(),0);
             }
             WMessage::ajaxInfo();
         }
         //渲染视图
         $this->setLayoutNone();
-        $this->render("in_form");
+        $this->render("add_info");
     }
+
     /**
      * 修改仪器仪表
      */
-    public function actionEditInstrument(){
+    public function actionEditInstrumentInfo(){
         if (Yii::app()->request->isAjaxRequest) {
-            $instrument = New Instrument();
-            $instrument = $instrument->model()->findByPk($_POST['id']);
-            $instrument->attributes = $_POST;
-            if (!$instrument->edit()) {
-                WMessage::ajaxInfo($instrument->error->getErrorMessage(),0);
+            $instrumentInfo = InstrumentInfo::model()->findByPk($_POST['id']);
+            $instrumentInfo->attributes = $_POST;
+            if (!$instrumentInfo->edit()) {
+                WMessage::ajaxInfo($instrumentInfo->error->getErrorMessage(),0);
             }
             WMessage::ajaxInfo();
         }
-        $instrument = New Instrument();
-        $data = $instrument->model()->findByPk($_GET['id']);
+        $data = InstrumentInfo::model()->findByPk($_GET['id']);
+        //渲染视图
+        $this->setLayoutNone();
+        $this->render("add_info",array(
+            'Edit'=>true,
+            'data'=>$data
+        ));
+    }
+
+    /**
+     * 仪器仪表台账
+     */
+    public function actionAddInstrumentIn(){
+        if (Yii::app()->request->isAjaxRequest) {
+            $InstrumentIn = New InstrumentIn();
+            $InstrumentIn->attributes = $_POST;
+            $InstrumentIn->date = date('Y-m-d');
+            if (!$InstrumentIn->add()) {
+                WMessage::ajaxInfo($InstrumentIn->error->getErrorMessage(),0);
+            }
+            WMessage::ajaxInfo();
+        }
+        //渲染视图
+        $this->setLayoutNone();
+        $this->render("in_form",array(
+            'mID'=>$_GET['id']
+        ));
+    }
+    /**
+     * 仪器仪表台账
+     */
+    public function actionInstrumentIn(){
+        $condition[] = "1=1";
+        $condition[] = $_GET['projectCode'] == "" ? "" : "AND INSTR(projectCode,'{$_GET['projectCode']}')>0";
+        $condition[] = $_GET['projectName'] == "" ? "" : "AND INSTR(projectName,'{$_GET['projectName']}')>0";
+        $condition[] = $_GET['name'] == "" ? "" : "AND INSTR(name,'{$_GET['name']}')>0";
+        $condition[] = $_GET['card'] == "" ? "" : "AND INSTR(card,'{$_GET['card']}')>0";
+        $condition[] = $_GET['SAP'] == "" ? "" : "AND INSTR(SAP,'{$_GET['SAP']}')>0";
+        $condition[] = $_GET['equCode'] == "" ? "" : "AND INSTR(equCode,'{$_GET['equCode']}')>0";
+        $condition[] = $_GET['materialCode'] == "" ? "" : "AND INSTR(materialCode,'{$_GET['materialCode']}')>0";
+        $condition[] = $_GET['materialName'] == "" ? "" : "AND INSTR(materialName,'{$_GET['materialName']}')>0";
+        $condition[] = $_GET['factory'] == "" ? "" : "AND INSTR(factory,'{$_GET['factory']}')>0";
+        $condition[] = $_GET['storeAddress'] == "" ? "" : "AND storeAddress='{$_GET['storeAddress']}'";
+        $condition[] = $_GET['state'] == "" ? "" : "AND state='{$_GET['state']}'";
+        //模型实例化
+        $PreFlood = new ViewInstrumentIn();
+        //条件
+        $criteria = new CDbCriteria();
+        $criteria->condition = implode(" ", $condition);
+        $criteria->order = "inID DESC ";
+        //分页
+        $this->pagination = new CPagination();
+        $this->pagination->pageSize = 15;
+        //查找数据
+        $rsList = $PreFlood->getRecord($criteria, $this->pagination);
+        //渲染视图
+        $this->setBread("仪器仪表台账");
+        $this->render("material_in",array(
+            'rsList'=>$rsList
+        ));
+    }
+    /**
+     * 修改仪器仪表台账
+     */
+    public function actionEditInstrumentIn(){
+        if (Yii::app()->request->isAjaxRequest) {
+            $InstrumentIn = New InstrumentIn();
+            $InstrumentIn = $InstrumentIn->model()->findByPk($_POST['id']);
+            $InstrumentIn->attributes = $_POST;
+            if (!$InstrumentIn->edit()) {
+                WMessage::ajaxInfo($InstrumentIn->error->getErrorMessage(),0);
+            }
+            WMessage::ajaxInfo();
+        }
+        $InstrumentIn = New InstrumentIn();
+        $data = $InstrumentIn->model()->findByPk($_GET['id']);
         //渲染视图
         $this->setLayoutNone();
         $this->render("in_form",array(
@@ -91,6 +178,97 @@ class InstrumentController extends Controller {
             'Edit'=>true
         ));
     }
+
+
+
+
+    /**
+     * 仪器仪表汇总
+     */
+    public function actionInstrumentList(){
+        $condition[] = "1=1";
+        $condition[] = $_GET['className'] == "" ? "" : "AND INSTR(className,'{$_GET['className']}')>0";
+        $condition[] = $_GET['name'] == "" ? "" : "AND INSTR(name,'{$_GET['name']}')>0";
+        $condition[] = $_GET['standard'] == "" ? "" : "AND INSTR(standard,'{$_GET['standard']}')>0";
+        $condition[] = $_GET['jsgf'] == "" ? "" : "AND INSTR(jsgf,'{$_GET['jsgf']}')>0";
+        //模型实例化
+        $instrument = new InstrumentInfo();
+        //条件
+        $criteria = new CDbCriteria();
+        $criteria->condition = implode(" ", $condition);
+        $criteria->order = "id asc";
+        //分页
+        $this->pagination = new CPagination();
+        $this->pagination->pageSize = 15;
+        //查找数据
+        $rsList = $instrument->getRecord($criteria, $this->pagination);
+        //渲染视图
+        $this->setBread("仪器仪表汇总");
+        $this->render("material_list",array(
+            'rsList'=>$rsList
+        ));
+    }
+    /**
+     * 显示现存台账
+     */
+    public function actionShowInstrumentIn(){
+        $condition[] = "1=1";
+        $condition[] = "AND mID={$_GET['m']}";
+        $condition[] = "AND storeAddress={$_GET['b']}";
+        //模型实例化
+        $PreFlood = new ViewInstrumentIn();
+        //条件
+        $criteria = new CDbCriteria();
+        $criteria->condition = implode(" ", $condition);
+        $criteria->order = "InID DESC";
+        //分页
+        $this->pagination = new CPagination();
+        $this->pagination->pageSize = 15;
+        //查找数据
+        $rsList = $PreFlood->getRecord($criteria, $this->pagination);
+        $this->setLayoutNone();
+        $this->render("in_list",array(
+            'rsList'=>$rsList
+        ));
+    }
+//    /**
+//     * 仪器仪表入库
+//     */
+//    public function actionAddInstrument(){
+//        if (Yii::app()->request->isAjaxRequest) {
+//            $instrument = New Instrument();
+//            $instrument->attributes = $_POST;
+//            if (!$instrument->add()) {
+//                WMessage::ajaxInfo($instrument->error->getErrorMessage(),0);
+//            }
+//            WMessage::ajaxInfo();
+//        }
+//        //渲染视图
+//        $this->setLayoutNone();
+//        $this->render("in_form");
+//    }
+//    /**
+//     * 修改仪器仪表
+//     */
+//    public function actionEditInstrument(){
+//        if (Yii::app()->request->isAjaxRequest) {
+//            $instrument = New Instrument();
+//            $instrument = $instrument->model()->findByPk($_POST['id']);
+//            $instrument->attributes = $_POST;
+//            if (!$instrument->edit()) {
+//                WMessage::ajaxInfo($instrument->error->getErrorMessage(),0);
+//            }
+//            WMessage::ajaxInfo();
+//        }
+//        $instrument = New Instrument();
+//        $data = $instrument->model()->findByPk($_GET['id']);
+//        //渲染视图
+//        $this->setLayoutNone();
+//        $this->render("in_form",array(
+//            'data'=>$data,
+//            'Edit'=>true
+//        ));
+//    }
 
     /**
      * 删除仪器仪表
@@ -116,7 +294,7 @@ class InstrumentController extends Controller {
                 exit("请选择上传的附件");
             }
             $inID = $_POST['inID'];
-            $rs = Instrument::model()->findByPk($inID);
+            $rs = InstrumentIn::model()->findByPk($inID);
             $path = "upload/instrument_file/";
             if (!file_exists($path)) {
                 mkdir($path);
@@ -166,7 +344,7 @@ class InstrumentController extends Controller {
         }else{
             WMessage::ajaxInfo("请求失败", 0);
         }
-        $instrument = Instrument::model()->findByPk($inID);
+        $instrument = InstrumentIn::model()->findByPk($inID);
         $fileArr = explode(',',$instrument->file);
 
         //渲染视图
@@ -191,10 +369,10 @@ class InstrumentController extends Controller {
     public function actionDelFile(){
         $name = $_GET['name'];
         $inID = $_GET['inID'];
-        $instrument = Instrument::model()->findByPk($inID);
+        $instrument = InstrumentIn::model()->findByPk($inID);
         $fileArr = explode(',',$instrument->file);
         foreach($fileArr as $file){
-            $fileName = substr(strchr($file,'instrument_file/'),14);
+            $fileName = substr(strchr($file,'instrument_file/'),16);
             if($fileName == $name){
                 if(unlink($file)){
                     $fileArr = array_diff($fileArr,array($file));

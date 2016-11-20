@@ -1,6 +1,6 @@
 <?php
-//防汛物资表台账
-class ViewPreFloodBills extends ActiveRecord{
+//仪器仪表台账
+class ViewInstrumentIn extends ActiveRecord{
 
 	/**
 	 * 获取模型实例
@@ -14,7 +14,7 @@ class ViewPreFloodBills extends ActiveRecord{
 	 * @see CActiveRecord::tableName()
 	 */
 	public function tableName(){
-		return 'view_preflood_bills';
+		return 'view_instrument_in';
 	}
 
 	/**

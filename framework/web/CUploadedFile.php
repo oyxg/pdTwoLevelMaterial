@@ -195,7 +195,9 @@ class CUploadedFile extends CComponent
 		if($this->_error==UPLOAD_ERR_OK)
 		{
 			if($deleteTempFile)
-				return move_uploaded_file($this->_tempName,$file);
+			//bugfix start
+				//return move_uploaded_file($this->_tempName,$file);
+			//bugfix end
 			elseif(is_uploaded_file($this->_tempName))
 				return copy($this->_tempName, $file);
 			else

@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/plugin/module/material.js"></script>
 <!-- 日历插件js & css -->
 <script type="text/javascript" src="/plugin/lhgcalendar/lhgcalendar.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/plugin/lhgcalendar/skins/lhgcalendar.css"/>
@@ -31,6 +32,11 @@
             $(form).ajaxSubmit(ajaxOpt);
             return false;
         });
+
+        //添加分类
+        $("a[rel=addClass]").click(function(){
+            Material.addPreFloodClass();
+        });
     });
     function pre(goodname) {
         $.ajax({
@@ -61,66 +67,96 @@
         <?php if($Edit):?>
             <input name="id" id="id" type="hidden" value="<?= $data['id']?>">
         <?php endif; ?>
+
         <tr>
-            <td width="100" align="right"><label>＊</label>分类：</td>
-            <td><select  name="className" id="className" type="text" class="grid_text" style="width:140px;height: 24px;">
-                    <option value="">-请选择-</option>
-                    <?php
-                    $PreFlood = new PreFloodInfo();
-                    $types = $PreFlood->model()->getType();
-                    foreach($types as $type): ?>
-                        <option value="<?=$type?>"<?php if($type==$data['className'])echo "selected";?>><?=$type?></option>
-                    <?php endforeach;?>
-                </select></td>
+            <td>
+                <table>
+                    <tr>
+                        <td width="100" align="right"><label>＊</label>物资分类：</td>
+                        <td>
+                            <select  name="className" type="text" class="grid_text" style="width:100px;height: 24px;">
+                                <option value="">-请选择-</option>
+                                <?php
+                                $Class = new PreFloodClass();
+                                $class = $Class->model()->getList();
+                                foreach($class as $row): ?>
+                                    <option value="<?=$row->name?>"<?php if($row->name==$data['className'])echo "selected";?>><?=$row->name?></option>
+                                <?php endforeach;?>
+                            </select>
+                            <a href="#" rel="addClass">添加分类</a>
+                        </td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right"><label>＊</label>物资名称：</td>
+                        <td><input name="name" id="name" type="text" class="grid_text"  value="<?= $data['name']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">物资编号：</td>
+                        <td><input name="mbh" id="mbh" type="text" class="grid_text"  value="<?= $data['mbh']?>"></td>
+                    </tr>
+
+                    <tr class="row">
+                        <td width="100" align="right">单价：</td>
+                        <td><input name="price" id="price" type="text" class="grid_text"  value="<?= $data['price']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">配置数量：</td>
+                        <td><input name="configure" id="configure" type="text" class="grid_text" value="<?= $data['configure']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">配置单位：</td>
+                        <td><input name="unit" id="unit" type="text" class="grid_text"  value="<?= $data['unit']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">配置级别：</td>
+                        <td><input name="pzlevel" id="pzlevel" type="text" class="grid_text"  value="<?= $data['pzlevel']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">规格型号：</td>
+                        <td><input name="standard" id="standard" type="text" class="grid_text"  value="<?= $data['standard']?>"></td>
+                    </tr>
+
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr class="row">
+                        <td width="100" align="right">公司编号：</td>
+                        <td><input name="cbh" id="cbh" type="text" class="grid_text"  value="<?= $data['cbh']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">技术规范：</td>
+                        <td><input name="jsgf" id="jsgf" type="text" class="grid_text"  value="<?= $data['jsgf']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">厂家：</td>
+                        <td><input name="factory" id="factory" type="text" class="grid_text"  value="<?= $data['factory']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">出厂编号：</td>
+                        <td><input name="bh" id="bh" type="text" class="grid_text"  value="<?= $data['bh']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">联系人：</td>
+                        <td><input name="contact" id="contact" type="text" class="grid_text"  value="<?= $data['contact']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">联系方式：</td>
+                        <td><input name="tel" id="tel" type="text" class="grid_text"  value="<?= $data['tel']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td width="100" align="right">备注：</td>
+                        <td><input name="remark" id="remark" type="text" class="grid_text"  value="<?= $data['remark']?>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td style="height: 24px">　</td>
+                        <td>　</td>
+                    </tr>
+                </table>
+            </td>
         </tr>
-        <tr class="row">
-            <td width="100" align="right"><label>＊</label>物资名称：</td>
-            <td><input name="name" id="name" type="text" class="grid_text"  value="<?= $data['name']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">单价：</td>
-            <td><input name="price" id="price" type="text" class="grid_text"  value="<?= $data['price']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">单位：</td>
-            <td><input name="unit" id="unit" type="text" class="grid_text"  value="<?= $data['unit']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">规格型号：</td>
-            <td><input name="standard" id="standard" type="text" class="grid_text"  value="<?= $data['standard']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">技术规范：</td>
-            <td><input name="jsgf" id="jsgf" type="text" class="grid_text"  value="<?= $data['jsgf']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">配置级别：</td>
-            <td><input name="pzlevel" id="pzlevel" type="text" class="grid_text"  value="<?= $data['pzlevel']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">配置标准：</td>
-            <td><input name="configure" id="configure" type="text" class="grid_text" value="<?= $data['configure']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">厂家：</td>
-            <td><input name="factory" id="factory" type="text" class="grid_text"  value="<?= $data['factory']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">出厂编号：</td>
-            <td><input name="bh" id="bh" type="text" class="grid_text"  value="<?= $data['bh']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">联系人：</td>
-            <td><input name="contact" id="contact" type="text" class="grid_text"  value="<?= $data['contact']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">联系方式：</td>
-            <td><input name="tel" id="tel" type="text" class="grid_text"  value="<?= $data['tel']?>"></td>
-        </tr>
-        <tr class="row">
-            <td width="100" align="right">备注：</td>
-            <td><input name="remark" id="remark" type="text" class="grid_text"  value="<?= $data['remark']?>"></td>
-        </tr>
+
+
     </table>
 
     <div align="center" style="margin:20px auto 20px auto">

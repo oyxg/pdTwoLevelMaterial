@@ -1,36 +1,22 @@
 <?php
-//防汛物资信息表
-class PreFloodInfo extends ActiveRecord{
+//仪器仪表信息表
+class InstrumentInfo extends ActiveRecord{
 
 	public $id;
-	public $className;//分类名称
+	public $className;//分类
 	public $name;
+	public $num;//配置数量
 	public $price;
 	public $unit;
 	public $standard;//规格型号
 	public $jsgf;//技术规范
-	public $pzlevel;//配置级别
-	public $configure;//配置數量
-	public $factory;//厂家
-	public $bh;//出厂编号
-	public $contact;//联系人
-	public $tel;//联系方式
-	public $remark;//备注
+	public $isBp;
+	public $isZc;
 	public $mbh;//物资编号
 	public $cbh;//公司编号
 
 //	private $_pk = 'id';
 
-	public static function getType(){
-		$types = array(
-				'个人防护用品',
-				'排水物资',
-				'挡水物资',
-				'照明工具',
-				'辅助配套物资'
-		);
-		return $types;
-	}
 	/**
 	 * 获取模型实例
 	 * @return Material
@@ -43,7 +29,7 @@ class PreFloodInfo extends ActiveRecord{
 	 * @see CActiveRecord::tableName()
 	 */
 	public function tableName(){
-		return 'mod_preflood_info';
+		return 'mod_instrument_info';
 	}
 	/**
 	 * 验证规则
@@ -52,11 +38,11 @@ class PreFloodInfo extends ActiveRecord{
 	public function rules(){
 		return array(
 			array(
-				'className,name',
+				'className,name,num,price,isBp,isZc',
 				'required'
 			),
 			array(
-				'price,unit,standard,jsgf,pzlevel,configure,factory,bh,contact,tel,remark,mbh,cbh',
+				'unit,standard,jsgf,mbh,cbh',
 				'safe'
 			)
 		);
@@ -70,21 +56,18 @@ class PreFloodInfo extends ActiveRecord{
 				'id'=>'主键',
 				'className'=>'物资分类',
 				'name'=>'物资名称',
+				'num'=>'配置数量',
 				'price'=>'单价',
-				'unit'=>'配置单位',
+				'unit'=>'单位',
 				'standard'=>'规格型号',
 				'jsgf'=>'技术规范',
-				'pzlevel'=>'配置级别',
-				'configure'=>'配置数量',
-				'factory'=>'厂家',
-				'bh'=>'出厂编号',
-				'contact'=>'联系方式',
-				'tel'=>'联系人',
-				'remark'=>'备注',
+				'isBp'=>'标配/选配',
+				'isZc'=>'是否资产',
 				'mbh'=>'物资编号',
-				'cbh'=>'公司编号'
+				'cbh'=>'公司编号',
 		);
 	}
+
 	/**
 	 * 是否存在指定ID
 	 * @return bool
@@ -108,4 +91,24 @@ class PreFloodInfo extends ActiveRecord{
 		return parent::getName($id,__CLASS__);
 	}
 
+	const YES="y";
+	const NO="n";
+	/**
+	 * @return array
+	 */
+	public static function getTypeList(){
+		return array(
+				self::YES=> '<span style="font-weight: bold">是</span>',
+				self::NO=> '<span style="font-weight: bold">否</span>'
+		);
+	}
+	/**
+	 * 获取状态
+	 * @param string $key
+	 * @return string
+	 */
+	public static function getState($key){
+		$list=self::getTypeList();
+		return $list[$key];
+	}
 }

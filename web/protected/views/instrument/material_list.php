@@ -1,115 +1,76 @@
 <script type="text/javascript" src="/plugin/module/material.js"></script>
+<script type="text/javascript" src="/plugin/module/inventory.js"></script>
 <style>
-    .qha{display: none;}
+    .xq{display: none;}
+    label{color:#999;}
+    .a_in{color: #000;font-weight: bold;cursor: pointer;}
+    .a_in:hover{color: #000;}
 </style>
 
 <script>
     $(function () {
 
-        //切換
-        $("button[rel=change]").click(function(){
+        var bottonStr = "显示现存";
+        $('#controlDisplay').click(function(){
             $('th').each(function(){
-                if($(this).attr('class')=='qha'){
+                if($(this).attr('class')=='xc'){
                     $(this).toggle();
                 }
-                if($(this).attr('class')=='qhb'){
+                if($(this).attr('class')=='xq'){
                     $(this).toggle();
                 }
             });
             $('td').each(function(){
-                if($(this).attr('class')=='qha'){
+                if($(this).attr('class')=='xc'){
                     $(this).toggle();
                 }
-                if($(this).attr('class')=='qhb'){
+                if($(this).attr('class')=='xq'){
                     $(this).toggle();
                 }
             });
+            $(this).val(bottonStr);
+            if(bottonStr=="显示需求"){
+                bottonStr="显示现存";
+            }else{
+                bottonStr="显示需求";
+            }
         });
 
-        //添加
-        $("button[rel=add]").click(function(){
-            Material.addInstrument();
+        //显示显存台帐
+        $("a[rel=show]").click(function(){
+            Material.showInstrumentIn($(this).attr('mID'), $(this).attr('bID'));
         });
-
-        //修改
-        $("a[rel=edit]").click(function(){
-            Material.editInstrument($(this).attr('code'));
-        });
-
-        //删除
-        $("a[rel=del]").click(function(){
-            Material.delInstrument($(this).attr('code'));
-        });
-
-        //附件
-        $("a[rel=file]").click(function(){
-            Material.InstrumentFile($(this).attr('code'));
-        });
-
-
     });
 </script>
 <div class="control_tb">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tbody>
             <tr>
-                <td width="270">
+                <td width="400">
                     <?php
                     $this->beginContent("//layouts/breadcrumbs");
                     $this->endContent();
                     ?>
                 </td>
                 <td align="right"><form method="get" action="<?= Yii::app()->createUrl("Instrument/InstrumentList") ?>">
-                    <table>
-                        <tr>
-                            <td>
-                                项目编号：
-                                <input class="grid_text" name="projectCode" value="<?php echo $_GET['projectCode']; ?>">
-                                项目名称：
-                                <input class="grid_text" name="projectName" value="<?php echo $_GET['projectName']; ?>">
-                                物料编码：
-                                <input class="grid_text" name="materialCode" value="<?php echo $_GET['materialCode']; ?>">
-                                物料名称：
-                                <input class="grid_text" name="materialName" value="<?php echo $_GET['materialName']; ?>">
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                设备编号：
-                                <input class="grid_text" name="equCode" value="<?php echo $_GET['equCode']; ?>">
-                                SAP编号：
-                                <input class="grid_text" name="SAP" value="<?php echo $_GET['SAP']; ?>">
-                                生产产家：
-                                <input class="grid_text" name="factory" value="<?php echo $_GET['factory']; ?>">
-                                规格型号：
-                                <input class="grid_text" name="standard" value="<?php echo $_GET['standard']; ?>">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                资产卡片号：
-                                <input class="grid_text" name="card" value="<?php echo $_GET['card']; ?>">
-                                存放地点：
-                                <select class="grid_text" name="storeAddress" style="height: 24px;width: 124px;">
-                                    <option></option>
-                                    <?php foreach (Store::getCategoryList() as $value): ?>
-                                        <option value="<?php echo $value['storeID']; ?>" <?= $value['storeID'] == $_GET['storeAddress'] ? "selected=\"selected\"" : "" ?>><?php echo $value['storeName']; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                                状态：
-                                <select class="grid_text" name="state" style="height: 24px;width: 60px;">
-                                    <option></option>
-                                    <option value="zc" <?php if($_GET['state']=='zc')echo "selected";?>>正常</option>
-                                    <option value="send" <?php if($_GET['state']=='send')echo "selected";?>>送修</option>
-                                    <option value="scrap" <?php if($_GET['state']=='scrap')echo "selected";?>>报废</option>
-                                </select>
-                                <input type="submit" value="查询" class="grid_button grid_button_s">
-                                <button type="button" rel="add" class="grid_button">添加</button>
-                                <button type="button" rel="change" class="grid_button">切換隐藏字段</button>
-                            </td>
-                        </tr>
-                    </table>
+                        物资分类：
+                        <select  name="className" type="text" class="grid_text" style="width:140px;height: 24px;">
+                            <option value="">-请选择-</option>
+                            <?php
+                            $instrumentClass = new InstrumentClass();
+                            $class = $instrumentClass->model()->getList();
+                            foreach($class as $row): ?>
+                                <option value="<?=$row->name?>"<?php if($row->name==$_GET['className'])echo "selected";?>><?=$row->name?></option>
+                            <?php endforeach;?>
+                        </select>
+                        物资名称：
+                        <input class="grid_text" name="name" value="<?php echo $_GET['name']; ?>">
+                        规格型号：
+                        <input class="grid_text" name="standard" value="<?php echo $_GET['standard']; ?>">
+                        技术规范：
+                        <input class="grid_text" name="jsgf" value="<?php echo $_GET['jsgf']; ?>">
+                        <input type="submit" value="查询" class="grid_button grid_button_s">
+                        <input type="button" class="grid_button grid_button_s" id="controlDisplay" value="显示需求" />
                     </form></td>
             </tr>
         </tbody>
@@ -118,68 +79,85 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="github_tb">
     <thead>
         <tr class="row">
-            <th align="left">资产分类</th>
-            <th align="left">存放地点</th>
-            <th align="left">物料名称</th>
-            <th align="center">数量</th>
+            <th align="left">物资分类</th>
+            <th align="left">物资名称</th>
+            <th align="center">配置数量</th>
             <th align="center">单位</th>
             <th align="center">单价</th>
             <th align="left">规格型号</th>
+            <th align="left">技术规范</th>
 
-            <th align="left" class="qhb" style="border-left:2px #999 dashed">项目名称</th>
-            <th align="center"  class="qhb">项目编号</th>
-            <th align="center" class="qhb">物料编码</th>
-            <th align="center" class="qhb">资产卡片号</th>
-            <th align="center" class="qhb">设备编号</th>
-            <th align="center" class="qhb" style="border-right:2px #999 dashed">SAP编号</th>
+            <th align="center" class="xc">工区现存</th>
+            <th align="center" class="xc">一班现存</th>
+            <th align="center" class="xc">二班现存</th>
+            <th align="center" class="xc">三班现存</th>
+            <th align="center" class="xc">四班现存</th>
+            <th align="center" class="xc">五班现存</th>
+            <th align="center" class="xc">六班现存</th>
+            <th align="center" class="xc">合计现存</th>
+            <th align="center" class="xc">采购总价</th>
 
-            <th align="left" class="qha" style="border-left:2px #999 dashed">生产厂家</th>
-            <th align="center" class="qha">出厂编号</th>
-            <th align="center" class="qha">出厂时间</th>
-            <th align="left" class="qha">配送单位</th>
-            <th align="left" class="qha">联系人</th>
-            <th align="center" class="qha" style="border-right:2px #999 dashed">联系电话</th>
+            <th align="center" class="xq">工区需求</th>
+            <th align="center" class="xq">一班需求</th>
+            <th align="center" class="xq">二班需求</th>
+            <th align="center" class="xq">三班需求</th>
+            <th align="center" class="xq">四班需求</th>
+            <th align="center" class="xq">五班需求</th>
+            <th align="center" class="xq">六班需求</th>
+            <th align="center" class="xq">合计需求</th>
+            <th align="center" class="xq">采购总价</th>
 
-            <th align="center">状态</th>
-            <th align="center">操作</th>
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($rsList as $key => $v): ?>
+    <?php
+    foreach ($rsList as $key => $v):
+        $view = ViewInstrumentList::model()->findAll("mID='{$v->id}'");
+//        var_dump($view);
+//        exit();
+        $i = 0;
+        $xc = array();//现存
+        for($bz = 10;$bz >= 0;$bz--){
+            foreach($view as $row => $bzInfo){
+                if($bzInfo->address==$bz){
+                    $xc[$bz] = $bzInfo->num;
+                }
+            }
+        }
+        $html = "<label>0</label>";
+        $a = "<a class='a_in' rel='show' mID='{$v->id}'";
+        ?>
         <tr>
-            <td align="center"><?php echo $v->class; ?></td>
-            <td align="left"><?php echo Store::getName($v->storeAddress); ?></td>
-            <td align="left"><?php echo $v->materialName; ?></td>
-            <td align="center"><?php echo $v->num; ?></td>
+
+            <td align="left"><?php echo $v->className; ?></td>
+            <td align="left"><?php echo $v->name; ?></td>
+            <td align="center"><?php echo $v->num;//配置数量 ?></td>
             <td align="center"><?php echo $v->unit; ?></td>
             <td align="center"><?php echo $v->price; ?></td>
             <td align="left"><?php echo $v->standard; ?></td>
+            <td align="left"><?php echo $v->jsgf; ?></td>
 
-            <td align="left" class="qhb" style="border-left:2px #999 dashed"><?php echo $v->projectName; ?></td>
-            <td align="right" class="qhb"><?php echo $v->projectCode; ?></td>
-            <td align="right" class="qhb"><?php echo $v->materialCode; ?></td>
-            <td align="right" class="qhb"><?php echo $v->card; ?></td>
-            <td align="right" class="qhb"><?php echo $v->equCode; ?></td>
-            <td align="right" class="qhb" style="border-right:2px #999 dashed"><?php echo $v->SAP; ?></td>
+            <td align="center" class="xc"><?php echo $xc[0]==''?$html:"{$a} bID='0'>"."{$xc[0]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $xc[1]==''?$html:"{$a} bID='1'>"."{$xc[1]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $xc[2]==''?$html:"{$a} bID='2'>"."{$xc[2]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $xc[3]==''?$html:"{$a} bID='3'>"."{$xc[3]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $xc[4]==''?$html:"{$a} bID='4'>"."{$xc[4]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $xc[5]==''?$html:"{$a} bID='5'>"."{$xc[5]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $xc[6]==''?$html:"{$a} bID='6'>"."{$xc[6]}</a>"; ?></td>
+            <td align="center" class="xc"><?php echo $sun_xc = array_sum($xc); ?></td>
+            <td align="center" class="xc"><?php echo floatval($sun_xc * $v->price); ?></td>
 
-            <td align="left" class="qha" style="border-left:2px #999 dashed"><?php echo $v->factory; ?></td>
-            <td align="right" class="qha"><?php echo $v->factoryCode; ?></td>
-            <td align="center" class="qha"><?php echo $v->factoryDate; ?></td>
-            <td align="left" class="qha"><?php echo $v->distribution; ?></td>
-            <td align="left" class="qha"><?php echo $v->contact; ?></td>
-            <td align="right" class="qha" style="border-right:2px #999 dashed"><?php echo $v->tel; ?></td>
+            <?php $t = $v->num;?>
+            <td align="center" class="xq"><?php $res = $t-$xc[0]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
+            <td align="center" class="xq"><?php $res = $t-$xc[1]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
+            <td align="center" class="xq"><?php $res = $t-$xc[2]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
+            <td align="center" class="xq"><?php $res = $t-$xc[3]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
+            <td align="center" class="xq"><?php $res = $t-$xc[4]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
+            <td align="center" class="xq"><?php $res = $t-$xc[5]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
+            <td align="center" class="xq"><?php $res = $t-$xc[6]; echo $res<=0?$html:"<b>{$res}</b>"; ?></td>
 
-            <td align="center"><?php echo Instrument::getState($v->state); ?></td>
-            <td align="center"><div class="grid_menu_panel" style="width:70px">
-                    <div class="grid_menu_btn">操作</div>
-                    <div class="grid_menu">
-                        <ul>
-                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="edit">修改</a></li>
-                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="del">删除</a></li>
-                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="file">附件</a></li>
-                        </ul>
-                    </div>
-                </div></td>
+            <td align="center" class="xq"><?php echo $sun_xq = array_sum($xq); ?></td>
+            <td align="center" class="xq"><?php echo floatval($sun_xq * $v->price); ?></td>
 
         </tr>
     <?php endforeach; ?>

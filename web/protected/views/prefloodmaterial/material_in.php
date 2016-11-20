@@ -64,12 +64,13 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="github_tb">
     <thead>
         <tr class="row">
+            <th align="left">物资分类</th>
             <th align="left">班组</th>
             <th align="left">物资名称</th>
             <th align="left">出厂编号</th>
             <th align="center">单价</th>
-            <th align="center">单位</th>
-            <th align="center">数量</th>
+            <th align="center">配置单位</th>
+            <th align="center">领用数量</th>
             <th align="left">厂家</th>
             <th align="left">联系人</th>
             <th align="left">联系方式</th>
@@ -84,6 +85,7 @@
     <tbody>
     <?php foreach ($rsList as $key => $v): ?>
         <tr>
+            <td align="left"><?php echo $v->className; ?></td>
             <td align="left"><?php echo PreFloodIn::getBz($v->bzID); ?></td>
             <td align="left"><?php echo $v->name; ?></td>
             <td align="left"><?php echo $v->bh; ?></td>

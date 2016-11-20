@@ -853,7 +853,9 @@ class CComponent
 	{
 		if(is_string($_expression_))
 		{
-			extract($_data_);
+			//bugfix start
+			extract($_data_,EXTR_SKIP);
+			//bugfix end
 			return eval('return '.$_expression_.';');
 		}
 		else
@@ -2619,7 +2621,6 @@ class CHttpRequest extends CApplicationComponent
 	{
 		if(strpos($url,'/')===0 && strpos($url,'//')!==0)
 			$url=$this->getHostInfo().$url;
-			$url=stripslashes($url);	//过滤 CR（回车，由 %0d 或 \r 指定）和 LF（换行，由 %0a 或 \n 指定）的字符输入到头文件中
 		header('Location: '.$url, true, $statusCode);
 		if($terminate)
 			Yii::app()->end();
@@ -2959,19 +2960,14 @@ class CCookieCollection extends CMap
 		if(version_compare(PHP_VERSION,'5.2.0','>='))
 			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
 		else
-			//setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure);
-			//bugfix start
-			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
-			//bugfix end
+			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure);
 	}
 	protected function removeCookie($cookie)
 	{
 		if(version_compare(PHP_VERSION,'5.2.0','>='))
 			setcookie($cookie->name,'',0,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
 		else
-			//bugfix start
-			setcookie($cookie->name,'',0,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
-			//bugfix end
+			setcookie($cookie->name,'',0,$cookie->path,$cookie->domain,$cookie->secure);
 	}
 }
 class CUrlManager extends CApplicationComponent
@@ -3415,7 +3411,10 @@ abstract class CBaseController extends CComponent
 	{
 		// we use special variable names here to avoid conflict when extracting data
 		if(is_array($_data_))
-			extract($_data_,EXTR_PREFIX_SAME,'data');
+		//bugfix start
+			//extract($_data_,EXTR_PREFIX_SAME,'data');
+			extract($_data_,EXTR_SKIP,'data'); 
+		//bugfix end
 		else
 			$data=$_data_;
 		if($_return_)
@@ -4537,14 +4536,14 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	public function setCookieParams($value)
 	{
 		$data=session_get_cookie_params();
-		extract($data);
-		extract($value);
+		//bugfix start
+		extract($data,EXTR_SKIP);
+		extract($value,EXTR_SKIP);
+		//bugfix end
 		if(isset($httponly))
 			session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
 		else
-			//bugfix start
-			session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
-			//bugfix end
+			session_set_cookie_params($lifetime,$path,$domain,$secure);
 	}
 	public function getCookieMode()
 	{

@@ -78,7 +78,9 @@ EOD;
 
 		$config=require($args[0]);
 		$translator='Yii::t';
-		extract($config);
+		//bugfix start
+		extract($config,EXTR_SKIP);
+		//bugfix end
 
 		if(!isset($sourcePath,$messagePath,$languages))
 			$this->usageError('The configuration file must specify "sourcePath", "messagePath" and "languages".');

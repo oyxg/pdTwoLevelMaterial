@@ -105,14 +105,14 @@
         </ul>
         <div class="nav_sub">
             <ul>
-                <?php if (Auth::has(AI::C_PreFloodMaterialList)): ?>
-                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/PreFloodlist"); ?>">防汛物资列表</a></li>
-                <?php endif; ?>
                 <?php if (Auth::has(AI::C_PreFloodMaterialInfo)): ?>
-                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/PreFloodInfo"); ?>">防汛物资信息</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/PreFloodInfo"); ?>">防汛物资配置</a></li>
                 <?php endif; ?>
                 <?php if (Auth::has(AI::C_PreFloodMaterialIn)): ?>
                     <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/PreFloodIn"); ?>">防汛物资台账</a></li>
+                <?php endif; ?>
+                <?php if (Auth::has(AI::C_PreFloodMaterialList)): ?>
+                    <li><a href="<?php echo Yii::app()->createUrl("prefloodmaterial/PreFloodlist"); ?>">防汛物资汇总</a></li>
                 <?php endif; ?>
             </ul>
         </div>
@@ -124,8 +124,14 @@
         </ul>
         <div class="nav_sub">
             <ul>
+                <?php if (Auth::has(AI::C_InstrumentInfo)): ?>
+                    <li><a href="<?php echo Yii::app()->createUrl("Instrument/InstrumentInfo"); ?>">仪器仪表配置</a></li>
+                <?php endif; ?>
+                <?php if (Auth::has(AI::C_InstrumentIn)): ?>
+                    <li><a href="<?php echo Yii::app()->createUrl("Instrument/InstrumentIn"); ?>">仪器仪表台账</a></li>
+                <?php endif; ?>
                 <?php if (Auth::has(AI::C_InstrumentList)): ?>
-                    <li><a href="<?php echo Yii::app()->createUrl("Instrument/Instrumentlist"); ?>">仪器仪表列表</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl("Instrument/Instrumentlist"); ?>">仪器仪表汇总</a></li>
                 <?php endif; ?>
             </ul>
         </div>

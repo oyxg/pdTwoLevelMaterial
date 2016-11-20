@@ -42,16 +42,17 @@ clean_xss($_GET['name']);
                         <table>
                         <tr>
                             <td>
-                                分类：
-                                <select class="grid_text" name="className" id="className" style="height: 24px">
+                                物资分类：
+                                <input class="grid_text" name="className" value="<?php echo $_GET['className']; ?>">
+<!--                                <select class="grid_text" name="className" id="className" style="height: 24px">
                                     <option></option>
                                     <?php
-                                    $PreFlood = new PreFloodInfo();
+/*                                    $PreFlood = new PreFloodInfo();
                                     $types = $PreFlood->model()->getType();
-                                    foreach($types as $type): ?>
-                                        <option value="<?=$type?>"<?php if($type==$_GET['className'])echo "selected";?>><?=$type?></option>
-                                    <?php endforeach;?>
-                                </select>
+                                    foreach($types as $type): */?>
+                                        <option value="<?/*=$type*/?>"<?php /*if($type==$_GET['className'])echo "selected";*/?>><?/*=$type*/?></option>
+                                    <?php /*endforeach;*/?>
+                                </select>-->
                                 物资名称：
                                 <input class="grid_text" name="name" value="<?php echo $_GET['name']; ?>">
                                 配置级别：
@@ -81,14 +82,16 @@ clean_xss($_GET['name']);
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="github_tb">
     <thead>
         <tr class="row">
-            <th align="left">分类</th>
+            <th align="left">物资分类</th>
+            <th align="left">物资编号</th>
+            <th align="left">公司编号</th>
             <th align="left">物资名称</th>
             <th align="left">规格型号</th>
-            <th align="left">单位</th>
+            <th align="left">配置数量</th>
+            <th align="left">配置单位</th>
+            <th align="left">配置级别</th>
             <th align="center">单价</th>
             <th align="left">技术规范</th>
-            <th align="left">配置级别</th>
-            <th align="left">配置标准</th>
             <th align="left">厂家</th>
             <th align="left">出厂编号</th>
             <th align="left">联系人</th>
@@ -103,13 +106,15 @@ clean_xss($_GET['name']);
         ?>
         <tr>
             <td align="left"><?php echo $v->className; ?></td>
+            <td align="left"><?php echo $v->mbh; ?></td>
+            <td align="left"><?php echo $v->cbh; ?></td>
             <td align="left"><?php echo $v->name; ?></td>
             <td align="left"><?php echo $v->standard; ?></td>
+            <td align="left"><?php echo $v->configure; ?></td>
             <td align="left"><?php echo $v->unit; ?></td>
+            <td align="left"><?php echo $v->pzlevel; ?></td>
             <td align="center"><?php echo $v->price; ?></td>
             <td align="left"><?php echo $v->jsgf; ?></td>
-            <td align="left"><?php echo $v->pzlevel; ?></td>
-            <td align="left"><?php echo $v->configure; ?></td>
             <td align="left"><?php echo $v->factory; ?></td>
             <td align="left"><?php echo $v->bh; ?></td>
             <td align="left"><?php echo $v->contact; ?></td>
@@ -121,7 +126,7 @@ clean_xss($_GET['name']);
                         <ul>
                             <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="edit">修改</a></li>
                             <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="in">入库</a></li>
-                            <li class="icon_015"><a href="#" code="<?php echo $v->id; ?>" rel="need">各班需求</a></li>
+<!--                            <li class="icon_015"><a href="#" code="--><?php //echo $v->id; ?><!--" rel="need">各班需求</a></li>-->
                         </ul>
                     </div>
                 </div></td>

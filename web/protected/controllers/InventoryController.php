@@ -19,17 +19,27 @@ class InventoryController extends Controller {
     public function actionAdd() {
         if ($_POST['is_all'] == "1") {
             $materialIDArr = array();
-            $store = UserStore::getStoreByUserID();
+            $userID = Yii::app()->user->getId();
+            $store = UserStore::model()->findAll("userID=".$userID);
+//            var_dump($store[0]->storeID);
+//                exit();
             if (!$store) {
                 WMessage::ajaxInfo("你没有绑定仓库", 0);
             }
-            //查询参数
-//            $condition[] = "1=1";
-//            $condition[] = "AND storeID=" . $store->storeID;
-//            $condition[] = "AND del=0";
-//            $criteria = new CDbCriteria();
-//            $criteria->condition = implode(" ", $condition);
-            $rsList = Material::model()->findAll();
+            if (Auth::has(AI::R_Storer)){
+                //查询参数
+//                $condition[] = "1=1";
+//                $condition[] = "AND storeID=" . $store->storeID;
+//                $condition[] = "AND del=0";
+//                $criteria = new CDbCriteria();
+//                $criteria->condition = implode(" ", $condition);
+//                $Material = new Material();
+                $rsList = Material::model()->findAll("storeID in ({$store[0]->storeID})");
+//                var_dump($rsList);
+//                exit();
+            }else{
+                $rsList = Material::model()->findAll();
+            }
             if ($rsList) {
                 foreach ($rsList as $k => $rs) {
                     $materialIDArr[] = $rs['materialID'];
@@ -208,7 +218,7 @@ WHERE r.state = 'sh' AND r.id = rm.formID AND rm.materialID = '{$mid}'{$sql_date
                 //移库数量
                 $sql = "SELECT SUM(rm.number) as count_move
 FROM mod_move_form r,mod_material_move rm
-WHERE r.id = rm.moveformID AND rm.materialID = '{$mid}'{$sql_date}";
+WHERE r.id = rm.moveformID AND rm.comeMaterialID = '{$mid}'{$sql_date}";
                 $countMove = ActiveRecord::getRecordByCMD(Yii::app()->db->createCommand($sql))[0]['count_move'];
                 $moveArr = array("countMove"=>$countMove);
                 //先合并三个字段后，再合并到结果集中
@@ -244,6 +254,7 @@ WHERE r.id = rm.moveformID AND rm.materialID = '{$mid}'{$sql_date}";
             array("name" => "当前库存", "width" => 17),
             array("name" => "入库数量", "width" => 17),
             array("name" => "出库数量", "width" => 17),
+            array("name" => "待领料数量", "width" => 17),
             array("name" => "移库数量", "width" => 17),
         ));
         $data = array();
@@ -263,6 +274,7 @@ WHERE r.id = rm.moveformID AND rm.materialID = '{$mid}'{$sql_date}";
             $data[$i]['currCount'] = floatval($rs['currCount']);
             $data[$i]['countIn'] = $rs['countIn']==''?'0':floatval($rs['countIn']);
             $data[$i]['countReceive'] = $rs['countReceive']==''?'0':floatval($rs['countReceive']);
+            $data[$i]['countNoReceive'] = $rs['countNoReceive']==''?'0':floatval($rs['countNoReceive']);
             $data[$i]['countMove'] = $rs['countMove']==''?'0':floatval($rs['countMove']);
             $i++;
         }

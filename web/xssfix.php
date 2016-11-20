@@ -29,13 +29,14 @@ function clean_xss(&$string, $low = true)
 
 function _sqlfilter()
 {
-	$pattern = '/‘|’|“|”|\/\*|sleep|select|insert|and|update|delete|SELECT|INSERT|AND|OR|CONST|ROW|COUNT|or|const|row|count|UPDATE|DELETE/i';
+	$pattern = '/‘|’|“|”|\/\*|sleep|select|insert|and|update|delete|SELECT|INSERT|AND|CONST|ROW|COUNT|const|row|count|UPDATE|DELETE|or|OR/i';//
 	$pattern2 = '/<|>|script/i';
+//	var_dump($_REQUEST);
 	foreach($_REQUEST as $key => $para){
 			if(is_array($para) || is_object($para) || 0 < preg_match($pattern,$para)){
 					 echo '<script language="JavaScript">alert("系统警告1：\n\n请不要尝试在参数中包含非法字符尝试注入！");
 					 history.go(-1);
-					 </script>'.$para;
+					 </script>' . var_dump($para);
 					exit;
 			}
 
@@ -50,6 +51,6 @@ function _sqlfilter()
 	//($_SERVER['REQUEST_METHOD'] == 'GET')?$_GET = $_REQUEST:$_POST = $_REQUEST;
 	return true;
 }
-	_sqlfilter();
+	//_sqlfilter();
 
 ?>

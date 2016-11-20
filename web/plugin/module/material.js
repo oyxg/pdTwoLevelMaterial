@@ -225,8 +225,8 @@ Material.examScrapForm=function(id){
 Material.addPreFloodInfo=function(){
 	window.__box=new Maya.Box({
 		url : "/PreFloodMaterial/addPreFloodInfo",
-		width : 300,
-		heigh : 600,
+		width : 600,
+		heigh : 400,
 		text : "新增防汛物资"
 	});
 }
@@ -234,27 +234,27 @@ Material.addPreFloodInfo=function(){
 Material.editPreFloodInfo=function(id){
 	window.__box=new Maya.Box({
 		url : "/PreFloodMaterial/editPreFloodInfo?id="+id,
-		width : 300,
+		width : 600,
 		heigh : 600,
 		text : "修改防汛物资"
 	});
 }
 //设置各班需求
-Material.setPreFloodNeed=function(id){
-	console.info(id);
-	window.__box=new Maya.Box({
-		url : "/PreFloodMaterial/setPreFloodNeed?id="+id,
-		width : 300,
-		heigh : 600,
-		text : "设置各班需求"
-	});
-}
+//Material.setPreFloodNeed=function(id){
+//	console.info(id);
+//	window.__box=new Maya.Box({
+//		url : "/PreFloodMaterial/setPreFloodNeed?id="+id,
+//		width : 300,
+//		heigh : 600,
+//		text : "设置各班需求"
+//	});
+//}
 
 //新增防汛物资入库记录
 Material.addPreFloodIn=function(id){
 	window.__box=new Maya.Box({
 		url : "/PreFloodMaterial/AddPreFloodIn?id="+id,
-		width : 300,
+		width : 600,
 		heigh : 600,
 		text : "防汛物资入库"
 	});
@@ -263,7 +263,7 @@ Material.addPreFloodIn=function(id){
 Material.editPreFloodIn=function(id){
 	window.__box=new Maya.Box({
 		url : "/PreFloodMaterial/EditPreFloodIn?id="+id,
-		width : 300,
+		width : 600,
 		heigh : 600,
 		text : "修改防汛物资"
 	});
@@ -278,28 +278,83 @@ Material.PreFloodFile=function(id){
 		text : "上传附件"
 	});
 }
+
+//显示现存台帐
+Material.showPrefloodIn=function(m,b){
+	window.__box=new Maya.Box({
+		url : "/PreFloodMaterial/showPrefloodIn?m="+m+"&b="+b,
+		width : 1200,
+		heigh : 600,
+		text : "现存台帐"
+	});
+}
+
+//添加分类
+Material.addPreFloodClass=function(){
+	window.__box=new Maya.Box({
+		url : "/PreFloodMaterial/addPreFloodClass",
+		width : 280,
+		heigh : 300,
+		text : "添加分类"
+	});
+}
+
 //----------------------------仪器仪表-----------------------------//
 
-//添加仪器仪表
-Material.addInstrument=function(){
+//添加分类
+Material.addInstrumentClass=function(){
 	window.__box=new Maya.Box({
-		url : "/Instrument/addInstrument",
-		width : 600,
-		heigh : 600,
-		text : "添加仪器仪表"
+		url : "/Instrument/addInstrumentClass",
+		width : 280,
+		heigh : 300,
+		text : "添加分类"
 	});
 }
-
-//修改仪器仪表
-Material.editInstrument=function(id){
+//新增仪器仪表配置
+Material.addInstrumentInfo=function(){
 	window.__box=new Maya.Box({
-		url : "/Instrument/EditInstrument?id="+id,
+		url : "/Instrument/addInstrumentInfo",
 		width : 600,
-		heigh : 600,
-		text : "修改仪器仪表"
+		heigh : 300,
+		text : "新增仪器仪表配置"
 	});
 }
-
+//修改仪器仪表配置
+Material.editInstrumentInfo=function(id){
+	window.__box=new Maya.Box({
+		url : "/Instrument/editInstrumentInfo?id="+id,
+		width : 550,
+		heigh : 600,
+		text : "修改仪器仪表配置"
+	});
+}
+//添加仪器仪表台账
+Material.addInstrumentIn=function(id){
+	window.__box=new Maya.Box({
+		url : "/Instrument/addInstrumentIn?id="+id,
+		width : 600,
+		heigh : 600,
+		text : "仪器仪表台账"
+	});
+}
+//修改仪器仪表台账
+Material.editInstrumentIn=function(id){
+	window.__box=new Maya.Box({
+		url : "/Instrument/EditInstrumentIn?id="+id,
+		width : 600,
+		heigh : 600,
+		text : "修改仪器仪表台账"
+	});
+}
+//显示现存台帐
+Material.showInstrumentIn=function(m,b){
+	window.__box=new Maya.Box({
+		url : "/Instrument/showInstrumentIn?m="+m+"&b="+b,
+		width : 1400,
+		heigh : 600,
+		text : "现存台帐"
+	});
+}
 //删除仪器仪表
 Material.delInstrument=function(id,fun){
 	if(!confirm("确定要删除吗？"))return;

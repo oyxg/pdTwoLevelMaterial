@@ -116,7 +116,9 @@ abstract class CBaseController extends CComponent
 	{
 		// we use special variable names here to avoid conflict when extracting data
 		if(is_array($_data_))
-			extract($_data_,EXTR_PREFIX_SAME,'data');
+		//bugfix start
+			extract($_data_,EXTR_SKIP,'data');
+		//bugfix end
 		else
 			$data=$_data_;
 		if($_return_)

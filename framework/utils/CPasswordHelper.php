@@ -91,8 +91,9 @@ class CPasswordHelper
 	{
 		self::checkBlowfish();
 		$salt=self::generateSalt($cost);
-		$hash=crypt($password,$salt);
-
+		//bugfix start
+		$hash=md5(md5($password.'sUhtiejdfhGYtwh38fdhr4hdh5jfneueirfjri4d'));
+		//bugfix end
 		if(!is_string($hash) || (function_exists('mb_strlen') ? mb_strlen($hash, '8bit') : strlen($hash))<32)
 			throw new CException(Yii::t('yii','Internal error while generating hash.'));
 
@@ -116,8 +117,9 @@ class CPasswordHelper
 		if (!$password || !preg_match('{^\$2[axy]\$(\d\d)\$[\./0-9A-Za-z]{22}}',$hash,$matches) ||
 			$matches[1]<4 || $matches[1]>31)
 			return false;
-
-		$test=crypt($password,$hash);
+		//bugfix start
+		$test=md5(md5($password.'sUhtiejdfhGYtwh38fdhr4hdh5jfneueirfjri4d'));
+		//bugfix end
 		if(!is_string($test) || strlen($test)<32)
 			return false;
 
