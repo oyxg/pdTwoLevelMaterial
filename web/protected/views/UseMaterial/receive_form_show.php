@@ -69,9 +69,11 @@
                 <td width="70" align="right"><strong>项目编号：</strong></td>
                 <td width="170"><?= $receiveForm->glProCode?></td>
                 <td width="70" align="right"><strong>领料性质：</strong></td>
-                <td width="170"><?= $receiveForm->batchCode?></td>
+                <td width="170"><?= $receiveForm->nature=='qx'?"抢修":"大修";?></td>
             </tr>
             <tr height="30">
+                <td width="70" align="right"><strong>批次号：</strong></td>
+                <td width="170"><?= $receiveForm->batchCode?></td>
                 <td width="70" align="right"><strong>班组：</strong></td>
                 <td width="170"><?= $receiveForm->bz?></td>
                 <td width="70" align="right"><strong>备注：</strong></td>
@@ -87,7 +89,7 @@
             <tr class="row">
                 <th align="center">序号</th>
                 <th align="center">仓库</th>
-                <th align="center">批次号</th>
+<!--                <th align="center">批次号</th>-->
                 <th align="center">物资编码</th>
                 <th width="70" align="left">物资描述</th>
                 <th width="70" align="left">扩展编码</th>
@@ -113,7 +115,7 @@
                 <tr>
                     <td align="center"><?php echo $i;?></td>
                     <td align="center"><?php echo Store::model()->getName(Material::model()->find("materialID='{$v['materialID']}'")->storeID);?></td>
-                    <td align="center"><?php echo $v['batchCode'];?></td>
+<!--                    <td align="center">--><?php //echo $v['batchCode'];?><!--</td>-->
                     <td align="center"><?php echo $v['goodsCode'];?></td>
                     <td align="center"><?php echo $v['goodsName'];?></td>
                     <td align="center"><?php echo $v['extendCode'];?></td>

@@ -868,8 +868,10 @@ WHERE rf.id = rfm.formID AND rf.formCode='{$_rtm->formCode}' AND rfm.materialID=
         $sql = "SELECT distinct m.storeID,m.currCount,f.formCode,f.nature,f.state,f.batchCode as fbatchCode,f.glPro,f.glProCode,fm.* ";
         if($_GET['type']=='receive'){
             $sql .= "FROM mod_receive_form_material fm,mod_receive_form f,mod_material m ";
+            $type = "领料";
         }else if($_GET['type']=='return'){
             $sql .= "FROM mod_return_form_material fm,mod_return_form f,mod_material m ";
+            $type = "退料";
         }
         $sqlWhere = " WHERE fm.formID = f.id AND m.materialID=fm.materialID" . $criteria->condition;
         $sqlMerge = $sql . $sqlWhere ." ORDER BY f.formCode desc";
@@ -880,7 +882,7 @@ WHERE rf.id = rfm.formID AND rf.formCode='{$_rtm->formCode}' AND rfm.materialID=
 //        var_dump($rsList);
 //        exit();
         //返回所有物资数据
-        $this->setBread("退料单物资记录");
+        $this->setBread($type."单物资记录");
         $this->render("use_material_list",array(
             "rsList" => $rsList
         ));

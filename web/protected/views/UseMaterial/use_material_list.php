@@ -54,7 +54,7 @@ clean_xss($_GET['glPro']);
 
                             </td></tr>
                         <tr><td>
-                            <?=$typeName;?>批次号：
+                            批次号：
                             <input class="grid_text" name="batchCode" value="<?php echo $_GET['batchCode']; ?>" />
                             <?=$typeName;?>单号：
                             <input class="grid_text" name="formCode" value="<?php echo $_GET['formCode']; ?>" />
@@ -85,7 +85,7 @@ clean_xss($_GET['glPro']);
             <th width="200" align="center"><?=$typeName;?>性质</th>
             <th width="200" align="left">项目编号</th>
             <th width="200" align="left">项目名称</th>
-            <th width="200" align="left"><?=$typeName;?>批次号</th>
+            <th width="200" align="left">批次号</th>
             <th width="200" align="left">库存地址</th>
             <th width="200" align="left">物资编号</th>
             <th width="200" align="left">扩展编码</th>

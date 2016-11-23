@@ -32,9 +32,11 @@
                 <td width="70" align="right"><strong>项目编号：</strong></td>
                 <td width="170"><?= $returnForm->glProCode?></td>
                 <td width="70" align="right"><strong>退料性质：</strong></td>
-                <td width="170"><?= $returnForm->batchCode?></td>
+                <td width="170"><?= $returnForm->nature=='qx'?"抢修":"大修";?></td>
             </tr>
             <tr height="30">
+                <td width="70" align="right"><strong>批次号：</strong></td>
+                <td width="170"><?= $returnForm->batchCode;?></td>
                 <td width="70" align="right"><strong>备注：</strong></td>
                 <td width="170" colspan="3"><?= $returnForm->remark?></td>
             </tr>
@@ -47,7 +49,7 @@
             <thead>
             <tr class="row">
                 <th width="50" align="center">序号</th>
-                <th align="70">批次号</th>
+<!--                <th align="70">批次号</th>-->
                 <th align="70">物资编码</th>
                 <th width="70" align="left">物资描述</th>
                 <th width="70" align="center">厂家</th>
@@ -65,7 +67,7 @@
                 $i++;  ?>
                 <tr>
                     <td align="center"><?php echo $i;?></td>
-                    <td align="center"><?php echo $v['batchCode'];?></td>
+<!--                    <td align="center">--><?php //echo $v['batchCode'];?><!--</td>-->
                     <td align="center"><?php echo $v['goodsCode'];?></td>
                     <td align="center"><?php echo $v['goodsName'];?></td>
                     <td align="center"><?php echo $v['factory'];?></td>
