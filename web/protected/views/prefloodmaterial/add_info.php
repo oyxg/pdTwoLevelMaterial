@@ -121,6 +121,10 @@
             <td>
                 <table>
                     <tr class="row">
+                        <td width="100" align="right">资产卡号：</td>
+                        <td><input name="card" id="card" type="text" class="grid_text"  value="<?= $data['card']?>"></td>
+                    </tr>
+                    <tr class="row">
                         <td width="100" align="right">公司编号：</td>
                         <td><input name="cbh" id="cbh" type="text" class="grid_text"  value="<?= $data['cbh']?>"></td>
                     </tr>
@@ -147,10 +151,6 @@
                     <tr class="row">
                         <td width="100" align="right">备注：</td>
                         <td><input name="remark" id="remark" type="text" class="grid_text"  value="<?= $data['remark']?>"></td>
-                    </tr>
-                    <tr class="row">
-                        <td style="height: 24px">　</td>
-                        <td>　</td>
                     </tr>
                 </table>
             </td>

@@ -85,6 +85,7 @@ clean_xss($_GET['name']);
             <th align="left">物资分类</th>
             <th align="left">物资编号</th>
             <th align="left">公司编号</th>
+            <th align="left">资产卡号</th>
             <th align="left">物资名称</th>
             <th align="left">规格型号</th>
             <th align="left">配置数量</th>
@@ -108,6 +109,7 @@ clean_xss($_GET['name']);
             <td align="left"><?php echo $v->className; ?></td>
             <td align="left"><?php echo $v->mbh; ?></td>
             <td align="left"><?php echo $v->cbh; ?></td>
+            <td align="left"><?php echo $v->card; ?></td>
             <td align="left"><?php echo $v->name; ?></td>
             <td align="left"><?php echo $v->standard; ?></td>
             <td align="left"><?php echo $v->configure; ?></td>

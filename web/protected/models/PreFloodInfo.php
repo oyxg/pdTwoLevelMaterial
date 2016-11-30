@@ -18,6 +18,7 @@ class PreFloodInfo extends ActiveRecord{
 	public $remark;//备注
 	public $mbh;//物资编号
 	public $cbh;//公司编号
+	public $card;//资产卡号
 
 //	private $_pk = 'id';
 
@@ -56,7 +57,7 @@ class PreFloodInfo extends ActiveRecord{
 				'required'
 			),
 			array(
-				'price,unit,standard,jsgf,pzlevel,configure,factory,bh,contact,tel,remark,mbh,cbh',
+				'price,unit,standard,jsgf,pzlevel,configure,factory,bh,contact,tel,remark,mbh,cbh,card',
 				'safe'
 			)
 		);
@@ -82,7 +83,8 @@ class PreFloodInfo extends ActiveRecord{
 				'tel'=>'联系人',
 				'remark'=>'备注',
 				'mbh'=>'物资编号',
-				'cbh'=>'公司编号'
+				'cbh'=>'公司编号',
+				'card'=>'资产卡号'
 		);
 	}
 	/**
